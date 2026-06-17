@@ -182,7 +182,7 @@
 .nav-mobile-close-btn {
     background: transparent;
     border: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--light-grey-description-color);
     cursor: pointer;
     line-height: 1;
@@ -255,6 +255,11 @@
 
 /* Smaller tablets / large phones */
 @media (max-width: 768px) {
+
+    .nav-bar-items {
+        padding: 0.5rem;
+    }
+
     .nav-bar-container {
         padding: 0.6rem 0;
     }
