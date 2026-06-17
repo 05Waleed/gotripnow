@@ -1,0 +1,98 @@
+.nav-bar-container {
+    background-color: var(--white-container-color);
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+}
+
+.nav-bar-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar-logo {
+    color: var(--red-accent-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 0.95;
+    text-decoration: none;
+}
+
+.nav-bar-logo-black {
+    color: var(--black-heading-color);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-left: 0.25rem;
+}
+
+.nav-bar-bttns {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--black-heading-color);
+    opacity: 0.8;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    color: var(--red-accent-color);
+}
+
+.nav-cta-btn {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--white-container-color);
+    background-color: var(--red-accent-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.nav-cta-btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(235, 68, 54, 0.2);
+}
+
+.nav-bar-locale-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link.active {
+    color: var(--red-accent-color);
+    opacity: 1;
+}
+
+/* Optional: small underline indicator for the active link */
+.nav-link.active {
+    position: relative;
+}
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red-accent-color);
+}
+
+/* For the CTA button, an "active" state usually means it's already inverted,
+   so keep it solid but you can darken/outline it slightly to show it's current */
+.nav-cta-btn.active {
+    background-color: var(--black-heading-color);
+}

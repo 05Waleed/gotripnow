@@ -1,0 +1,158 @@
+/* ===== Trigger button — sits in the navbar next to Wishlist/Basket/Profile ===== */
+.lc-selector {
+    position: relative;
+    font-family: var(--font-montserrat), sans-serif;
+}
+
+.lc-trigger-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+    color: var(--black-heading-color);
+    border-radius: 8px;
+    transition: background 0.15s ease;
+}
+
+.lc-trigger-btn:hover,
+.lc-trigger-btn.active {
+    background-color: rgba(15, 23, 42, 0.04);
+}
+
+.lc-icon {
+    opacity: 0.85;
+}
+
+.lc-trigger-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--black-heading-color);
+    opacity: 0.8;
+}
+
+/* ===== Backdrop ===== */
+.lc-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 1000;
+    animation: lc-fade-in 0.15s ease-out;
+}
+
+/* ===== Modal ===== */
+.lc-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(680px, 92vw);
+    max-height: 85vh;
+    background: var(--white-container-color);
+    border-radius: 16px;
+    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.2);
+    z-index: 1001;
+    padding: 1.5rem 1.75rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    animation: lc-pop-in 0.18s ease-out;
+}
+
+.lc-close-btn {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.25rem;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: var(--light-grey-description-color);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.lc-close-btn:hover {
+    color: var(--black-heading-color);
+}
+
+/* ===== Tabs ===== */
+.lc-tabs {
+    display: flex;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    margin-bottom: 1.25rem;
+    padding-right: 2rem;
+}
+
+.lc-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.6rem 0.1rem 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--light-grey-description-color);
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.lc-tab:hover {
+    color: var(--black-heading-color);
+}
+
+.lc-tab.active {
+    color: var(--red-accent-color);
+    border-bottom-color: var(--red-accent-color);
+}
+
+.lc-tab-icon {
+    opacity: 0.9;
+}
+
+/* ===== Tab content ===== */
+.lc-tab-content {
+    overflow-y: auto;
+}
+
+/* ===== Animations ===== */
+@keyframes lc-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes lc-pop-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* ===== Mobile — full-screen sheet instead of a centered card ===== */
+@media (max-width: 480px) {
+    .lc-modal {
+        width: 100vw;
+        max-height: 100vh;
+        height: 100vh;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        transform: none;
+        animation: lc-fade-in 0.15s ease-out;
+    }
+}

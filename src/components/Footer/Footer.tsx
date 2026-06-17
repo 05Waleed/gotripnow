@@ -13,18 +13,7 @@ export default function Footer({ dict }: FooterProps) {
 
   return (
     <footer>
-      <div>
-        {/* Rights notice */}
-        <div>
-          © {currentYear} GoTripNow. {dict.rights}
-        </div>
-
-        {/* Footer Links */}
-        <div className="flex gap-4">
-          <a href="#">{dict.privacy}</a>
-          <a href="#">{dict.terms}</a>
-        </div>
-      </div>
+     
     </footer>
   )
 }

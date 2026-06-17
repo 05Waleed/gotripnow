@@ -1,17 +1,17 @@
-/* Grid of language options shown inside the Language tab.
+/* Grid of currency options shown inside the Currency tab.
    Scoped to this component only — the modal shell, tabs, and
    trigger button live in LanguageCurrencySelector.css. */
 
-.lang-grid {
+.currency-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.25rem 1rem;
     max-height: 50vh;
     overflow-y: auto;
     padding-right: 0.25rem;
 }
 
-.lang-option {
+.currency-option {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,28 +28,22 @@
     transition: background 0.12s ease;
 }
 
-.lang-option:hover {
+.currency-option:hover {
     background-color: var(--main-background-color);
 }
 
-.lang-option.active {
+.currency-option.active {
     color: var(--red-accent-color);
 }
 
-.lang-check {
+.currency-check {
     color: var(--red-accent-color);
     font-weight: 700;
     margin-left: 0.5rem;
 }
 
-@media (max-width: 768px) {
-    .lang-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: 480px) {
-    .lang-grid {
+    .currency-grid {
         grid-template-columns: 1fr;
     }
 }

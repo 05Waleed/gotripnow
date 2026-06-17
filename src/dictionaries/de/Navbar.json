@@ -1,6 +1,7 @@
 {
-  "home": "Startseite",
-  "tours": "Touren Finden",
-  "about": "Über Uns",
-  "contact": "Kontakt"
+  "home": "Home",
+  "tours": "Touren",
+  "about": "Über uns",
+  "contact": "Kontakt",
+  "planTour": "Tour planen"
 }

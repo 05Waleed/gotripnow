@@ -1,6 +1,7 @@
 {
   "home": "Accueil",
-  "tours": "Trouver des Visites",
-  "about": "À Propos",
-  "contact": "Contact"
+  "tours": "Visites",
+  "about": "À propos",
+  "contact": "Contact",
+  "planTour": "Planifier"
 }
