@@ -3,6 +3,9 @@
     padding: 0.75rem 0;
     border-bottom: 1px solid rgba(15, 23, 42, 0.05);
     box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-bar-items {
@@ -49,6 +52,22 @@
     color: var(--red-accent-color);
 }
 
+.nav-link.active {
+    color: var(--red-accent-color);
+    opacity: 1;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red-accent-color);
+}
+
 .nav-cta-btn {
     text-decoration: none;
     font-size: 0.9rem;
@@ -66,33 +85,197 @@
     box-shadow: 0 4px 12px rgba(235, 68, 54, 0.2);
 }
 
+.nav-cta-btn.active {
+    background-color: var(--black-heading-color);
+}
+
+/* ===== Right-hand cluster: locale selector + hamburger ===== */
+.nav-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
 .nav-bar-locale-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.nav-link.active {
+/* ===== Hamburger button — hidden on desktop ===== */
+.nav-burger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 8px;
+    transition: background 0.15s ease;
+}
+
+.nav-burger-btn:hover {
+    background-color: rgba(15, 23, 42, 0.04);
+}
+
+.nav-burger-line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--black-heading-color);
+    border-radius: 2px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-burger-btn.active .nav-burger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-burger-btn.active .nav-burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-burger-btn.active .nav-burger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== Mobile drawer ===== */
+.nav-mobile-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    z-index: 998;
+    animation: nav-fade-in 0.15s ease-out;
+}
+
+.nav-mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(320px, 80vw);
+    height: 100vh;
+    background: var(--white-container-color);
+    z-index: 999;
+    padding: 1.25rem 1.75rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    box-shadow: -8px 0 24px rgba(15, 23, 42, 0.12);
+    animation: nav-slide-in 0.22s ease-out;
+    overflow-y: auto;
+}
+
+/* Logo + close button row at the top of the drawer */
+.nav-mobile-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.nav-mobile-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    color: var(--light-grey-description-color);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.25rem;
+    margin-top: 0.1rem;
+}
+
+.nav-mobile-close-btn:hover {
+    color: var(--black-heading-color);
+}
+
+.nav-mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-mobile-link {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--black-heading-color);
+    opacity: 0.85;
+}
+
+.nav-mobile-link.active {
     color: var(--red-accent-color);
     opacity: 1;
 }
 
-/* Optional: small underline indicator for the active link */
-.nav-link.active {
-    position: relative;
-}
-.nav-link.active::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 2px;
-    background-color: var(--red-accent-color);
+.nav-mobile-cta {
+    text-align: center;
 }
 
-/* For the CTA button, an "active" state usually means it's already inverted,
-   so keep it solid but you can darken/outline it slightly to show it's current */
-.nav-cta-btn.active {
-    background-color: var(--black-heading-color);
+@keyframes nav-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes nav-slide-in {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ===== Responsive breakpoints ===== */
+
+/* Tablet and below — collapse into hamburger menu */
+@media (max-width: 968px) {
+    .nav-bar-bttns {
+        display: none;
+    }
+
+    .nav-burger-btn {
+        display: flex;
+    }
+}
+
+/* Smaller tablets / large phones */
+@media (max-width: 768px) {
+    .nav-bar-container {
+        padding: 0.6rem 0;
+    }
+
+    .nav-bar-logo {
+        font-size: 1.05rem;
+    }
+
+    .nav-bar-logo-black {
+        font-size: 1.2rem;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .nav-bar-right {
+        gap: 0.4rem;
+    }
+
+    .nav-mobile-drawer {
+        width: 100vw;
+        padding: 1.25rem 1.5rem 2rem;
+    }
 }

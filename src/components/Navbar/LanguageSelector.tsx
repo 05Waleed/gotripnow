@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import { usePathname, useRouter } from "next/navigation";
 import "./LanguageSelector.css";
@@ -16,11 +15,6 @@ export const languages: Language[] = [
     { code: "it", label: "Italiano" },
 ];
 
-/**
- * Reads the active language out of the URL (first path segment).
- * Exported so other components (e.g. the trigger button) can show
- * the current language without re-deriving the logic themselves.
- */
 export function useCurrentLanguage(): Language {
     const pathname = usePathname();
     const currentCode = pathname?.split("/")[1] || "en";
@@ -28,15 +22,9 @@ export function useCurrentLanguage(): Language {
 }
 
 interface LanguageSelectorProps {
-    /** Called after a language is picked, so a parent modal/dropdown can close itself. */
     onSelect?: () => void;
 }
 
-/**
- * Renders only the grid of language options. Has no button or popup of its
- * own on purpose — it's meant to be dropped into a tab panel (see
- * LanguageCurrencySelector) so the same list can be reused anywhere.
- */
 export default function LanguageSelector({ onSelect }: LanguageSelectorProps) {
     const pathname = usePathname();
     const router = useRouter();

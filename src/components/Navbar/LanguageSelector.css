@@ -1,7 +1,3 @@
-/* Grid of language options shown inside the Language tab.
-   Scoped to this component only — the modal shell, tabs, and
-   trigger button live in LanguageCurrencySelector.css. */
-
 .lang-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

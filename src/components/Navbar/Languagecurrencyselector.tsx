@@ -1,21 +1,11 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import LanguageSelector, { useCurrentLanguage } from "./LanguageSelector";
 import CurrencySelector from "./CurrencySelector";
-import './Languagecurrencyselector.css'
+import './Languagecurrencyselector.css';
 
 type Tab = "language" | "currency";
 
-/**
- * Single nav entry point for locale settings, styled after GetYourGuide:
- * one globe button labelled "EN/CHF" that opens one modal with two tabs
- * (Language / Currency) instead of two separate dropdowns.
- *
- * This file owns only the shell — the trigger button, backdrop, modal,
- * and tabs. The actual option lists live in LanguageSelector and
- * CurrencySelector so each can be reused or tested independently.
- */
 export default function LanguageCurrencySelector() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeTab, setActiveTab] = useState<Tab>("language");
@@ -26,7 +16,6 @@ export default function LanguageCurrencySelector() {
 
     const close = () => setIsOpen(false);
 
-    // Close on outside click / Escape, and lock body scroll while the modal is open.
     useEffect(() => {
         if (!isOpen) return;
 
