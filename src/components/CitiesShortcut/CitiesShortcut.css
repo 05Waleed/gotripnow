@@ -1,0 +1,60 @@
+.cs-cities-shortcut-container {
+    margin-top: clamp(3rem, 8vw, 6rem);
+}
+
+.cs-cities-shortcut-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 12rem;
+    gap: 0.8rem;
+    margin-top: clamp(2rem, 3vw, 2rem);
+
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.cs-cities-shortcut-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.cs-cities-shortcut-section-title {
+    color: rgb(26, 26, 26);
+    margin: 0px;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 800;
+}
+
+.cs-city-image {
+    height: 11.3rem;
+    width: 100%;
+    max-width: 11.3rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.cs-next-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* --- Added Hover Effect --- */
+.cs-city-card:hover .cs-next-image {
+    transform: scale(1.08);
+}
+
+.cs-city-name {
+    margin-top: 0.75rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 1200px) {
+    .cs-cities-shortcut-container {
+        padding: 0 clamp(1rem, 5vw, 4rem);
+    }
+}

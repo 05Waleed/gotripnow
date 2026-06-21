@@ -7,36 +7,40 @@ const loaders = {
     Hero: () => import("../dictionaries/en/Hero.json").then((m) => m.default),
     Navbar: () => import("../dictionaries/en/Navbar.json").then((m) => m.default),
     Footer: () => import("../dictionaries/en/Footer.json").then((m) => m.default),
+    Tours: () => import("../dictionaries/en/Tours.json").then((m) => m.default),
   },
   de: {
     Hero: () => import("../dictionaries/de/Hero.json").then((m) => m.default),
     Navbar: () => import("../dictionaries/de/Navbar.json").then((m) => m.default),
     Footer: () => import("../dictionaries/de/Footer.json").then((m) => m.default),
+    Tours: () => import("../dictionaries/de/Tours.json").then((m) => m.default),
   },
   fr: {
     Hero: () => import("../dictionaries/fr/Hero.json").then((m) => m.default),
     Navbar: () => import("../dictionaries/fr/Navbar.json").then((m) => m.default),
     Footer: () => import("../dictionaries/fr/Footer.json").then((m) => m.default),
+    Tours: () => import("../dictionaries/fr/Tours.json").then((m) => m.default),
   },
   it: {
     Hero: () => import("../dictionaries/it/Hero.json").then((m) => m.default),
     Navbar: () => import("../dictionaries/it/Navbar.json").then((m) => m.default),
     Footer: () => import("../dictionaries/it/Footer.json").then((m) => m.default),
+    Tours: () => import("../dictionaries/it/Tours.json").then((m) => m.default),
   },
 };
 
 export const getDictionary = async (locale: Locale) => {
   const currentLoader = loaders[locale] || loaders.en;
-
-  const [heroData, navbarData, footerData] = await Promise.all([
+  const [heroData, navbarData, footerData, toursData] = await Promise.all([
     currentLoader.Hero(),
     currentLoader.Navbar(),
     currentLoader.Footer(),
+    currentLoader.Tours(),
   ]);
-
   return {
     Hero: heroData,
     Navbar: navbarData,
     Footer: footerData,
+    Tours: toursData,
   };
 };

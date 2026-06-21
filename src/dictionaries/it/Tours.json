@@ -1,19 +1,19 @@
 {
     "ui": {
-        "sectionTitle": "Tours in {city}",
+        "sectionTitle": "Tour a {city}",
         "buttons": {
-            "seeDetails": "See Details",
-            "previous": "Previous page",
-            "next": "Next page"
+            "seeDetails": "Vedi dettagli",
+            "previous": "Pagina precedente",
+            "next": "Pagina successiva"
         },
         "labels": {
-            "priceFrom": "From",
-            "reviews": "reviews",
+            "priceFrom": "Da",
+            "reviews": "recensioni",
             "currency": "CHF"
         }
     },
     "citiesShortcut": {
-        "sectionTitle": "Popular Cities",
+        "sectionTitle": "Città Popolari",
         "cities": [
             {
                 "id": 1,
@@ -32,7 +32,7 @@
             },
             {
                 "id": 4,
-                "name": "Lucerne",
+                "name": "Lucerna",
                 "img": "/assets/city-img-1.jpg"
             },
             {
@@ -42,7 +42,7 @@
             },
             {
                 "id": 6,
-                "name": "Zurich",
+                "name": "Zurigo",
                 "img": "/assets/city-img-1.jpg"
             }
         ]
@@ -51,10 +51,10 @@
         {
             "id": "zurich-old-town-walking",
             "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurich",
+            "city": "Zurigo",
             "duration": "half-day",
-            "durationLabel": "4 hours",
-            "title": "Zurich Old Town Walking Tour",
+            "durationLabel": "4 ore",
+            "title": "Tour a piedi della città vecchia di Zurigo",
             "price": 49,
             "rating": 4.8,
             "reviewCount": 120
@@ -62,10 +62,10 @@
         {
             "id": "zurich-city-highlights-cruise",
             "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurich",
+            "city": "Zurigo",
             "duration": "half-day",
-            "durationLabel": "3 hours",
-            "title": "Zurich City Highlights & Lake Cruise",
+            "durationLabel": "3 ore",
+            "title": "Attrazioni di Zurigo e crociera sul lago",
             "price": 65,
             "rating": 4.7,
             "reviewCount": 85
@@ -73,10 +73,10 @@
         {
             "id": "zurich-fondue-tuk-tuk",
             "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurich",
+            "city": "Zurigo",
             "duration": "short",
-            "durationLabel": "2 hours",
-            "title": "Swiss Fondue Tuk-Tuk Tour of Zurich",
+            "durationLabel": "2 ore",
+            "title": "Tour di Zurigo in Tuk-Tuk con fonduta svizzera",
             "price": 89,
             "rating": 4.9,
             "reviewCount": 64
@@ -84,10 +84,10 @@
         {
             "id": "zurich-lindt-chocolate-adventure",
             "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurich",
+            "city": "Zurigo",
             "duration": "half-day",
-            "durationLabel": "4.5 hours",
-            "title": "Zurich Chocolate SideCar & Lindt Museum Tour",
+            "durationLabel": "4.5 ore",
+            "title": "Tour di Zurigo in sidecar e Museo del cioccolato Lindt",
             "price": 75,
             "rating": 4.6,
             "reviewCount": 142

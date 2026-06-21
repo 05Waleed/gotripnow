@@ -121,6 +121,8 @@
 
 .tour-card-cta {
     color: #ffffff;
+    background-color: rgb(235, 68, 54);
+    border-color: rgb(235, 68, 54);
     padding: 8px 20px;
     border-radius: 24px;
     font-size: 0.875rem;

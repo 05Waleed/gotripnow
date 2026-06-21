@@ -1,19 +1,19 @@
 {
     "ui": {
-        "sectionTitle": "Tours in {city}",
+        "sectionTitle": "Visites à {city}",
         "buttons": {
-            "seeDetails": "See Details",
-            "previous": "Previous page",
-            "next": "Next page"
+            "seeDetails": "Voir les détails",
+            "previous": "Page précédente",
+            "next": "Page suivante"
         },
         "labels": {
-            "priceFrom": "From",
-            "reviews": "reviews",
+            "priceFrom": "À partir de",
+            "reviews": "avis",
             "currency": "CHF"
         }
     },
     "citiesShortcut": {
-        "sectionTitle": "Popular Cities",
+        "sectionTitle": "Villes Populaires",
         "cities": [
             {
                 "id": 1,
@@ -53,8 +53,8 @@
             "imageUrl": "/assets/city-img-1.jpg",
             "city": "Zurich",
             "duration": "half-day",
-            "durationLabel": "4 hours",
-            "title": "Zurich Old Town Walking Tour",
+            "durationLabel": "4 heures",
+            "title": "Visite à pied de la vieille ville de Zurich",
             "price": 49,
             "rating": 4.8,
             "reviewCount": 120
@@ -64,8 +64,8 @@
             "imageUrl": "/assets/city-img-1.jpg",
             "city": "Zurich",
             "duration": "half-day",
-            "durationLabel": "3 hours",
-            "title": "Zurich City Highlights & Lake Cruise",
+            "durationLabel": "3 heures",
+            "title": "Points forts de Zurich et croisière sur le lac",
             "price": 65,
             "rating": 4.7,
             "reviewCount": 85
@@ -75,8 +75,8 @@
             "imageUrl": "/assets/city-img-1.jpg",
             "city": "Zurich",
             "duration": "short",
-            "durationLabel": "2 hours",
-            "title": "Swiss Fondue Tuk-Tuk Tour of Zurich",
+            "durationLabel": "2 heures",
+            "title": "Visite de Zurich en Tuk-Tuk avec fondue suisse",
             "price": 89,
             "rating": 4.9,
             "reviewCount": 64
@@ -86,8 +86,8 @@
             "imageUrl": "/assets/city-img-1.jpg",
             "city": "Zurich",
             "duration": "half-day",
-            "durationLabel": "4.5 hours",
-            "title": "Zurich Chocolate SideCar & Lindt Museum Tour",
+            "durationLabel": "4.5 heures",
+            "title": "Visite de Zurich en side-car & Musée du chocolat Lindt",
             "price": 75,
             "rating": 4.6,
             "reviewCount": 142

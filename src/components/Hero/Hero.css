@@ -80,3 +80,30 @@
         height: calc(100dvh - 4.25rem);
     }
 }
+
+/* ── Mobile Landscape (Short viewports) ──────────────── */
+@media (max-height: 480px) and (orientation: landscape) {
+    .hero-container {
+        min-height: 25rem; 
+        padding: 2rem 0;
+    }
+
+    .hero-content {
+        justify-content: flex-end;
+        gap: 1rem; 
+    }
+
+    .hero-text-block {
+        gap: 0.25rem;
+    }
+
+    .hero-content-title {
+        font-size: clamp(1.5rem, 6vh, 2.5rem);
+        line-height: 1.1;
+    }
+
+    .hero-content-subtitle {
+        font-size: clamp(0.85rem, 4vh, 1.2rem);
+        line-height: 1.3;
+    }
+}

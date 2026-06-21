@@ -2,95 +2,24 @@
 
 import { useState, useRef, useCallback, useEffect } from 'react';
 import './TourSection.css';
-import TourCard from '../TourCard/TourCard';
+import TourCard, { TourData } from '../TourCard/TourCard';
 
-interface TourData {
-    id: number;
-    image: string;
-    title: string;
-    location: string;
-    duration: string;
-    rating: string;
-    reviewCount: number;
-    price: string;
-    ctaText?: string;
-    ctaColor?: string;
+interface TourSectionProps {
+    ui: {
+        sectionTitle: string;
+        buttons: {
+            seeDetails: string;
+            previous: string;
+            next: string;
+        };
+        labels: {
+            priceFrom: string;
+            reviews: string;
+            currency: string;
+        };
+    };
+    tours: TourData[];
 }
-
-const toursData: TourData[] = [
-    {
-        id: 1,
-        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80',
-        title: 'Zürich City and Lake Tour',
-        location: 'Altstadt & Lake Zürich',
-        duration: '3 hours',
-        rating: '4.8',
-        reviewCount: 120,
-        price: '65',
-        ctaText: 'See Details',
-        ctaColor: '#4a7fd4',
-    },
-    {
-        id: 2,
-        image: 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?auto=format&fit=crop&w=600&q=80',
-        title: 'Jungfraujoch - Top of Europe Trip',
-        location: 'Bernese Oberland',
-        duration: 'Full Day',
-        rating: '4.9',
-        reviewCount: 210,
-        price: '210',
-        ctaText: 'See Details',
-        ctaColor: '#cc2029',
-    },
-    {
-        id: 3,
-        image: 'https://images.unsplash.com/photo-1574484284002-952d92456975?auto=format&fit=crop&w=600&q=80',
-        title: 'Authentic Swiss Fondue Night',
-        location: 'Traditional Chalet',
-        duration: '2 hours',
-        rating: '4.7',
-        reviewCount: 85,
-        price: '55',
-        ctaText: 'See Details',
-        ctaColor: '#cc2029',
-    },
-    {
-        id: 4,
-        image: 'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=600&q=80',
-        title: 'Rhine Falls Day Trip from Zürich',
-        location: 'Schaffhausen',
-        duration: '5 hours',
-        rating: '4.6',
-        reviewCount: 98,
-        price: '79',
-        ctaText: 'See Details',
-        ctaColor: '#cc2029',
-    },
-    {
-        id: 5,
-        image: 'https://images.unsplash.com/photo-1527668752968-14dc70a27c95?auto=format&fit=crop&w=600&q=80',
-        title: 'Swiss Alps Helicopter Tour',
-        location: 'Zürich Airport',
-        duration: '1 hour',
-        rating: '5.0',
-        reviewCount: 42,
-        price: '320',
-        ctaText: 'See Details',
-        ctaColor: '#cc2029',
-    },
-    {
-        id: 6,
-        image: 'https://images.unsplash.com/photo-1559521783-1d1599583485?auto=format&fit=crop&w=600&q=80',
-        title: 'Chocolate & Cheese Tasting Tour',
-        location: 'Zürich Old Town',
-        duration: '2.5 hours',
-        rating: '4.5',
-        reviewCount: 167,
-        price: '45',
-        ctaText: 'See Details',
-        ctaColor: '#4a7fd4',
-    },
-];
 
 function useCardsPerPage(): number {
     const getCount = () => {
@@ -111,15 +40,14 @@ function useCardsPerPage(): number {
     return count;
 }
 
-export default function TourSection() {
+export default function TourSection({ ui, tours }: TourSectionProps) {
     const cardsPerPage = useCardsPerPage();
-    const totalPages = Math.ceil(toursData.length / cardsPerPage);
+    const totalPages = Math.ceil(tours.length / cardsPerPage);
 
     const [activePage, setActivePage] = useState(0);
     const trackRef = useRef<HTMLDivElement>(null);
     const isScrolling = useRef(false);
 
-    // Clamp active page when cardsPerPage changes (e.g. window resize)
     useEffect(() => {
         setActivePage((p) => Math.min(p, totalPages - 1));
     }, [totalPages]);
@@ -146,16 +74,23 @@ export default function TourSection() {
     const handlePrev = () => goToPage(Math.max(activePage - 1, 0));
     const handleNext = () => goToPage(Math.min(activePage + 1, totalPages - 1));
 
+    const cardUiData = {
+        seeDetails: ui.buttons.seeDetails,
+        priceFrom: ui.labels.priceFrom,
+        reviews: ui.labels.reviews,
+        currency: ui.labels.currency
+    };
+
     return (
         <section className="tours-section large-screen-max-width">
             <div className="tours-section-header">
-                <h1 className="tours-section-title">Zürich Tours</h1>
+                <h2 className="tours-section-title">{ui.sectionTitle}</h2>
                 <div className="tours-section-nav">
                     <button
                         className="tours-nav-btn"
                         onClick={handlePrev}
                         disabled={activePage === 0}
-                        aria-label="Previous page"
+                        aria-label={ui.buttons.previous}
                     >
                         ‹
                     </button>
@@ -163,34 +98,34 @@ export default function TourSection() {
                         className="tours-nav-btn"
                         onClick={handleNext}
                         disabled={activePage === totalPages - 1}
-                        aria-label="Next page"
+                        aria-label={ui.buttons.next}
                     >
                         ›
                     </button>
                 </div>
             </div>
 
-            <div
-                className="tours-track"
-                ref={trackRef}
-                onScroll={handleScroll}
-            >
+            <div className="tours-track" ref={trackRef} onScroll={handleScroll}>
                 {Array.from({ length: totalPages }).map((_, pageIndex) => (
                     <div
                         className="tours-page"
                         key={pageIndex}
                         style={{ '--cards-per-page': cardsPerPage } as React.CSSProperties}
                     >
-                        {toursData
+                        {tours
                             .slice(pageIndex * cardsPerPage, pageIndex * cardsPerPage + cardsPerPage)
                             .map((tour) => (
-                                <TourCard key={tour.id} {...tour} />
+                                <TourCard
+                                    key={tour.id}
+                                    {...tour}
+                                    ui={cardUiData}
+                                />
                             ))}
                     </div>
                 ))}
             </div>
 
-            <div className="tours-dots" role="tablist" aria-label="Tour pages">
+            <div className="tours-dots" role="tablist" aria-label={`${ui.sectionTitle} pages`}>
                 {Array.from({ length: totalPages }).map((_, i) => (
                     <button
                         key={i}
