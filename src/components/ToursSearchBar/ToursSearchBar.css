@@ -2,6 +2,14 @@
    ToursSearchBar — single unified white card
    ============================================= */
 
+/* Outer wrapper so errors sit below the card */
+.tsb-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
 .tsb-card {
     background-color: #ffffff;
     width: 100%;
@@ -23,6 +31,35 @@
     margin: 1rem 0;
 }
 
+/* ── Error messages below the card ─────────── */
+/* Always rendered — height reserved — so the card never shifts */
+.tsb-errors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.25rem;
+    padding: 0 0.25rem;
+    min-height: 1.25rem;
+}
+
+.tsb-error-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    color: #d63b2f;
+    animation: tsb-fade-in 0.15s ease;
+}
+
+@keyframes tsb-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 /* ── Responsive: tablet/mobile (≤ 768px) ─── */
 @media (max-width: 768px) {
     .tsb-card {
@@ -31,11 +68,15 @@
         border-radius: 1rem;
     }
 
-    /* Horizontal divider between stacked fields */
     .tsb-divider {
         width: auto;
         height: 1px;
         align-self: stretch;
         margin: 0 1.25rem;
+    }
+
+    .tsb-errors {
+        flex-direction: column;
+        gap: 0.3rem;
     }
 }

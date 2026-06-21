@@ -10,7 +10,6 @@
     min-width: 0;
 }
 
-/* Trigger area — flush inside card, no own border */
 .tlf-input-container {
     height: 5rem;
     width: 100%;
@@ -30,7 +29,6 @@
     background-color: #f9fafb;
 }
 
-/* Left-side field icon */
 .tlf-field-icon {
     color: #d63b2f;
     display: flex;
@@ -38,7 +36,6 @@
     flex-shrink: 0;
 }
 
-/* Search input */
 .tlf-input-container input {
     border: none;
     outline: none;
@@ -66,10 +63,10 @@
     padding: 1rem 0 0.75rem 0;
     z-index: 200;
     border: 1px solid #f0f0f0;
-    animation: tsb-drop-in 0.15s ease;
+    animation: tlf-drop-in 0.15s ease;
 }
 
-@keyframes tsb-drop-in {
+@keyframes tlf-drop-in {
     from {
         opacity: 0;
         transform: translateY(-6px);

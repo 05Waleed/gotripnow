@@ -19,7 +19,7 @@ interface TourTypeFieldProps {
     isOpen: boolean;
     onOpen: () => void;
     onClose: () => void;
-    onSelect: () => void;
+    onSelect: (value: string) => void;
 }
 
 function ClockFieldIcon() {
@@ -48,7 +48,7 @@ export default function TourTypeField({
 
     const handleSelect = (value: string) => {
         setSelectedValue(value);
-        onSelect(); // advance to next field
+        onSelect(value);
     };
 
     const currentLabel = TOUR_TYPES.find((o) => o.value === selectedValue)?.label;
@@ -59,18 +59,13 @@ export default function TourTypeField({
                 className={`ttf-input-container${isOpen ? ' active' : ''}`}
                 onClick={isOpen ? onClose : onOpen}
             >
-                {/* Left-side clock icon */}
-                <span className="ttf-field-icon">
-                    <ClockFieldIcon />
-                </span>
+                <span className="ttf-field-icon"><ClockFieldIcon /></span>
                 <span className="ttf-icon-sep" />
-
                 <span className="ttf-field-text">
                     <span className={`ttf-display-value${!selectedValue ? ' placeholder' : ''}`}>
                         {currentLabel || 'Select tour duration'}
                     </span>
                 </span>
-
                 <div className={`ttf-chevron${isOpen ? ' rotated' : ''}`}>
                     <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
                         <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" />
@@ -88,9 +83,7 @@ export default function TourTypeField({
                                 className={`ttf-option-item${selectedValue === option.value ? ' selected' : ''}`}
                                 onClick={() => handleSelect(option.value)}
                             >
-                                <div className="ttf-icon-container">
-                                    <ClockDropdownIcon />
-                                </div>
+                                <div className="ttf-icon-container"><ClockDropdownIcon /></div>
                                 <div className="ttf-text-container">
                                     <span className="ttf-label">{option.label}</span>
                                     <span className="ttf-description">{option.description}</span>

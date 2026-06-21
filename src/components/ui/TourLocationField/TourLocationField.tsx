@@ -9,20 +9,20 @@ interface SuggestionItem {
 }
 
 const SUGGESTIONS: SuggestionItem[] = [
-    { city: 'Zurich',      country: 'Switzerland' },
-    { city: 'Lucerne',     country: 'Switzerland' },
-    { city: 'Interlaken',  country: 'Switzerland' },
-    { city: 'Geneva',      country: 'Switzerland' },
-    { city: 'Bern',        country: 'Switzerland' },
-    { city: 'Zermatt',     country: 'Switzerland' },
-    { city: 'Basel',       country: 'Switzerland' },
+    { city: 'Zurich',     country: 'Switzerland' },
+    { city: 'Lucerne',    country: 'Switzerland' },
+    { city: 'Interlaken', country: 'Switzerland' },
+    { city: 'Geneva',     country: 'Switzerland' },
+    { city: 'Bern',       country: 'Switzerland' },
+    { city: 'Zermatt',    country: 'Switzerland' },
+    { city: 'Basel',      country: 'Switzerland' },
 ];
 
 interface TourLocationFieldProps {
     isOpen: boolean;
     onOpen: () => void;
     onClose: () => void;
-    onSelect: () => void;
+    onSelect: (city: string) => void;
 }
 
 function PinIcon() {
@@ -42,11 +42,8 @@ export default function TourLocationField({
     const inputRef = useRef<HTMLInputElement>(null);
     const [query, setQuery] = React.useState('');
 
-    // Auto-focus the input when this field becomes active
     useEffect(() => {
-        if (isOpen) {
-            setTimeout(() => inputRef.current?.focus(), 0);
-        }
+        if (isOpen) setTimeout(() => inputRef.current?.focus(), 0);
     }, [isOpen]);
 
     const filteredSuggestions = SUGGESTIONS.filter(
@@ -57,18 +54,14 @@ export default function TourLocationField({
 
     const handleSelect = (city: string) => {
         setQuery(city);
-        onSelect(); // advance to next field
+        onSelect(city);
     };
 
     return (
         <div className="tlf-wrapper">
             <div className={`tlf-input-container${isOpen ? ' active' : ''}`}>
-                {/* Left-side location icon */}
-                <span className="tlf-field-icon">
-                    <PinIcon />
-                </span>
+                <span className="tlf-field-icon"><PinIcon /></span>
                 <span className="tlf-icon-sep" />
-
                 <input
                     ref={inputRef}
                     type="text"

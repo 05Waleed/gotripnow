@@ -29,7 +29,6 @@
     background-color: #f9fafb;
 }
 
-/* Left-side clock icon */
 .ttf-field-icon {
     color: #d63b2f;
     display: flex;
@@ -37,7 +36,6 @@
     flex-shrink: 0;
 }
 
-/* Text area grows to fill, chevron stays right */
 .ttf-field-text {
     flex: 1;
     min-width: 0;
@@ -79,10 +77,10 @@
     padding: 1rem 0 0.75rem 0;
     z-index: 200;
     border: 1px solid #f0f0f0;
-    animation: tsb-drop-in 0.15s ease;
+    animation: ttf-drop-in 0.15s ease;
 }
 
-@keyframes tsb-drop-in {
+@keyframes ttf-drop-in {
     from {
         opacity: 0;
         transform: translateY(-6px);
