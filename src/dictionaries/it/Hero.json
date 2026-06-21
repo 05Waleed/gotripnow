@@ -1,6 +1,48 @@
 {
-  "title": "Trova la Tua Prossima Avventura",
-  "subtitle": "Prenota incredibili tour e attività locali in tutto il mondo",
-  "placeholder": "Dove vuoi andare?",
-  "button": "Cerca"
+  "hero": {
+    "title": "Trova la Tua Prossima Avventura",
+    "subtitle": "Prenota incredibili tour e attività locali in tutto il mondo"
+  },
+  "search": {
+    "button": "Cerca",
+    "location": {
+      "placeholder": "Cerca città",
+      "dropdownTitle": "Suggerimenti",
+      "noResults": "Nessuna destinazione trovata",
+      "errorRequired": "Seleziona una città"
+    },
+    "duration": {
+      "placeholder": "Seleziona durata",
+      "dropdownTitle": "Durata",
+      "errorRequired": "Seleziona la durata del tour",
+      "options": {
+        "halfDay": {
+          "label": "Mezza giornata",
+          "description": "4–6 ore"
+        },
+        "fullDay": {
+          "label": "Giornata intera",
+          "description": "8–10 ore"
+        },
+        "twoDays": {
+          "label": "Due giorni",
+          "description": "16–20 ore"
+        }
+      }
+    },
+    "travelers": {
+      "triggerSingular": "Viaggiatore",
+      "triggerPlural": "Viaggiatori",
+      "dropdownTitle": "Viaggiatori",
+      "adults": {
+        "label": "Adulti",
+        "description": "18 anni e oltre"
+      },
+      "children": {
+        "label": "Bambini",
+        "description": "0–17 anni"
+      },
+      "done": "Fatto"
+    }
+  }
 }

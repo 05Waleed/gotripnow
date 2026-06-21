@@ -1,21 +1,12 @@
 'use client';
-
 import React from 'react';
 import './TourTypeField.css';
+import type { HeroDict } from '../../Hero/Hero';
 
-interface TourTypeOption {
-    value: string;
-    label: string;
-    description: string;
-}
-
-const TOUR_TYPES: TourTypeOption[] = [
-    { value: 'half-day', label: 'Half Day', description: '4–6 hours' },
-    { value: 'full-day', label: 'Full Day', description: '8–10 hours' },
-    { value: 'two-days', label: 'Two Days', description: '16–20 hours' },
-];
+type DurationDict = HeroDict['search']['duration'];
 
 interface TourTypeFieldProps {
+    dict: DurationDict;
     isOpen: boolean;
     onOpen: () => void;
     onClose: () => void;
@@ -38,20 +29,22 @@ function ClockDropdownIcon() {
     );
 }
 
-export default function TourTypeField({
-    isOpen,
-    onOpen,
-    onClose,
-    onSelect,
-}: TourTypeFieldProps) {
+export default function TourTypeField({ dict, isOpen, onOpen, onClose, onSelect }: TourTypeFieldProps) {
     const [selectedValue, setSelectedValue] = React.useState('');
+
+    // Map static keys to dict options so labels come from the dictionary
+    const options = [
+        { value: 'half-day', ...dict.options.halfDay },
+        { value: 'full-day', ...dict.options.fullDay },
+        { value: 'two-days', ...dict.options.twoDays },
+    ];
 
     const handleSelect = (value: string) => {
         setSelectedValue(value);
         onSelect(value);
     };
 
-    const currentLabel = TOUR_TYPES.find((o) => o.value === selectedValue)?.label;
+    const currentLabel = options.find((o) => o.value === selectedValue)?.label;
 
     return (
         <div className="ttf-wrapper">
@@ -63,7 +56,7 @@ export default function TourTypeField({
                 <span className="ttf-icon-sep" />
                 <span className="ttf-field-text">
                     <span className={`ttf-display-value${!selectedValue ? ' placeholder' : ''}`}>
-                        {currentLabel || 'Select tour duration'}
+                        {currentLabel || dict.placeholder}
                     </span>
                 </span>
                 <div className={`ttf-chevron${isOpen ? ' rotated' : ''}`}>
@@ -75,9 +68,9 @@ export default function TourTypeField({
 
             {isOpen && (
                 <div className="ttf-dropdown">
-                    <div className="ttf-dropdown-title">Duration</div>
+                    <div className="ttf-dropdown-title">{dict.dropdownTitle}</div>
                     <ul className="ttf-options-list">
-                        {TOUR_TYPES.map((option) => (
+                        {options.map((option) => (
                             <li
                                 key={option.value}
                                 className={`ttf-option-item${selectedValue === option.value ? ' selected' : ''}`}

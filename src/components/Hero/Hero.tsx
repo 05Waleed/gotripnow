@@ -1,14 +1,31 @@
+// gotripnow/src/components/Hero/Hero.tsx
 import './Hero.css';
 import Image from 'next/image';
 import ToursSearchBar from '../ToursSearchBar/ToursSearchBar';
 
-interface HeroProps {
-    dict: {
-        title: string;
-        subtitle: string;
-        placeholder: string;
+export interface HeroDict {
+    hero: { title: string; subtitle: string };
+    search: {
         button: string;
+        location: { placeholder: string; dropdownTitle: string; noResults: string; errorRequired: string };
+        duration: {
+            placeholder: string; dropdownTitle: string; errorRequired: string;
+            options: {
+                halfDay: { label: string; description: string };
+                fullDay: { label: string; description: string };
+                twoDays: { label: string; description: string };
+            };
+        };
+        travelers: {
+            triggerSingular: string; triggerPlural: string; dropdownTitle: string; done: string;
+            adults: { label: string; description: string };
+            children: { label: string; description: string };
+        };
     };
+}
+
+interface HeroProps {
+    dict: HeroDict;
 }
 
 export default function Hero({ dict }: HeroProps) {
@@ -22,17 +39,13 @@ export default function Hero({ dict }: HeroProps) {
                 sizes="100vw"
                 className="hero-bg-image"
             />
-
             <div className="hero-content">
-                {/* Text block */}
                 <div className="hero-text-block">
-                    <h1 className="hero-content-title">{dict.title}</h1>
-                    <h2 className="hero-content-subtitle">{dict.subtitle}</h2>
+                    <h1 className="hero-content-title">{dict.hero.title}</h1>
+                    <h2 className="hero-content-subtitle">{dict.hero.subtitle}</h2>
                 </div>
-
-                {/* Search bar — wrapped to constrain max-width */}
                 <div className="hero-searchbar-wrapper">
-                    <ToursSearchBar />
+                    <ToursSearchBar dict={dict.search} />
                 </div>
             </div>
         </section>

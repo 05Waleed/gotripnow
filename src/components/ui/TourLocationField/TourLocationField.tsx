@@ -1,24 +1,25 @@
+// gotripnow/src/components/ui/TourLocationField/TourLocationField.tsx
 'use client';
-
 import React, { useEffect, useRef } from 'react';
 import './TourLocationField.css';
+import type { HeroDict } from '../../Hero/Hero';
 
-interface SuggestionItem {
-    city: string;
-    country: string;
-}
+type LocationDict = HeroDict['search']['location'];
+
+interface SuggestionItem { city: string; country: string }
 
 const SUGGESTIONS: SuggestionItem[] = [
-    { city: 'Zurich',     country: 'Switzerland' },
-    { city: 'Lucerne',    country: 'Switzerland' },
+    { city: 'Zurich', country: 'Switzerland' },
+    { city: 'Lucerne', country: 'Switzerland' },
     { city: 'Interlaken', country: 'Switzerland' },
-    { city: 'Geneva',     country: 'Switzerland' },
-    { city: 'Bern',       country: 'Switzerland' },
-    { city: 'Zermatt',    country: 'Switzerland' },
-    { city: 'Basel',      country: 'Switzerland' },
+    { city: 'Geneva', country: 'Switzerland' },
+    { city: 'Bern', country: 'Switzerland' },
+    { city: 'Zermatt', country: 'Switzerland' },
+    { city: 'Basel', country: 'Switzerland' },
 ];
 
 interface TourLocationFieldProps {
+    dict: LocationDict;
     isOpen: boolean;
     onOpen: () => void;
     onClose: () => void;
@@ -33,12 +34,7 @@ function PinIcon() {
     );
 }
 
-export default function TourLocationField({
-    isOpen,
-    onOpen,
-    onClose,
-    onSelect,
-}: TourLocationFieldProps) {
+export default function TourLocationField({ dict, isOpen, onOpen, onClose, onSelect }: TourLocationFieldProps) {
     const inputRef = useRef<HTMLInputElement>(null);
     const [query, setQuery] = React.useState('');
 
@@ -46,7 +42,7 @@ export default function TourLocationField({
         if (isOpen) setTimeout(() => inputRef.current?.focus(), 0);
     }, [isOpen]);
 
-    const filteredSuggestions = SUGGESTIONS.filter(
+    const filtered = SUGGESTIONS.filter(
         (item) =>
             item.city.toLowerCase().includes(query.toLowerCase()) ||
             item.country.toLowerCase().includes(query.toLowerCase())
@@ -65,7 +61,7 @@ export default function TourLocationField({
                 <input
                     ref={inputRef}
                     type="text"
-                    placeholder="Search City"
+                    placeholder={dict.placeholder}
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     onFocus={onOpen}
@@ -74,10 +70,10 @@ export default function TourLocationField({
 
             {isOpen && (
                 <div className="tlf-dropdown">
-                    <div className="tlf-dropdown-title">Suggestions</div>
+                    <div className="tlf-dropdown-title">{dict.dropdownTitle}</div>
                     <ul className="tlf-suggestions-list">
-                        {filteredSuggestions.length > 0 ? (
-                            filteredSuggestions.map((item, index) => (
+                        {filtered.length > 0 ? (
+                            filtered.map((item, index) => (
                                 <li
                                     key={index}
                                     className="tlf-suggestion-item"
@@ -96,7 +92,7 @@ export default function TourLocationField({
                                 </li>
                             ))
                         ) : (
-                            <div className="tlf-no-results">No destinations found</div>
+                            <div className="tlf-no-results">{dict.noResults}</div>
                         )}
                     </ul>
                 </div>

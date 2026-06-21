@@ -1,6 +1,48 @@
 {
-  "title": "Finde Dein Nächstes Abenteuer",
-  "subtitle": "Buche unglaubliche lokale Touren und Aktivitäten weltweit",
-  "placeholder": "Wohin möchtest du?",
-  "button": "Suchen"
+  "hero": {
+    "title": "Finde Dein Nächstes Abenteuer",
+    "subtitle": "Buche unglaubliche lokale Touren und Aktivitäten weltweit"
+  },
+  "search": {
+    "button": "Suchen",
+    "location": {
+      "placeholder": "Stadt suchen",
+      "dropdownTitle": "Vorschläge",
+      "noResults": "Keine Ziele gefunden",
+      "errorRequired": "Bitte wähle eine Stadt aus"
+    },
+    "duration": {
+      "placeholder": "Tourdauer wählen",
+      "dropdownTitle": "Dauer",
+      "errorRequired": "Bitte wähle eine Tourdauer aus",
+      "options": {
+        "halfDay": {
+          "label": "Halber Tag",
+          "description": "4–6 Stunden"
+        },
+        "fullDay": {
+          "label": "Ganzer Tag",
+          "description": "8–10 Stunden"
+        },
+        "twoDays": {
+          "label": "Zwei Tage",
+          "description": "16–20 Stunden"
+        }
+      }
+    },
+    "travelers": {
+      "triggerSingular": "Reisender",
+      "triggerPlural": "Reisende",
+      "dropdownTitle": "Reisende",
+      "adults": {
+        "label": "Erwachsene",
+        "description": "Ab 18 Jahren"
+      },
+      "children": {
+        "label": "Kinder",
+        "description": "0–17 Jahre"
+      },
+      "done": "Fertig"
+    }
+  }
 }

@@ -1,3 +1,4 @@
+// gotripnow/src/components/ToursSearchBar/ToursSearchBar.tsx
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -6,15 +7,17 @@ import TourLocationField from '../ui/TourLocationField/TourLocationField';
 import TourTypeField from '../ui/TourTypeField/TourTypeField';
 import TourPassengerField from '../ui/TourPassengerField/TourPassengerField';
 import TourSearchBttn from '../ui/TourSearchBttn/TourSearchBttn';
+import type { HeroDict } from '../Hero/Hero';
 
+type SearchDict = HeroDict['search'];
 type ActiveField = 'location' | 'type' | 'passenger' | null;
+interface FormErrors { location: string; type: string }
 
-interface FormErrors {
-    location: string;
-    type: string;
+interface ToursSearchBarProps {
+    dict: SearchDict;
 }
 
-export default function ToursSearchBar() {
+export default function ToursSearchBar({ dict }: ToursSearchBarProps) {
     const [activeField, setActiveField] = useState<ActiveField>(null);
     const [location, setLocation] = useState('');
     const [tourType, setTourType] = useState('');
@@ -33,16 +36,11 @@ export default function ToursSearchBar() {
 
     function handleSearch() {
         const newErrors: FormErrors = { location: '', type: '' };
-
-        if (!location.trim()) newErrors.location = 'Please select a city';
-        if (!tourType) newErrors.type = 'Please select a tour duration';
-
+        if (!location.trim()) newErrors.location = dict.location.errorRequired;
+        if (!tourType) newErrors.type = dict.duration.errorRequired;
         setErrors(newErrors);
-
         if (newErrors.location || newErrors.type) return;
-
         setActiveField(null);
-        // → your search / router call here
         console.log('Search:', { location, tourType });
     }
 
@@ -50,6 +48,7 @@ export default function ToursSearchBar() {
         <div className="tsb-wrapper">
             <div className="tsb-card" ref={cardRef}>
                 <TourLocationField
+                    dict={dict.location}
                     isOpen={activeField === 'location'}
                     onOpen={() => setActiveField('location')}
                     onClose={() => setActiveField(null)}
@@ -59,10 +58,9 @@ export default function ToursSearchBar() {
                         setActiveField('type');
                     }}
                 />
-
                 <div className="tsb-divider" />
-
                 <TourTypeField
+                    dict={dict.duration}
                     isOpen={activeField === 'type'}
                     onOpen={() => setActiveField('type')}
                     onClose={() => setActiveField(null)}
@@ -72,19 +70,16 @@ export default function ToursSearchBar() {
                         setActiveField('passenger');
                     }}
                 />
-
                 <div className="tsb-divider" />
-
                 <TourPassengerField
+                    dict={dict.travelers}
                     isOpen={activeField === 'passenger'}
                     onOpen={() => setActiveField('passenger')}
                     onClose={() => setActiveField(null)}
                 />
-
-                <TourSearchBttn onClick={handleSearch} />
+                <TourSearchBttn label={dict.button} onClick={handleSearch} />
             </div>
 
-            {/* Always rendered — height reserved — no layout shift */}
             <div className="tsb-errors" role="alert" aria-live="polite">
                 {errors.location && (
                     <span className="tsb-error-item">

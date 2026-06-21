@@ -1,6 +1,48 @@
 {
-  "title": "Find Your Next Adventure",
-  "subtitle": "Book incredible local tours and activities worldwide",
-  "placeholder": "Where are you going?",
-  "button": "Search"
+  "hero": {
+    "title": "Find Your Next Adventure",
+    "subtitle": "Book incredible local tours and activities worldwide"
+  },
+  "search": {
+    "button": "Search",
+    "location": {
+      "placeholder": "Search City",
+      "dropdownTitle": "Suggestions",
+      "noResults": "No destinations found",
+      "errorRequired": "Please select a city"
+    },
+    "duration": {
+      "placeholder": "Select tour duration",
+      "dropdownTitle": "Duration",
+      "errorRequired": "Please select a tour duration",
+      "options": {
+        "halfDay": {
+          "label": "Half Day",
+          "description": "4–6 hours"
+        },
+        "fullDay": {
+          "label": "Full Day",
+          "description": "8–10 hours"
+        },
+        "twoDays": {
+          "label": "Two Days",
+          "description": "16–20 hours"
+        }
+      }
+    },
+    "travelers": {
+      "triggerSingular": "Traveler",
+      "triggerPlural": "Travelers",
+      "dropdownTitle": "Travelers",
+      "adults": {
+        "label": "Adults",
+        "description": "Age 18+"
+      },
+      "children": {
+        "label": "Children",
+        "description": "Ages 0–17"
+      },
+      "done": "Done"
+    }
+  }
 }
