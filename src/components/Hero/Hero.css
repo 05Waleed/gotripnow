@@ -1,0 +1,89 @@
+/* =============================================
+   Hero — fully responsive with clamp()
+   ============================================= */
+
+.hero-container {
+    position: relative;
+    height: calc(100dvh - 4.7rem);
+    width: 100%;
+}
+
+.hero-bg-image {
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.52);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: clamp(1.5rem, 4vw, 5rem);
+    height: 100%;
+    width: 100%;
+    /* 
+      Horizontal padding: 1rem on tiny phones → 7.5rem on large desktops
+      Vertical bottom padding: 2rem → 3rem
+    */
+    padding:
+        clamp(1rem, 3vw, 2rem) clamp(1rem, 6vw, 7.5rem) clamp(1.5rem, 4vw, 3rem);
+    box-sizing: border-box;
+}
+
+/* Text block */
+.hero-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.hero-content-title {
+    color: #ffffff;
+    font-size: clamp(1.75rem, 5vw + 0.5rem, 4.25rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.hero-content-subtitle {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: clamp(0.95rem, 1.8vw + 0.3rem, 2rem);
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Search bar container — constrains width on large screens */
+.hero-searchbar-wrapper {
+    width: 100%;
+}
+
+/* ── Small phones (≤ 480px) ──────────────── */
+@media (max-width: 480px) {
+    .hero-container {
+        height: calc(100dvh - 3.75rem);
+    }
+
+    .hero-content {
+        justify-content: flex-end;
+        padding-bottom: 1.5rem;
+    }
+}
+
+/* ── Tablets (481px – 768px) ─────────────── */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-container {
+        height: calc(100dvh - 4.25rem);
+    }
+}
+
+/* ── Large desktops (≥ 1400px) ───────────── */
+@media (min-width: 1400px) {
+    .hero-content {
+        padding-left: clamp(7.5rem, 10vw, 12rem);
+        padding-right: clamp(7.5rem, 10vw, 12rem);
+    }
+}

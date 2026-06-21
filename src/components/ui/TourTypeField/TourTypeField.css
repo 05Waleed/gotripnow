@@ -1,0 +1,188 @@
+/* =============================================
+   TourTypeField — middle section of search bar
+   ============================================= */
+
+.ttf-wrapper {
+    position: relative;
+    flex: 1;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, sans-serif;
+    min-width: 0;
+}
+
+.ttf-input-container {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    gap: 0.3rem;
+    transition: background-color 0.15s ease;
+}
+
+.ttf-input-container:hover,
+.ttf-input-container.active {
+    background-color: #f9fafb;
+}
+
+/* Left-side clock icon */
+.ttf-field-icon {
+    color: #d63b2f;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Text area grows to fill, chevron stays right */
+.ttf-field-text {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ttf-display-value {
+    font-size: 0.975rem;
+    color: #111827;
+}
+
+.ttf-display-value.placeholder {
+    color: #9ca3af;
+}
+
+.ttf-chevron {
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.ttf-chevron.rotated {
+    transform: rotate(180deg);
+}
+
+/* ── Dropdown ─────────────────────────────── */
+.ttf-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    min-width: 280px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.13);
+    padding: 1rem 0 0.75rem 0;
+    z-index: 200;
+    border: 1px solid #f0f0f0;
+    animation: tsb-drop-in 0.15s ease;
+}
+
+@keyframes tsb-drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ttf-dropdown-title {
+    padding: 0 1.25rem 0.5rem 1.25rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.ttf-options-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ttf-option-item {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.12s ease;
+    gap: 0.875rem;
+}
+
+.ttf-option-item:hover {
+    background-color: #f9fafb;
+}
+
+.ttf-option-item.selected {
+    background-color: #fff7f5;
+}
+
+.ttf-option-item.selected .ttf-label {
+    color: #d63b2f;
+}
+
+.ttf-icon-container {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: #f3f4f6;
+    color: #374151;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ttf-option-item.selected .ttf-icon-container {
+    background-color: #fef2f0;
+    color: #d63b2f;
+}
+
+.ttf-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ttf-label {
+    font-size: 0.93rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.3;
+}
+
+.ttf-description {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.1rem;
+}
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 768px) {
+    .ttf-wrapper {
+        flex: none;
+        width: 100%;
+    }
+
+    .ttf-input-container {
+        height: 4.25rem;
+        border-radius: 0;
+    }
+
+    .ttf-dropdown {
+        left: 0;
+        right: 0;
+        min-width: unset;
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+        top: 100%;
+    }
+}

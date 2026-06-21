@@ -1,0 +1,169 @@
+/* =============================================
+   TourLocationField — left section of search bar
+   ============================================= */
+
+.tlf-wrapper {
+    position: relative;
+    flex: 1.4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, sans-serif;
+    min-width: 0;
+}
+
+/* Trigger area — flush inside card, no own border */
+.tlf-input-container {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 1rem 0 0 1rem;
+    gap: 0.2rem;
+    cursor: text;
+    transition: background-color 0.15s ease;
+}
+
+.tlf-input-container:hover,
+.tlf-input-container.active {
+    background-color: #f9fafb;
+}
+
+/* Left-side field icon */
+.tlf-field-icon {
+    color: #d63b2f;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* Search input */
+.tlf-input-container input {
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    font-size: 0.975rem;
+    background: transparent;
+    color: #111827;
+    font-family: inherit;
+}
+
+.tlf-input-container input::placeholder {
+    color: #9ca3af;
+}
+
+/* ── Dropdown ─────────────────────────────── */
+.tlf-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    min-width: 300px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.13);
+    padding: 1rem 0 0.75rem 0;
+    z-index: 200;
+    border: 1px solid #f0f0f0;
+    animation: tsb-drop-in 0.15s ease;
+}
+
+@keyframes tsb-drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tlf-dropdown-title {
+    padding: 0 1.25rem 0.5rem 1.25rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.tlf-suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tlf-suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1.25rem;
+    cursor: pointer;
+    transition: background-color 0.12s ease;
+    gap: 0.875rem;
+}
+
+.tlf-suggestion-item:hover {
+    background-color: #f9fafb;
+}
+
+.tlf-icon-container {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: #f3f4f6;
+    color: #374151;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tlf-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tlf-city {
+    font-size: 0.93rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.3;
+}
+
+.tlf-country {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 0.1rem;
+}
+
+.tlf-no-results {
+    padding: 1rem 1.25rem;
+    color: #9ca3af;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ── Responsive ───────────────────────────── */
+@media (max-width: 768px) {
+    .tlf-wrapper {
+        flex: none;
+        width: 100%;
+    }
+
+    .tlf-input-container {
+        height: 4.25rem;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .tlf-dropdown {
+        left: 0;
+        right: 0;
+        min-width: unset;
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+        top: 100%;
+    }
+}

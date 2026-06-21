@@ -1,0 +1,41 @@
+/* =============================================
+   ToursSearchBar — single unified white card
+   ============================================= */
+
+.tsb-card {
+    background-color: #ffffff;
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.16);
+    display: flex;
+    align-items: stretch;
+    height: 5rem;
+    overflow: visible;
+    position: relative;
+}
+
+/* Vertical divider between fields */
+.tsb-divider {
+    width: 1px;
+    background-color: #e5e7eb;
+    flex-shrink: 0;
+    align-self: stretch;
+    margin: 1rem 0;
+}
+
+/* ── Responsive: tablet/mobile (≤ 768px) ─── */
+@media (max-width: 768px) {
+    .tsb-card {
+        flex-direction: column;
+        height: auto;
+        border-radius: 1rem;
+    }
+
+    /* Horizontal divider between stacked fields */
+    .tsb-divider {
+        width: auto;
+        height: 1px;
+        align-self: stretch;
+        margin: 0 1.25rem;
+    }
+}
