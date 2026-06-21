@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero/Hero";
+import TourSection from "@/components/TourSection/TourSection";
 import { getDictionary, Locale } from "../dictionaries";
 
 interface PageProps {
@@ -12,6 +13,7 @@ export default async function Page({ params }: PageProps) {
   return (
     <>
       <Hero dict={dict.Hero} />
+      <TourSection />
     </>
   );
 }

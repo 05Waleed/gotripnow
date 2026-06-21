@@ -36,11 +36,11 @@
       "dropdownTitle": "Reisende",
       "adults": {
         "label": "Erwachsene",
-        "description": "Ab 18 Jahren"
+        "description": "Ab 15 Jahren"
       },
       "children": {
         "label": "Kinder",
-        "description": "0–17 Jahre"
+        "description": "0–14 Jahre"
       },
       "done": "Fertig"
     }

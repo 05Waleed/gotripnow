@@ -1,0 +1,319 @@
+{
+    "tours": [
+        {
+            "id": "zurich-old-town-walking",
+            "imageUrl": "/assets/tours/zurich-old-town.jpg",
+            "city": "Zurich",
+            "duration": "half-day",
+            "durationLabel": "4 hours",
+            "title": "Zurich Old Town Walking Tour",
+            "price": 49
+        },
+        {
+            "id": "zurich-lake-cruise",
+            "imageUrl": "/assets/tours/zurich-lake.jpg",
+            "city": "Zurich",
+            "duration": "half-day",
+            "durationLabel": "3 hours",
+            "title": "Zurich Lake Sunset Cruise",
+            "price": 65
+        },
+        {
+            "id": "zurich-uetliberg-hike",
+            "imageUrl": "/assets/tours/uetliberg.jpg",
+            "city": "Zurich",
+            "duration": "full-day",
+            "durationLabel": "8 hours",
+            "title": "Uetliberg Mountain Full Day Hike",
+            "price": 89
+        },
+        {
+            "id": "zurich-Rhine-falls",
+            "imageUrl": "/assets/tours/rhine-falls.jpg",
+            "city": "Zurich",
+            "duration": "full-day",
+            "durationLabel": "9 hours",
+            "title": "Rhine Falls & Stein am Rhein Day Trip",
+            "price": 110
+        },
+        {
+            "id": "zurich-jungfraujoch",
+            "imageUrl": "/assets/tours/jungfraujoch.jpg",
+            "city": "Zurich",
+            "duration": "two-days",
+            "durationLabel": "2 days",
+            "title": "Jungfraujoch Top of Europe from Zurich",
+            "price": 320
+        },
+        {
+            "id": "lucerne-city-walk",
+            "imageUrl": "/assets/tours/lucerne-chapel-bridge.jpg",
+            "city": "Lucerne",
+            "duration": "half-day",
+            "durationLabel": "3 hours",
+            "title": "Lucerne Chapel Bridge & Old Town Walk",
+            "price": 44
+        },
+        {
+            "id": "lucerne-aare-gorge",
+            "imageUrl": "/assets/tours/aare-gorge.jpg",
+            "city": "Lucerne",
+            "duration": "full-day",
+            "durationLabel": "8 hours",
+            "title": "Aare Gorge Full Day Tour from Lucerne",
+            "price": 98
+        },
+        {
+            "id": "lucerne-einsiedeln",
+            "imageUrl": "/assets/tours/einsiedeln.jpg",
+            "city": "Lucerne",
+            "duration": "full-day",
+            "durationLabel": "9 hours",
+            "title": "Tour to Einsiedeln Monastery from Lucerne",
+            "price": 85
+        },
+        {
+            "id": "lucerne-stans-cable-car",
+            "imageUrl": "/assets/tours/stans-cable-car.jpg",
+            "city": "Lucerne",
+            "duration": "half-day",
+            "durationLabel": "5 hours",
+            "title": "Half Day Cable Car Tour from Lucerne to Stans",
+            "price": 75
+        },
+        {
+            "id": "lucerne-interlaken-two-days",
+            "imageUrl": "/assets/tours/interlaken-two-days.jpg",
+            "city": "Lucerne",
+            "duration": "two-days",
+            "durationLabel": "2 days",
+            "title": "Lucerne to Interlaken Adventure — 2 Day Tour",
+            "price": 290
+        },
+        {
+            "id": "interlaken-paragliding",
+            "imageUrl": "/assets/tours/interlaken-paragliding.jpg",
+            "city": "Interlaken",
+            "duration": "half-day",
+            "durationLabel": "4 hours",
+            "title": "Paragliding over the Swiss Alps from Interlaken",
+            "price": 180
+        },
+        {
+            "id": "interlaken-canyoning",
+            "imageUrl": "/assets/tours/interlaken-canyoning.jpg",
+            "city": "Interlaken",
+            "duration": "half-day",
+            "durationLabel": "5 hours",
+            "title": "Canyoning Adventure in Interlaken",
+            "price": 130
+        },
+        {
+            "id": "interlaken-grindelwald",
+            "imageUrl": "/assets/tours/grindelwald.jpg",
+            "city": "Interlaken",
+            "duration": "full-day",
+            "durationLabel": "8 hours",
+            "title": "Grindelwald Glacier Hike from Interlaken",
+            "price": 115
+        },
+        {
+            "id": "interlaken-schilthorn",
+            "imageUrl": "/assets/tours/schilthorn.jpg",
+            "city": "Interlaken",
+            "duration": "full-day",
+            "durationLabel": "10 hours",
+            "title": "Schilthorn & Mürren Full Day Excursion",
+            "price": 145
+        },
+        {
+            "id": "interlaken-lauterbrunnen-two-days",
+            "imageUrl": "/assets/tours/lauterbrunnen.jpg",
+            "city": "Interlaken",
+            "duration": "two-days",
+            "durationLabel": "2 days",
+            "title": "Lauterbrunnen Valley & Wengen Overnight Tour",
+            "price": 340
+        },
+        {
+            "id": "geneva-old-town",
+            "imageUrl": "/assets/tours/geneva-old-town.jpg",
+            "city": "Geneva",
+            "duration": "half-day",
+            "durationLabel": "3 hours",
+            "title": "Geneva Old Town & Jet d'Eau Walking Tour",
+            "price": 42
+        },
+        {
+            "id": "geneva-lake-boat",
+            "imageUrl": "/assets/tours/geneva-lake-boat.jpg",
+            "city": "Geneva",
+            "duration": "half-day",
+            "durationLabel": "4 hours",
+            "title": "Lake Geneva Scenic Boat Tour",
+            "price": 68
+        },
+        {
+            "id": "geneva-montreux",
+            "imageUrl": "/assets/tours/montreux-chateau.jpg",
+            "city": "Geneva",
+            "duration": "full-day",
+            "durationLabel": "9 hours",
+            "title": "Montreux & Château de Chillon Day Trip from Geneva",
+            "price": 99
+        },
+        {
+            "id": "geneva-annecy",
+            "imageUrl": "/assets/tours/annecy.jpg",
+            "city": "Geneva",
+            "duration": "full-day",
+            "durationLabel": "8 hours",
+            "title": "Annecy — Venice of the Alps — Day Trip from Geneva",
+            "price": 88
+        },
+        {
+            "id": "geneva-chamonix-two-days",
+            "imageUrl": "/assets/tours/chamonix.jpg",
+            "city": "Geneva",
+            "duration": "two-days",
+            "durationLabel": "2 days",
+            "title": "Chamonix Mont Blanc Overnight Tour from Geneva",
+            "price": 375
+        },
+        {
+            "id": "bern-old-town",
+            "imageUrl": "/assets/tours/bern-old-town.jpg",
+            "city": "Bern",
+            "duration": "half-day",
+            "durationLabel": "3 hours",
+            "title": "Bern UNESCO Old Town & Bear Park Walk",
+            "price": 38
+        },
+        {
+            "id": "bern-ballenberg",
+            "imageUrl": "/assets/tours/ballenberg.jpg",
+            "city": "Bern",
+            "duration": "full-day",
+            "durationLabel": "9 hours",
+            "title": "Ballenberg Open Air Museum Full Day from Bern",
+            "price": 92
+        },
+        {
+            "id": "bern-thun-brienz",
+            "imageUrl": "/assets/tours/thun-brienz.jpg",
+            "city": "Bern",
+            "duration": "full-day",
+            "durationLabel": "8 hours",
+            "title": "Lakes Thun & Brienz Scenic Day Tour from Bern",
+            "price": 105
+        },
+        {
+            "id": "bern-gruyeres",
+            "imageUrl": "/assets/tours/gruyeres.jpg",
+            "city": "Bern",
+            "duration": "half-day",
+            "durationLabel": "5 hours",
+            "title": "Gruyères Cheese & Castle Half Day from Bern",
+            "price": 72
+        },
+        {
+            "id": "bern-black-forest-two-days",
+            "imageUrl": "/assets/tours/black-forest.jpg",
+            "city": "Bern",
+            "duration": "two-days",
+            "durationLabel": "2 days",
+            "title": "Black Forest & Freiburg Overnight Tour from Bern",
+            "price": 295
+        },
+        {
+            "id": "zermatt-matterhorn-view",
+            "imageUrl": "/assets/tours/matterhorn.jpg",
+            "city": "Zermatt",
+            "duration": "half-day",
+            "durationLabel": "4 hours",
+            "title": "Matterhorn Glacier Paradise Viewpoint Tour",
+            "price": 155
+        },
+        {
+            "id": "zermatt-gornergratt",
+            "imageUrl": "/assets/tours/gornergratt.jpg",
+            "city": "Zermatt",
+            "duration": "full-day",
+            "durationLabel": "8 hours",
+            "title": "Gornergrat Railway & Alpine Lakes Full Day",
+            "price": 175
+        },
+        {
+            "id": "zermatt-5-lakes-hike",
+            "imageUrl": "/assets/tours/five-lakes.jpg",
+            "city": "Zermatt",
+            "duration": "full-day",
+            "durationLabel": "9 hours",
+            "title": "Five Lakes Walk — Zermatt's Classic Hike",
+            "price": 90
+        },
+        {
+            "id": "zermatt-ski-intro",
+            "imageUrl": "/assets/tours/zermatt-ski.jpg",
+            "city": "Zermatt",
+            "duration": "half-day",
+            "durationLabel": "5 hours",
+            "title": "Beginner Ski Lesson on Zermatt Slopes",
+            "price": 210
+        },
+        {
+            "id": "zermatt-saas-fee-two-days",
+            "imageUrl": "/assets/tours/saas-fee.jpg",
+            "city": "Zermatt",
+            "duration": "two-days",
+            "durationLabel": "2 days",
+            "title": "Zermatt & Saas-Fee Alpine Villages Overnight",
+            "price": 420
+        },
+        {
+            "id": "basel-art-museums",
+            "imageUrl": "/assets/tours/basel-art.jpg",
+            "city": "Basel",
+            "duration": "half-day",
+            "durationLabel": "4 hours",
+            "title": "Basel Art Museums & Rhine Promenade Tour",
+            "price": 45
+        },
+        {
+            "id": "basel-three-countries",
+            "imageUrl": "/assets/tours/three-countries.jpg",
+            "city": "Basel",
+            "duration": "half-day",
+            "durationLabel": "3 hours",
+            "title": "Three Countries Corner — Switzerland, France & Germany",
+            "price": 39
+        },
+        {
+            "id": "basel-colmar",
+            "imageUrl": "/assets/tours/colmar.jpg",
+            "city": "Basel",
+            "duration": "full-day",
+            "durationLabel": "8 hours",
+            "title": "Colmar Alsatian Wine Town Day Trip from Basel",
+            "price": 82
+        },
+        {
+            "id": "basel-freiburg",
+            "imageUrl": "/assets/tours/freiburg.jpg",
+            "city": "Basel",
+            "duration": "full-day",
+            "durationLabel": "9 hours",
+            "title": "Freiburg im Breisgau Full Day Excursion from Basel",
+            "price": 78
+        },
+        {
+            "id": "basel-strasbourg-two-days",
+            "imageUrl": "/assets/tours/strasbourg.jpg",
+            "city": "Basel",
+            "duration": "two-days",
+            "durationLabel": "2 days",
+            "title": "Strasbourg & Alsace Wine Route Overnight from Basel",
+            "price": 285
+        }
+    ]
+}

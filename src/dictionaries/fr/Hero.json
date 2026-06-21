@@ -36,11 +36,11 @@
       "dropdownTitle": "Voyageurs",
       "adults": {
         "label": "Adultes",
-        "description": "18 ans et plus"
+        "description": "15 ans et plus"
       },
       "children": {
         "label": "Enfants",
-        "description": "0–17 ans"
+        "description": "0–14 ans"
       },
       "done": "Terminer"
     }

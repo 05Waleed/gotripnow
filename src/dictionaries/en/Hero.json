@@ -36,11 +36,11 @@
       "dropdownTitle": "Travelers",
       "adults": {
         "label": "Adults",
-        "description": "Age 18+"
+        "description": "Age 14+"
       },
       "children": {
         "label": "Children",
-        "description": "Ages 0–17"
+        "description": "Ages 0–14"
       },
       "done": "Done"
     }

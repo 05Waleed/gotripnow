@@ -39,7 +39,7 @@ export default function Hero({ dict }: HeroProps) {
                 sizes="100vw"
                 className="hero-bg-image"
             />
-            <div className="hero-content">
+            <div className="hero-content large-screen-max-width">
                 <div className="hero-text-block">
                     <h1 className="hero-content-title">{dict.hero.title}</h1>
                     <h2 className="hero-content-subtitle">{dict.hero.subtitle}</h2>
