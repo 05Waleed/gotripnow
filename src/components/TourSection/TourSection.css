@@ -106,10 +106,6 @@
 }
 
 @media (max-width: 639px) {
-    .tours-section {
-        margin-top: 2.5rem;
-        margin-bottom: 2.5rem;
-    }
 
     .tours-section-title {
         font-size: 1.4rem;

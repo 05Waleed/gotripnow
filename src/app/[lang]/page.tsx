@@ -3,6 +3,7 @@ import TourSection from "@/components/TourSection/TourSection";
 import CitiesShortcut from "@/components/CitiesShortcut/CitiesShortcut";
 import { getDictionary, Locale } from "../dictionaries";
 import { TourData } from "@/components/TourCard/TourCard";
+import Whyus from "@/components/Whyus/Whyus";
 
 interface PageProps {
   params: Promise<{ lang: Locale }>;
@@ -25,17 +26,13 @@ export default async function Page({ params }: PageProps) {
   return (
     <>
       <Hero dict={dict.Hero} />
-
-      {/* Pass the consolidated citiesShortcut block down */}
       <CitiesShortcut dict={dict.Tours.citiesShortcut} />
-
       {Object.entries(toursByCity).map(([city, tours]) => {
         const template = dict.Tours.ui.sectionTitle || "Tours in {city}";
         const sectionUi = {
           ...dict.Tours.ui,
-          sectionTitle: template.replace("{city}", city)
+          sectionTitle: template.replace("{city}", city),
         };
-
         return (
           <TourSection
             key={city}
@@ -44,6 +41,7 @@ export default async function Page({ params }: PageProps) {
           />
         );
       })}
+      <Whyus dict={dict.Whyus} />
     </>
   );
 }

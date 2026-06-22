@@ -8,39 +8,45 @@ const loaders = {
     Navbar: () => import("../dictionaries/en/Navbar.json").then((m) => m.default),
     Footer: () => import("../dictionaries/en/Footer.json").then((m) => m.default),
     Tours: () => import("../dictionaries/en/Tours.json").then((m) => m.default),
+    Whyus: () => import("../dictionaries/en/Whyus.json").then((m) => m.default),
   },
   de: {
     Hero: () => import("../dictionaries/de/Hero.json").then((m) => m.default),
     Navbar: () => import("../dictionaries/de/Navbar.json").then((m) => m.default),
     Footer: () => import("../dictionaries/de/Footer.json").then((m) => m.default),
     Tours: () => import("../dictionaries/de/Tours.json").then((m) => m.default),
+    Whyus: () => import("../dictionaries/de/Whyus.json").then((m) => m.default),
   },
   fr: {
     Hero: () => import("../dictionaries/fr/Hero.json").then((m) => m.default),
     Navbar: () => import("../dictionaries/fr/Navbar.json").then((m) => m.default),
     Footer: () => import("../dictionaries/fr/Footer.json").then((m) => m.default),
     Tours: () => import("../dictionaries/fr/Tours.json").then((m) => m.default),
+    Whyus: () => import("../dictionaries/fr/Whyus.json").then((m) => m.default),
   },
   it: {
     Hero: () => import("../dictionaries/it/Hero.json").then((m) => m.default),
     Navbar: () => import("../dictionaries/it/Navbar.json").then((m) => m.default),
     Footer: () => import("../dictionaries/it/Footer.json").then((m) => m.default),
     Tours: () => import("../dictionaries/it/Tours.json").then((m) => m.default),
+    Whyus: () => import("../dictionaries/it/Whyus.json").then((m) => m.default),
   },
 };
 
 export const getDictionary = async (locale: Locale) => {
   const currentLoader = loaders[locale] || loaders.en;
-  const [heroData, navbarData, footerData, toursData] = await Promise.all([
+  const [heroData, navbarData, footerData, toursData, whyusData] = await Promise.all([
     currentLoader.Hero(),
     currentLoader.Navbar(),
     currentLoader.Footer(),
     currentLoader.Tours(),
+    currentLoader.Whyus(),
   ]);
   return {
     Hero: heroData,
     Navbar: navbarData,
     Footer: footerData,
     Tours: toursData,
+    Whyus: whyusData,
   };
 };
