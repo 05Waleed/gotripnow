@@ -5,6 +5,7 @@ import { getDictionary, Locale } from "../dictionaries";
 import { TourData } from "@/components/TourCard/TourCard";
 import Whyus from "@/components/Whyus/Whyus";
 import Reviews from "@/components/Reviews/Reviews";
+import VideoDay from "@/components/VideoDar/VideoDay";
 
 interface PageProps {
   params: Promise<{ lang: Locale }>;
@@ -14,7 +15,6 @@ export default async function Page({ params }: PageProps) {
   const { lang } = await params;
   const dict = await getDictionary(lang);
 
-  // Group tours by city directly out of the shared file
   const toursByCity = dict.Tours.tours.reduce<Record<string, TourData[]>>(
     (acc, tour) => {
       if (!acc[tour.city]) acc[tour.city] = [];
@@ -44,6 +44,10 @@ export default async function Page({ params }: PageProps) {
       })}
       <Whyus dict={dict.Whyus} />
       <Reviews dict={dict.Reviews} />
+      <VideoDay
+        dict={dict.VideoDay}
+        youtubeId="lzCdg7zfCY0"
+      />
     </>
   );
 }

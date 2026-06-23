@@ -1,0 +1,243 @@
+/* ─── VideoDay Section ────────────────────────────────────────────────── */
+
+.videoday {
+    margin: 6rem auto;
+}
+
+.videoday__card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 48px 48px 56px;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    background-color: #1a2f4a;
+}
+
+.videoday__card:hover {
+    /* Hardcoded fallback matching rgb(235, 68, 54) at 30% opacity */
+    box-shadow: 0 20px 60px rgba(235, 68, 54, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+/* ── Background image ────────────────────────────────────────────────── */
+.videoday__bg {
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+}
+
+/* ── Dark + diagonal texture overlay ────────────────────────────────── */
+.videoday__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        /* diagonal hatching */
+        repeating-linear-gradient(-45deg,
+            transparent,
+            transparent 18px,
+            rgba(255, 255, 255, 0.025) 18px,
+            rgba(255, 255, 255, 0.025) 19px),
+        /* dark tint so text is always readable */
+        linear-gradient(to top,
+            rgba(10, 20, 40, 0.82) 0%,
+            rgba(10, 20, 40, 0.45) 50%,
+            rgba(10, 20, 40, 0.25) 100%);
+}
+
+/* Everything above the overlays */
+.videoday__play,
+.videoday__content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ── Play button ─────────────────────────────────────────────────────── */
+.videoday__play {
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0;
+}
+
+.videoday__play svg {
+    width: 22px;
+    height: 22px;
+    color: var(--red-accent-color);
+    margin-left: 3px;
+}
+
+.videoday__play:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4);
+}
+
+.videoday__play:active {
+    transform: scale(0.97);
+}
+
+/* ── Text content ────────────────────────────────────────────────────── */
+.videoday__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 520px;
+}
+
+.videoday__heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.videoday__brand {
+    color: var(--red-accent-color);
+}
+
+.videoday__sub {
+    font-size: 15px;
+    color: rgba(255, 255, 255);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── YouTube Modal ───────────────────────────────────────────────────── */
+.videoday__modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: videoday-fade-in 0.2s ease;
+}
+
+@keyframes videoday-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.videoday__modal-inner {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+
+.videoday__modal-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+}
+
+.videoday__modal-close svg {
+    width: 28px;
+    height: 28px;
+}
+
+.videoday__modal-close:hover {
+    opacity: 1;
+}
+
+/* 16:9 responsive iframe */
+.videoday__iframe-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #000;
+}
+
+.videoday__iframe-wrap iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+    .videoday {
+        padding: 0 clamp(1rem, 5vw, 4rem);
+    }
+}
+
+@media (max-width: 640px) {
+    .videoday {
+        padding: 0 16px 56px;
+    }
+
+    .videoday__card {
+        padding: 100px 24px 36px;
+        min-height: 280px;
+    }
+
+    .videoday__play {
+        top: 28px;
+        left: 24px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .videoday__play svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .videoday__label {
+        top: 20px;
+        right: 20px;
+        font-size: 10px;
+    }
+
+    .videoday__heading {
+        font-size: 24px;
+    }
+
+    .videoday__sub {
+        font-size: 14px;
+    }
+
+    .videoday__modal {
+        padding: 16px;
+    }
+
+    .videoday__modal-close {
+        top: -40px;
+    }
+}
