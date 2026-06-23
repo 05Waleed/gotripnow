@@ -6,7 +6,7 @@
   "search": {
     "button": "Search",
     "location": {
-      "placeholder": "Search City",
+      "placeholder": "Departure City",
       "dropdownTitle": "Suggestions",
       "noResults": "No destinations found",
       "errorRequired": "Please select a city"

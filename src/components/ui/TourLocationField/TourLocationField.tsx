@@ -10,11 +10,7 @@ interface SuggestionItem { city: string; country: string }
 
 const SUGGESTIONS: SuggestionItem[] = [
     { city: 'Zurich', country: 'Switzerland' },
-    { city: 'Lucerne', country: 'Switzerland' },
-    { city: 'Interlaken', country: 'Switzerland' },
     { city: 'Geneva', country: 'Switzerland' },
-    { city: 'Bern', country: 'Switzerland' },
-    { city: 'Zermatt', country: 'Switzerland' },
     { city: 'Basel', country: 'Switzerland' },
 ];
 

@@ -6,7 +6,7 @@
   "search": {
     "button": "Cerca",
     "location": {
-      "placeholder": "Cerca città",
+      "placeholder": "Città di partenza",
       "dropdownTitle": "Suggerimenti",
       "noResults": "Nessuna destinazione trovata",
       "errorRequired": "Seleziona una città"

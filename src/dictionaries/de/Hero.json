@@ -6,7 +6,7 @@
   "search": {
     "button": "Suchen",
     "location": {
-      "placeholder": "Stadt suchen",
+      "placeholder": "Abflugort",
       "dropdownTitle": "Vorschläge",
       "noResults": "Keine Ziele gefunden",
       "errorRequired": "Bitte wähle eine Stadt aus"

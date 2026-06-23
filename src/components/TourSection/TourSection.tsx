@@ -19,6 +19,7 @@ interface TourSectionProps {
         };
     };
     tours: TourData[];
+    layout?: 'slider' | 'grid';
 }
 
 function useCardsPerPage(): number {
@@ -40,7 +41,7 @@ function useCardsPerPage(): number {
     return count;
 }
 
-export default function TourSection({ ui, tours }: TourSectionProps) {
+export default function TourSection({ ui, tours, layout = 'slider' }: TourSectionProps) {
     const cardsPerPage = useCardsPerPage();
     const totalPages = Math.ceil(tours.length / cardsPerPage);
 
@@ -82,7 +83,8 @@ export default function TourSection({ ui, tours }: TourSectionProps) {
     };
 
     return (
-        <section className="tours-section large-screen-max-width">
+        /* We inject a layout class to let our CSS handle the responsive override */
+        <section className={`tours-section large-screen-max-width tours-layout-${layout}`}>
             <div className="tours-section-header">
                 <h2 className="tours-section-title">{ui.sectionTitle}</h2>
                 <div className="tours-section-nav">

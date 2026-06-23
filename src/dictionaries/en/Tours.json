@@ -49,48 +49,202 @@
     },
     "tours": [
         {
-            "id": "zurich-old-town-walking",
+            "id": "zurich-rhine-falls-express",
             "imageUrl": "/assets/city-img-1.jpg",
             "city": "Zurich",
             "duration": "half-day",
             "durationLabel": "4 hours",
-            "title": "Zurich Old Town Walking Tour",
-            "price": 49,
-            "rating": 4.8,
-            "reviewCount": 120
-        },
-        {
-            "id": "zurich-city-highlights-cruise",
-            "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurich",
-            "duration": "half-day",
-            "durationLabel": "3 hours",
-            "title": "Zurich City Highlights & Lake Cruise",
-            "price": 65,
+            "title": "Rhine Falls Express Tour from Zurich",
+            "price": 59,
             "rating": 4.7,
-            "reviewCount": 85
+            "reviewCount": 210
         },
         {
-            "id": "zurich-fondue-tuk-tuk",
+            "id": "zurich-e-bike-city-exploration",
             "imageUrl": "/assets/city-img-1.jpg",
             "city": "Zurich",
             "duration": "short",
-            "durationLabel": "2 hours",
-            "title": "Swiss Fondue Tuk-Tuk Tour of Zurich",
-            "price": 89,
-            "rating": 4.9,
-            "reviewCount": 64
+            "durationLabel": "2.5 hours",
+            "title": "Zurich Guided E-Bike City Tour",
+            "price": 55,
+            "rating": 4.8,
+            "reviewCount": 42
         },
         {
-            "id": "zurich-lindt-chocolate-adventure",
+            "id": "zurich-mount-titlis-day-trip",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Zurich",
+            "duration": "full-day",
+            "durationLabel": "9.5 hours",
+            "title": "Mount Titlis Eternal Winter Day Trip",
+            "price": 165,
+            "rating": 4.9,
+            "reviewCount": 318
+        },
+        {
+            "id": "zurich-urban-craft-beer-crawl",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Zurich",
+            "duration": "short",
+            "durationLabel": "3 hours",
+            "title": "Zurich West Urban Craft Beer Crawl",
+            "price": 69,
+            "rating": 4.5,
+            "reviewCount": 57
+        },
+        {
+            "id": "zurich-sunset-uetliberg-hike",
             "imageUrl": "/assets/city-img-1.jpg",
             "city": "Zurich",
             "duration": "half-day",
-            "durationLabel": "4.5 hours",
-            "title": "Zurich Chocolate SideCar & Lindt Museum Tour",
-            "price": 75,
+            "durationLabel": "3.5 hours",
+            "title": "Uetliberg Mountain Sunset Hike & Aperitif",
+            "price": 39,
             "rating": 4.6,
-            "reviewCount": 142
+            "reviewCount": 89
+        },
+        {
+            "id": "zurich-ghost-walk-legends",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Zurich",
+            "duration": "short",
+            "durationLabel": "1.5 hours",
+            "title": "Zurich Ghost Walk & Dark History Tour",
+            "price": 29,
+            "rating": 4.4,
+            "reviewCount": 112
+        },
+        {
+            "id": "geneva-old-town-chocolate",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Geneva",
+            "duration": "short",
+            "durationLabel": "3 hours",
+            "title": "Geneva Old Town Chocolate Tour & Boat Ride",
+            "price": 125,
+            "rating": 4.9,
+            "reviewCount": 310
+        },
+        {
+            "id": "geneva-scenic-lake-cruise",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Geneva",
+            "duration": "short",
+            "durationLabel": "1 hour",
+            "title": "Scenic Lake Geneva Cruise with Audio Guide",
+            "price": 25,
+            "rating": 4.3,
+            "reviewCount": 435
+        },
+        {
+            "id": "geneva-chamonix-mont-blanc",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Geneva",
+            "duration": "full-day",
+            "durationLabel": "10 hours",
+            "title": "Chamonix & Mont-Blanc Day Trip from Geneva",
+            "price": 123,
+            "rating": 4.8,
+            "reviewCount": 678
+        },
+        {
+            "id": "geneva-annecy-day-trip",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Geneva",
+            "duration": "half-day",
+            "durationLabel": "5 hours",
+            "title": "Annecy 'Venice of the Alps' Tour from Geneva",
+            "price": 61,
+            "rating": 4.6,
+            "reviewCount": 117
+        },
+        {
+            "id": "geneva-gruyeres-cheese-chocolate",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Geneva",
+            "duration": "full-day",
+            "durationLabel": "9 hours",
+            "title": "Gruyères Day Trip with Cheese & Chocolate Factories",
+            "price": 193,
+            "rating": 4.6,
+            "reviewCount": 84
+        },
+        {
+            "id": "geneva-city-un-highlights",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Geneva",
+            "duration": "short",
+            "durationLabel": "2.5 hours",
+            "title": "Best of Geneva City Tour: UN Area & Old Town",
+            "price": 56,
+            "rating": 4.4,
+            "reviewCount": 48
+        },
+        {
+            "id": "basel-old-town-walking",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Basel",
+            "duration": "short",
+            "durationLabel": "2 hours",
+            "title": "Basel Old Town Hidden Gems Walking Tour",
+            "price": 32,
+            "rating": 4.7,
+            "reviewCount": 154
+        },
+        {
+            "id": "basel-rhine-river-cruise",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Basel",
+            "duration": "short",
+            "durationLabel": "1.5 hours",
+            "title": "Scenic Rhine River City Cruise",
+            "price": 28,
+            "rating": 4.5,
+            "reviewCount": 98
+        },
+        {
+            "id": "basel-art-museum-architecture",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Basel",
+            "duration": "short",
+            "durationLabel": "3 hours",
+            "title": "Basel Art & World-Class Architecture Tour",
+            "price": 45,
+            "rating": 4.8,
+            "reviewCount": 62
+        },
+        {
+            "id": "basel-alsace-wine-day-trip",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Basel",
+            "duration": "full-day",
+            "durationLabel": "8 hours",
+            "title": "Alsace Wine Region & Colmar Tour from Basel",
+            "price": 145,
+            "rating": 4.9,
+            "reviewCount": 112
+        },
+        {
+            "id": "basel-culinary-food-trail",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Basel",
+            "duration": "half-day",
+            "durationLabel": "4 hours",
+            "title": "Traditional Basel Culinary & Food Tasting Trail",
+            "price": 85,
+            "rating": 4.6,
+            "reviewCount": 73
+        },
+        {
+            "id": "basel-black-forest-express",
+            "imageUrl": "/assets/city-img-1.jpg",
+            "city": "Basel",
+            "duration": "full-day",
+            "durationLabel": "7 hours",
+            "title": "German Black Forest Highlights Tour from Basel",
+            "price": 110,
+            "rating": 4.7,
+            "reviewCount": 89
         }
     ]
 }

@@ -1,4 +1,3 @@
-// gotripnow/src/components/ToursSearchBar/ToursSearchBar.tsx
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';

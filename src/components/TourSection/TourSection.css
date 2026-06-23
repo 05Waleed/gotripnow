@@ -106,7 +106,6 @@
 }
 
 @media (max-width: 639px) {
-
     .tours-section-title {
         font-size: 1.4rem;
     }
@@ -115,5 +114,29 @@
         width: 32px;
         height: 32px;
         font-size: 1.2rem;
+    }
+}
+
+/* --- Responsive Grid Modifier Override (Desktop Only) --- */
+@media (min-width: 1024px) {
+
+    .tours-layout-grid .tours-section-nav,
+    .tours-layout-grid .tours-dots {
+        display: none !important;
+        /* Hide arrows & dots since everything is viewable */
+    }
+
+    .tours-layout-grid .tours-track {
+        flex-direction: column;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        gap: 1.5rem;
+    }
+
+    .tours-layout-grid .tours-page {
+        min-width: auto;
+        scroll-snap-align: none;
+        /* Force pages to behave like a unified row framework instead of wide slide chunks */
+        grid-template-columns: repeat(3, 1fr);
     }
 }
