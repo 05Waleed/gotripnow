@@ -17,7 +17,7 @@
     background-color: #1a2f4a;
 }
 
-.videoday__card:hover {
+.videoday__card {
     /* Hardcoded fallback matching rgb(235, 68, 54) at 30% opacity */
     box-shadow: 0 20px 60px rgba(235, 68, 54, 0.3);
     transition: box-shadow 0.3s ease;

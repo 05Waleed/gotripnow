@@ -6,6 +6,7 @@ import { TourData } from "@/components/TourCard/TourCard";
 import Whyus from "@/components/Whyus/Whyus";
 import Reviews from "@/components/Reviews/Reviews";
 import VideoDay from "@/components/VideoDar/VideoDay";
+import PlanTourCTA from "@/components/PlanTourCTA/PlanTourCTA";
 
 interface PageProps {
   params: Promise<{ lang: Locale }>;
@@ -42,12 +43,13 @@ export default async function Page({ params }: PageProps) {
           />
         );
       })}
-      <Whyus dict={dict.Whyus} />
-      <Reviews dict={dict.Reviews} />
       <VideoDay
         dict={dict.VideoDay}
         youtubeId="lzCdg7zfCY0"
       />
+      <Whyus dict={dict.Whyus} />
+      <Reviews dict={dict.Reviews} />
+      <PlanTourCTA dict={dict.PlanTourCTA} />
     </>
   );
 }

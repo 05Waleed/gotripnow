@@ -1,0 +1,169 @@
+/* ─── PlanTourCTA Section ─────────────────────────────────────────────── */
+
+.plantourcta {
+    margin: 6rem auto;
+}
+
+.plantourcta__card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    /* Rich, vibrant brand red gradient with modern depth */
+    background: linear-gradient(135deg,
+            #d12d20 0%,
+            #b81d11 50%,
+            #8a0f06 100%);
+    box-shadow: 0 20px 40px rgba(184, 29, 17, 0.15), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Elegant radial glow effect replacing the outdated hatching texture */
+.plantourcta__texture {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+}
+
+/* ── Left: text content ─────────────────────────────────────────────── */
+.plantourcta__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 640px;
+}
+
+.plantourcta__eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.plantourcta__heading {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0;
+    white-space: pre;
+}
+
+.plantourcta__sub {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── Right: CTA button ──────────────────────────────────────────────── */
+.plantourcta__action {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+}
+
+.plantourcta__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    color: #b81d11;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 18px 36px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+}
+
+.plantourcta__btn svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.25s ease;
+}
+
+.plantourcta__btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.plantourcta__btn:hover svg {
+    transform: translateX(4px);
+}
+
+.plantourcta__btn:active {
+    transform: translateY(-1px);
+}
+
+/* ── Responsive Mobile States ───────────────────────────────────────── */
+@media (max-width: 1200px) {
+    .plantourcta {
+        padding: 0px clamp(1rem, 5vw, 4rem);
+    }
+}
+
+@media (max-width: 1024px) {
+    .plantourcta__card {
+        padding: 48px;
+        gap: 32px;
+    }
+
+    .plantourcta__heading {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 768px) {
+    .plantourcta {
+        padding: 0 24px;
+        margin: 4rem auto;
+    }
+
+    .plantourcta__card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 32px;
+        gap: 32px;
+    }
+
+    .plantourcta__heading {
+        font-size: 28px;
+    }
+
+    .plantourcta__btn {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .plantourcta {
+        padding: 0 16px;
+    }
+
+    .plantourcta__card {
+        padding: 32px 24px;
+        border-radius: 20px;
+    }
+
+    .plantourcta__heading {
+        font-size: 24px;
+    }
+
+    .plantourcta__sub {
+        font-size: 14px;
+    }
+}
