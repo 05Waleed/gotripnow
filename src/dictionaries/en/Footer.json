@@ -1,5 +1,44 @@
 {
-  "rights": "All rights reserved.",
-  "privacy": "Privacy Policy",
-  "terms": "Terms of Service"
+  "logo": {
+    "tagline": "Your global adventure partner for authentic local tours and curated experiences. Explore the world, your way."
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "x": "X"
+  },
+  "payment": {
+    "label": "We accept"
+  },
+  "quickLinks": {
+    "title": "Quick Links.",
+    "home": "Home",
+    "findTours": "Find Tours",
+    "about": "About Us",
+    "blog": "Blog",
+    "contact": "Contact",
+    "tourPlanner": "Tour Planner"
+  },
+  "explore": {
+    "title": "Explore.",
+    "interlaken": "Interlaken",
+    "grindelwald": "Grindelwald",
+    "zermatt": "Zermatt",
+    "zurich": "Zurich",
+    "lucerne": "Lucerne",
+    "lauterbrunnen": "Lauterbrunnen"
+  },
+  "support": {
+    "title": "Support.",
+    "helpCenter": "Help Center",
+    "faq": "FAQ",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy"
+  },
+  "bottom": {
+    "rights": "All rights reserved.",
+    "registered": "Registered travel agency."
+  }
 }

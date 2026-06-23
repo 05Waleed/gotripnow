@@ -5,7 +5,7 @@ import { getDictionary, Locale } from "../dictionaries";
 import { TourData } from "@/components/TourCard/TourCard";
 import Whyus from "@/components/Whyus/Whyus";
 import Reviews from "@/components/Reviews/Reviews";
-import VideoDay from "@/components/VideoDar/VideoDay";
+import VideoDay from "@/components/VideoDay/VideoDay";
 import PlanTourCTA from "@/components/PlanTourCTA/PlanTourCTA";
 
 interface PageProps {

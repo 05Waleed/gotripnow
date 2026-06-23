@@ -1,5 +1,44 @@
 {
-  "rights": "Tous droits réservés.",
-  "privacy": "Politique de Confidentialité",
-  "terms": "Conditions d'Utilisation"
+  "logo": {
+    "tagline": "Votre partenaire d'aventure mondial pour des circuits locaux authentiques et des expériences soigneusement sélectionnées. Explorez le monde, à votre façon."
+  },
+  "social": {
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "x": "X"
+  },
+  "payment": {
+    "label": "Nous acceptons"
+  },
+  "quickLinks": {
+    "title": "Liens rapides.",
+    "home": "Accueil",
+    "findTours": "Trouver des circuits",
+    "about": "À propos",
+    "blog": "Blog",
+    "contact": "Contact",
+    "tourPlanner": "Planificateur de voyage"
+  },
+  "explore": {
+    "title": "Explorer.",
+    "interlaken": "Interlaken",
+    "grindelwald": "Grindelwald",
+    "zermatt": "Zermatt",
+    "zurich": "Zurich",
+    "lucerne": "Lucerne",
+    "lauterbrunnen": "Lauterbrunnen"
+  },
+  "support": {
+    "title": "Assistance.",
+    "helpCenter": "Centre d'aide",
+    "faq": "FAQ",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "cookies": "Politique des cookies"
+  },
+  "bottom": {
+    "rights": "Tous droits réservés.",
+    "registered": "Agence de voyage enregistrée."
+  }
 }
