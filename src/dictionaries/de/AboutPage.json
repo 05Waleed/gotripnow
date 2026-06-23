@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "title": "Wir machen aus wenigen Tagen in der Schweiz die Reise, von der Sie immer wieder erzählen werden.",
+        "description_1": "Die Planung einer Reise in ein neues Land kann stressig sein. Wir haben festgestellt, dass viele Reisende besorgt und überfordert sind, wenn es darum geht, herauszufinden, wohin sie reisen, was sie sehen und wie sie sich fortbewegen sollen. Es gibt einfach zu viele Informationen da draußen, und die meisten Reiseunternehmen stecken Sie einfach in einen großen Touristenbus voller Fremder mit einem strikten Zeitplan.",
+        "description_2": "Wir haben GoTripNow gegründet, um das zu ändern. Wir glauben, dass Sie völlig in Ihrem eigenen Tempo reisen sollten, egal ob Sie alleine auf Entdeckungstour gehen oder die Reise mit neuen Freunden teilen. Bei uns bekommen Sie ein privates Auto und Ihren eigenen Fahrer. Wir gestalten die Reise genau nach Ihren Wünschen und zeigen Ihnen das echte Schweiz-Erlebnis und die besten Geheimtipps. Sie können anhalten, wann immer Sie wollen, eine Pause machen und die Aussicht genießen. Das Beste daran: Wir holen Sie direkt an Ihrer Haustür ab und bringen Sie auch wieder dorthin zurück, sodass Sie sich um nichts kümmern müssen."
+    },
+    "bento": {
+        "since": "Seit 2026",
+        "tagline": "Lokal geführt, unabhängig und detailverliebt, um jeden Tag perfekt zu machen.",
+        "travellers_count": "5k+",
+        "travellers_label": "Geführte Reisende",
+        "rating_value": "4.8 ★",
+        "rating_label": "Durchschnittliche Bewertung",
+        "guides_count": "10+",
+        "guides_label": "Lizensierte lokale Guides",
+        "caption_team": "Team auf dem Gipfel · Foto",
+        "caption_lake": "Alpensee · Foto",
+        "alt_team": "Das GoTripNow-Team auf einem Berggipfel",
+        "alt_lake": "Ein Alpensee in der Schweiz"
+    }
+}

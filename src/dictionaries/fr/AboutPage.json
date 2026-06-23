@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "title": "Nous transformons quelques jours en Suisse en un voyage dont vous ne cesserez de parler.",
+        "description_1": "Planifier un voyage dans un nouveau pays peut être stressant. Nous avons remarqué que de nombreux voyageurs se sentent inquiets et dépassés en essayant de savoir où aller, quoi voir et comment se déplacer. Il y a trop d'informations contradictoires, et la plupart des agences de voyage vous entassent simplement dans un grand bus touristique rempli d'inconnus avec un horaire strict.",
+        "description_2": "Nous avons lancé GoTripNow pour changer cela. Nous pensons que vous devriez pouvoir voyager entièrement à votre propre rythme, que vous exploriez en solo ou que vous partagiez l'aventure avec de nouveaux amis. Avec nous, vous bénéficiez d'une voiture privée et de votre propre chauffeur. Nous personnalisons le voyage exactement comme vous le souhaitez, en vous emmenant découvrir la vraie Suisse et ses secrets les mieux gardés. Vous pouvez vous arrêter quand vous voulez, faire une pause et profiter de la vue. Mieux encore, nous vous prenons en charge et vous déposons directement à votre porte, pour que vous n'ayez à vous soucier de rien."
+    },
+    "bento": {
+        "since": "Depuis 2026",
+        "tagline": "Une entreprise locale, indépendante et obsédée par les détails qui rendent une journée parfaite.",
+        "travellers_count": "5k+",
+        "travellers_label": "Voyageurs guidés",
+        "rating_value": "4.8 ★",
+        "rating_label": "Note moyenne des clients",
+        "guides_count": "10+",
+        "guides_label": "Guides locaux certifiés",
+        "caption_team": "L'équipe au sommet · Photo",
+        "caption_lake": "Lac alpin · Photo",
+        "alt_team": "L'équipe GoTripNow sur le sommet d'une montagne",
+        "alt_lake": "Un lac alpin en Suisse"
+    }
+}

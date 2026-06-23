@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "title": "We turn a few days in Switzerland into the trip you'll keep telling people about.",
+        "description_1": "Planning a trip to a new country can be stressful. We noticed that so many travelers get worried and overwhelmed trying to figure out where to go, what to see, and how to get around. There is too much information out there, and most travel companies just dump you into a big tourist bus filled with strangers on a strict schedule.",
+        "description_2": "We started GoTripNow to change that. We believe you should be able to travel completely at your own pace, whether you are exploring on your own or sharing the journey with new friends. With us, you get a private car and your own driver. We customize the trip exactly the way you want it, taking you to see the real Switzerland and its best hidden spots. You can stop whenever you want, take a break, and enjoy the view. Best of all, we pick you up and drop you off right at your door, so you don't have to worry about a thing."
+    },
+    "bento": {
+        "since": "Since 2026",
+        "tagline": "Locally owned, independently run, and obsessed with the details that make a day perfect.",
+        "travellers_count": "5k+",
+        "travellers_label": "Travellers guided",
+        "rating_value": "4.8 ★",
+        "rating_label": "Average guest rating",
+        "guides_count": "10+",
+        "guides_label": "Licensed local guides",
+        "caption_team": "Team on summit · Photo",
+        "caption_lake": "Alpine lake · Photo",
+        "alt_team": "GoTripNow team on a mountain summit",
+        "alt_lake": "An alpine lake in Switzerland"
+    }
+}

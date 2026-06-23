@@ -1,0 +1,203 @@
+/* ─── Desktop bento grid ────────────────────────────── */
+
+.about-bento {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+    max-width: 1100px;
+    margin: 6rem auto;
+}
+
+.about-bento-stack {
+    display: none;
+}
+
+/* ─── Shared card styles ────────────────────────────── */
+
+.about-bento-hero-card {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background: var(--red-accent-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-bento-hero-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(135deg,
+            transparent,
+            transparent 22px,
+            rgba(255, 255, 255, 0.055) 22px,
+            rgba(255, 255, 255, 0.055) 24px);
+    pointer-events: none;
+}
+
+.about-bento-since {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    position: relative;
+    z-index: 1;
+}
+
+.about-bento-tagline {
+    font-size: clamp(1rem, 1.6vw, 1.35rem);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.about-bento-stat-card {
+    background: var(--white-container-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border: 1px solid #eaeaea;
+}
+
+.about-bento-stat-card--accent {
+    background: rgb(253, 237, 236);
+}
+
+.about-bento-stat-number {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--black-heading-color);
+    line-height: 1;
+}
+
+.about-bento-stat-number--red {
+    color: var(--red-accent-color);
+}
+
+.about-bento-stat-label {
+    font-size: 13px;
+    color: var(--light-grey-description-color);
+}
+
+.about-bento-photo-card {
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    min-height: 160px;
+    background: rgb(200, 200, 200);
+    display: flex;
+    align-items: flex-end;
+}
+
+.about-bento-photo-card--wide {
+    grid-column: 2 / 4;
+}
+
+.about-bento-photo-img {
+    object-fit: cover;
+}
+
+.about-bento-photo-caption {
+    position: relative;
+    z-index: 1;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0.75rem 1rem;
+}
+
+/* ─── Tablet ────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .about-bento {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .about-bento-hero-card {
+        grid-column: 1 / 3;
+        grid-row: auto;
+        min-height: 240px;
+    }
+
+    .about-bento-photo-card--wide {
+        grid-column: 1 / 3;
+    }
+}
+
+/* ─── Mobile stacking ───────────────────────────────── */
+
+@media (max-width: 540px) {
+
+    .about-bento {
+        display: none;
+    }
+
+    .about-bento-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-bento-stack-item {
+        position: sticky;
+        top: calc(var(--stack-index) * 22px + 6rem);
+        height: 56vw;
+        max-height: 260px;
+        z-index: calc(var(--stack-index) + 1);
+    }
+
+    .about-bento-stack-item>* {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .about-bento-stack-item .about-bento-hero-card {
+        grid-column: unset;
+        grid-row: unset;
+        min-height: unset;
+        height: 100%;
+        padding: 1.5rem;
+        justify-content: space-between;
+    }
+
+    .about-bento-stack-item .about-bento-stat-card {
+        justify-content: center;
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .about-bento-stack-item .about-bento-photo-card {
+        min-height: unset;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    .about-bento-stack-item .about-bento-photo-card--wide {
+        grid-column: unset;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-bento, .about-bento-stack {
+        padding: 0 clamp(1rem, 5vw, 4rem);
+    }
+}

@@ -1,0 +1,45 @@
+.about-hero-text-section {
+    margin: 6rem auto;
+}
+
+.about-hero-text {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-hero-title {
+    color: #1a1a1a;
+    letter-spacing: -.01em;
+    margin: 0;
+    font-size: clamp(1.75rem, 5vw + .5rem, 4.25rem);
+    font-weight: bold;
+    line-height: 1.08;
+}
+
+.about-hero-description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-hero-description {
+    font-size: clamp(.95rem, 1.8vw + .3rem, 1.5rem);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+@media (max-width: 1200px) {
+    .about-hero-text-section {
+        padding: 0 clamp(1rem, 5vw, 4rem);
+    }
+}
+
+@media (max-width: 640px) {
+    .about-hero-text {
+        text-align: left;
+    }
+}
