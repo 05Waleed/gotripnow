@@ -1,0 +1,72 @@
+{
+    "heading": "Loved by travellers",
+    "subheading": "Real reviews from real GoTripNow guests.",
+    "badge": {
+        "score": "4.8",
+        "label": "Excellent",
+        "reviewCount": "302 verified reviews",
+        "source": "Google Reviews"
+    },
+    "reviews": [
+        {
+            "id": 1,
+            "name": "Sarah Mitchell",
+            "initials": "SM",
+            "avatarColor": "#4285F4",
+            "rating": 5,
+            "location": "United States",
+            "timeAgo": "2 weeks ago",
+            "text": "Our guide made the Jungfrauoch trip unforgettable. Hotel pick-up was right on time and the whole day felt effortless. Will definitely book again!"
+        },
+        {
+            "id": 2,
+            "name": "James Okonkwo",
+            "initials": "JO",
+            "avatarColor": "#34A853",
+            "rating": 5,
+            "location": "United Kingdom",
+            "timeAgo": "1 month ago",
+            "text": "Booked a last-minute trip to Lisbon and the team pulled it off seamlessly. Great prices, responsive support, and the itinerary was spot on."
+        },
+        {
+            "id": 3,
+            "name": "Priya Nair",
+            "initials": "PN",
+            "avatarColor": "#EA4335",
+            "rating": 4,
+            "location": "France",
+            "timeAgo": "3 weeks ago",
+            "text": "Chamonix day from Geneva was stunning. The guide adapted the route to the weather so we got the best views. Really smooth booking process."
+        },
+        {
+            "id": 4,
+            "name": "Thomas Berger",
+            "initials": "TB",
+            "avatarColor": "#FBBC04",
+            "rating": 5,
+            "location": "Germany",
+            "timeAgo": "2 months ago",
+            "text": "Traveled with my family to Thailand — three kids, lots of logistics. GoTripNow made it feel effortless. The suggested resorts were family-friendly."
+        },
+        {
+            "id": 5,
+            "name": "Lena Hoffmann",
+            "initials": "LH",
+            "avatarColor": "#9C27B0",
+            "rating": 5,
+            "location": "Switzerland",
+            "timeAgo": "3 months ago",
+            "text": "I was skeptical at first but this platform completely changed how I travel. The curated recommendations feel genuinely personal, not generic."
+        },
+        {
+            "id": 6,
+            "name": "Carlos Rivera",
+            "initials": "CR",
+            "avatarColor": "#FF5722",
+            "rating": 4,
+            "location": "Spain",
+            "timeAgo": "3 months ago",
+            "text": "Booked a private Black Forest tour. Flexible, friendly and not rushed at all. Worth every franc. Great service overall, very intuitive app."
+        }
+    ]
+}

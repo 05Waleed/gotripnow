@@ -4,6 +4,7 @@ import CitiesShortcut from "@/components/CitiesShortcut/CitiesShortcut";
 import { getDictionary, Locale } from "../dictionaries";
 import { TourData } from "@/components/TourCard/TourCard";
 import Whyus from "@/components/Whyus/Whyus";
+import Reviews from "@/components/Reviews/Reviews";
 
 interface PageProps {
   params: Promise<{ lang: Locale }>;
@@ -42,6 +43,7 @@ export default async function Page({ params }: PageProps) {
         );
       })}
       <Whyus dict={dict.Whyus} />
+      <Reviews dict={dict.Reviews} />
     </>
   );
 }

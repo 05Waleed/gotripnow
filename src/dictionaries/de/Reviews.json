@@ -1,0 +1,72 @@
+{
+    "heading": "Von Reisenden geliebt",
+    "subheading": "Echte Bewertungen von echten GoTripNow-Gästen.",
+    "badge": {
+        "score": "4.8",
+        "label": "Ausgezeichnet",
+        "reviewCount": "302 verifizierte Bewertungen",
+        "source": "Google Bewertungen"
+    },
+    "reviews": [
+        {
+            "id": 1,
+            "name": "Sarah Mitchell",
+            "initials": "SM",
+            "avatarColor": "#4285F4",
+            "rating": 5,
+            "location": "Vereinigte Staaten",
+            "timeAgo": "vor 2 Wochen",
+            "text": "Unser Guide hat die Jungfrauoch-Tour unvergesslich gemacht. Der Hotel-Transfer war pünktlich und der gesamte Tag fühlte sich mühelos an. Wir buchen definitiv wieder!"
+        },
+        {
+            "id": 2,
+            "name": "James Okonkwo",
+            "initials": "JO",
+            "avatarColor": "#34A853",
+            "rating": 5,
+            "location": "Vereinigtes Königreich",
+            "timeAgo": "vor 1 Monat",
+            "text": "Kurzfristig eine Reise nach Lissabon gebucht und das Team hat alles reibungslos organisiert. Tolle Preise, schneller Support und das Reiseprogramm war perfekt."
+        },
+        {
+            "id": 3,
+            "name": "Priya Nair",
+            "initials": "PN",
+            "avatarColor": "#EA4335",
+            "rating": 4,
+            "location": "Frankreich",
+            "timeAgo": "vor 3 Wochen",
+            "text": "Der Tagesausflug nach Chamonix ab Genf war atemberaubend. Der Guide hat die Route dem Wetter angepasst, sodass wir die besten Aussichten hatten. Sehr unkomplizierte Buchung."
+        },
+        {
+            "id": 4,
+            "name": "Thomas Berger",
+            "initials": "TB",
+            "avatarColor": "#FBBC04",
+            "rating": 5,
+            "location": "Deutschland",
+            "timeAgo": "vor 2 Monaten",
+            "text": "Mit der ganzen Familie nach Thailand gereist — drei Kinder, viel Planung. GoTripNow hat alles spielend einfach gemacht. Die empfohlenen Resorts waren sehr familienfreundlich."
+        },
+        {
+            "id": 5,
+            "name": "Lena Hoffmann",
+            "initials": "LH",
+            "avatarColor": "#9C27B0",
+            "rating": 5,
+            "location": "Schweiz",
+            "timeAgo": "vor 3 Monaten",
+            "text": "Ich war zunächst skeptisch, aber diese Plattform hat meine Art zu reisen komplett verändert. Die Empfehlungen fühlen sich wirklich persönlich an, nicht generisch."
+        },
+        {
+            "id": 6,
+            "name": "Carlos Rivera",
+            "initials": "CR",
+            "avatarColor": "#FF5722",
+            "rating": 4,
+            "location": "Spanien",
+            "timeAgo": "vor 3 Monaten",
+            "text": "Eine private Schwarzwaldtour gebucht. Flexibel, freundlich und ohne Hetze. Jeden Franken wert. Insgesamt toller Service, sehr intuitive App."
+        }
+    ]
+}

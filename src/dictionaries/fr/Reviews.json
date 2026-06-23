@@ -1,0 +1,72 @@
+{
+    "heading": "Adoré par les voyageurs",
+    "subheading": "De vraies avis de vrais clients GoTripNow.",
+    "badge": {
+        "score": "4.8",
+        "label": "Excellent",
+        "reviewCount": "302 avis vérifiés",
+        "source": "Avis Google"
+    },
+    "reviews": [
+        {
+            "id": 1,
+            "name": "Sarah Mitchell",
+            "initials": "SM",
+            "avatarColor": "#4285F4",
+            "rating": 5,
+            "location": "États-Unis",
+            "timeAgo": "il y a 2 semaines",
+            "text": "Notre guide a rendu l'excursion à la Jungfrauoch inoubliable. Le transfert depuis l'hôtel était ponctuel et toute la journée s'est déroulée sans effort. Nous réserverons à nouveau !"
+        },
+        {
+            "id": 2,
+            "name": "James Okonkwo",
+            "initials": "JO",
+            "avatarColor": "#34A853",
+            "rating": 5,
+            "location": "Royaume-Uni",
+            "timeAgo": "il y a 1 mois",
+            "text": "Voyage de dernière minute à Lisbonne réservé et l'équipe a tout géré à la perfection. Super prix, assistance réactive et itinéraire parfaitement adapté."
+        },
+        {
+            "id": 3,
+            "name": "Priya Nair",
+            "initials": "PN",
+            "avatarColor": "#EA4335",
+            "rating": 4,
+            "location": "France",
+            "timeAgo": "il y a 3 semaines",
+            "text": "La journée à Chamonix depuis Genève était magnifique. Le guide a adapté l'itinéraire à la météo pour nous offrir les meilleures vues. Processus de réservation vraiment fluide."
+        },
+        {
+            "id": 4,
+            "name": "Thomas Berger",
+            "initials": "TB",
+            "avatarColor": "#FBBC04",
+            "rating": 5,
+            "location": "Allemagne",
+            "timeAgo": "il y a 2 mois",
+            "text": "Voyage en famille en Thaïlande — trois enfants, beaucoup de logistique. GoTripNow a tout rendu simple. Les hébergements suggérés étaient parfaitement adaptés aux familles."
+        },
+        {
+            "id": 5,
+            "name": "Lena Hoffmann",
+            "initials": "LH",
+            "avatarColor": "#9C27B0",
+            "rating": 5,
+            "location": "Suisse",
+            "timeAgo": "il y a 3 mois",
+            "text": "J'étais sceptique au début, mais cette plateforme a complètement changé ma façon de voyager. Les recommandations sont vraiment personnalisées, pas génériques."
+        },
+        {
+            "id": 6,
+            "name": "Carlos Rivera",
+            "initials": "CR",
+            "avatarColor": "#FF5722",
+            "rating": 4,
+            "location": "Espagne",
+            "timeAgo": "il y a 3 mois",
+            "text": "Tour privé en Forêt-Noire réservé. Flexible, sympathique et sans précipitation. Ça vaut chaque franc. Service excellent dans l'ensemble, application très intuitive."
+        }
+    ]
+}
