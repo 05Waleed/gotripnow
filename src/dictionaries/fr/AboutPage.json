@@ -17,5 +17,35 @@
         "caption_lake": "Lac alpin · Photo",
         "alt_team": "L'équipe GoTripNow sur le sommet d'une montagne",
         "alt_lake": "Un lac alpin en Suisse"
+    },
+    "how_it_works": {
+        "title": "Des étapes simples pour un\nvoyage inoubliable",
+        "description": "Réserver votre voyage idéal est rapide, facile et sans tracas.",
+        "steps": [
+            {
+                "step_number": 1,
+                "title": "Choisissez votre circuit",
+                "description": "Parcourez nos circuits et activités sélectionnés avec soin. Choisissez celui qui correspond à votre aventure.",
+                "image_path": "/assets/hiw-1.png"
+            },
+            {
+                "step_number": 2,
+                "title": "Entrez vos coordonnées",
+                "description": "Remplissez vos préférences et vos informations de voyage en quelques clics seulement.",
+                "image_path": "/assets/hiw-2.png"
+            },
+            {
+                "step_number": 3,
+                "title": "Recevez la confirmation",
+                "description": "Recevez une confirmation instantanée et préparez-vous à vivre une expérience incroyable.",
+                "image_path": "/assets/hiw-3.png"
+            }
+        ],
+        "trust_badges": [
+            "Réservation sécurisée",
+            "Support 24/7",
+            "Annulation gratuite",
+            "Approuvé par les voyageurs"
+        ]
     }
 }

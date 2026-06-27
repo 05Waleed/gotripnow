@@ -17,5 +17,35 @@
         "caption_lake": "Alpensee · Foto",
         "alt_team": "Das GoTripNow-Team auf einem Berggipfel",
         "alt_lake": "Ein Alpensee in der Schweiz"
+    },
+    "how_it_works": {
+        "title": "Einfache Schritte zu Ihrer\nunvergesslichen Reise",
+        "description": "Die Buchung Ihrer perfekten Reise ist schnell, einfach und unkompliziert.",
+        "steps": [
+            {
+                "step_number": 1,
+                "title": "Tour auswählen",
+                "description": "Stöbern Sie durch handverlesene Touren und Aktivitäten. Wählen Sie das aus, was zu Ihrem Abenteuer passt.",
+                "image_path": "/assets/hiw-1.png"
+            },
+            {
+                "step_number": 2,
+                "title": "Details eingeben",
+                "description": "Tragen Sie Ihre Wünsche und Reiseinformationen mit nur wenigen Klicks ein.",
+                "image_path": "/assets/hiw-2.png"
+            },
+            {
+                "step_number": 3,
+                "title": "Bestätigung erhalten",
+                "description": "Erhalten Sie eine sofortige Bestätigung und machen Sie sich bereit für ein großartiges Erlebnis.",
+                "image_path": "/assets/hiw-3.png"
+            }
+        ],
+        "trust_badges": [
+            "Sichere Buchung",
+            "24/7 Support",
+            "Kostenlose Stornierung",
+            "Von Reisenden geschätzt"
+        ]
     }
 }

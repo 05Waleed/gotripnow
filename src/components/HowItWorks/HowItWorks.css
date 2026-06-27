@@ -1,0 +1,211 @@
+:root {
+    --red-accent-color: rgb(235, 68, 54);
+}
+
+.how-it-works-container {
+    text-align: center;
+    margin: 8rem auto;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.how-it-works-title {
+    color: #111827;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.how-it-works-description {
+    color: #6b7280;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.how-it-works-steps-wrapper {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.how-it-works-step {
+    background-color: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 24px;
+    padding: 2rem 1.5rem;
+    width: 360px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-image-container {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.step-image-container img {
+    width: 100% !important;
+    object-fit: cover;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.step-number {
+    background-color: var(--red-accent-color);
+    color: #ffffff;
+    font-weight: 700;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.step-heading {
+    margin: 0;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.step-text {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.step-arrow {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    opacity: 0.5;
+}
+
+.step-nav-dots {
+    display: none;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1.25rem;
+}
+
+.step-nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid var(--red-accent-color);
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+}
+
+.step-nav-dot.active {
+    background: var(--red-accent-color);
+}
+
+.trust-badges-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid #eaeaea;
+    flex-wrap: wrap;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #6b7280;
+    font-size: 0, 8rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+
+    .how-it-works-container {
+        padding: 0 clamp(1rem, 5vw, 4rem);
+    }
+
+    .how-it-works-steps-wrapper {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 2rem 1rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .how-it-works-steps-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .how-it-works-step {
+        scroll-snap-align: center;
+        width: 300px;
+    }
+
+    .step-image-container img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .step-arrow {
+        scroll-snap-align: none;
+    }
+
+    .step-nav-dots {
+        display: flex;
+    }
+}
+
+@media (max-width: 640px) {
+    .how-it-works-step {
+        width: 295px;
+        padding: 1.25rem 1rem;
+    }
+
+    .step-image-container img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .how-it-works-container br {
+        display: none;
+    }
+
+    .trust-badges-banner {
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: start;
+        padding-left: 1rem;
+    }
+}

@@ -1,7 +1,7 @@
 {
     "hero": {
         "title": "Trasformiamo pochi giorni in Svizzera nel viaggio che continuerai a raccontare a tutti.",
-        "description_1": "Pianificare un viaggio in un nuovo paese può essere stressante. Abbiamo notato che molti viaggiatori si sentono preoccupati e sopraffatti nel cercare di capire dove andare, cosa vedere e come spostarsi. Ci sono troppe informazioni là fuori e la maggior parte delle compagnie di viaggio si limita a caricarti su un grande autobus turistico pieno di sconosciuti seguendo tabelle di marcia rigide.",
+        "description_1": "Pianificare un viaggio in un nuovo paese può essere stressant. Abbiamo notato che molti viaggiatori si sentono preoccupati e sopraffatti nel cercare di capire dove andare, cosa vedere e come spostarsi. Ci sono troppe informazioni là fuori e la maggior parte delle compagnie di viaggio si limita a caricarti su un grande autobus turistico pieno di sconosciuti seguendo tabelle di marcia rigide.",
         "description_2": "Abbiamo fondato GoTripNow per cambiare tutto questo. Crediamo che tu debba poter viaggiare interamente al tuo ritmo, sia che tu stia esplorando da solo, sia che tu stia condividendo il viaggio con nuovi amici. Con noi, avrai un'auto privata e il tuo autista personale. Personalizziamo il viaggio esattamente come desideri, portandoti a vedere la Svizzera autentica e i suoi tesori nascosti. Puoi fermarti quando vuoi, fare una pausa e goderti il panorama. Soprattutto, ti veniamo a prendere e ti riaccompagniamo direttamente alla porta di casa, così non dovrai preoccuparti di nulla."
     },
     "bento": {
@@ -17,5 +17,35 @@
         "caption_lake": "Lago alpino · Foto",
         "alt_team": "Il team di GoTripNow sulla vetta di una montagna",
         "alt_lake": "Un lago alpino in Svizzera"
+    },
+    "how_it_works": {
+        "title": "Semplici passaggi per un\nviaggio indimenticabile",
+        "description": "Prenotare il tuo viaggio perfetto è veloce, facile e senza pensieri.",
+        "steps": [
+            {
+                "step_number": 1,
+                "title": "Scegli il tuo tour",
+                "description": "Sfoglia tour e attività selezionati con cura. Scegli quello perfetto per la tua avventura.",
+                "image_path": "/assets/hiw-1.png"
+            },
+            {
+                "step_number": 2,
+                "title": "Inserisci i tuoi dati",
+                "description": "Inserisci le tue preferenze e le informazioni sui viaggiatori in pochi clic.",
+                "image_path": "/assets/hiw-2.png"
+            },
+            {
+                "step_number": 3,
+                "title": "Ricevi la conferma",
+                "description": "Ricevi una conferma istantanea e preparati per un'esperienza straordinaria.",
+                "image_path": "/assets/hiw-3.png"
+            }
+        ],
+        "trust_badges": [
+            "Prenotazione sicura",
+            "Assistenza 24/7",
+            "Cancellazione gratuita",
+            "Scelto dai viaggiatori"
+        ]
     }
 }
