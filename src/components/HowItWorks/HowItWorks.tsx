@@ -13,6 +13,7 @@ export interface HowItWorksStep {
 }
 
 export interface HowItWorksDict {
+    main_title: string;
     title: string;
     description: string;
     steps: HowItWorksStep[];
@@ -67,16 +68,19 @@ export default function HowItWorks({ dict }: HowItWorksProps) {
 
     return (
         <div className='how-it-works-container large-screen-max-width'>
-            {/* Split titles at newline characters natively */}
-            <h2 className='how-it-works-title'>
-                {dict.title.split('\n').map((line, i) => (
-                    <React.Fragment key={i}>
-                        {line}
-                        {i < dict.title.split('\n').length - 1 && <br />}
-                    </React.Fragment>
-                ))}
-            </h2>
-            <p className='how-it-works-description'>{dict.description}</p>
+            <div className="how-it-works-text">
+                <h1 className='how-it-works-head-title'>{dict.main_title}</h1>
+                {/* Split titles at newline characters natively */}
+                <h2 className='how-it-works-title'>
+                    {dict.title.split('\n').map((line, i) => (
+                        <React.Fragment key={i}>
+                            {line}
+                            {i < dict.title.split('\n').length - 1 && <br />}
+                        </React.Fragment>
+                    ))}
+                </h2>
+                <p className='how-it-works-description'>{dict.description}</p>
+            </div>
 
             <div className="how-it-works-steps-wrapper" ref={wrapperRef} onScroll={handleScroll}>
                 {dict.steps.map((step, idx) => (
