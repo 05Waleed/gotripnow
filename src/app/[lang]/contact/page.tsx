@@ -1,5 +1,6 @@
 import ContactHero from "@/components/Contact/ContactHero"
-import ContactFormDetails from "@/components/Contact/ContactFormDetails"
+import ContactForm from "@/components/Contact/ContactForm"
+import FAQ from "@/components/Contact/FAQ"
 import { getDictionary, Locale } from "../../dictionaries"
 
 interface PageProps {
@@ -13,10 +14,11 @@ export default async function ContactPage({ params }: PageProps) {
   return (
     <>
       <ContactHero dict={dict.ContactPage.hero} />
-      <ContactFormDetails
-        detailsDict={dict.ContactPage.details}
-        formDict={dict.ContactPage.form}
+      <ContactForm
+        dict={dict.ContactPage.form}
+        pictureDict={dict.ContactPage.picture}
       />
+      <FAQ dict={dict.ContactPage.faq} />
     </>
   )
 }

@@ -1,20 +1,35 @@
 {
     "hero": {
-        "title": "Contatti ",
-        "titleLogo": "GoTrip",
-        "titleSuffix": "Now",
-        "description": "Desidera ricevere informazioni su un tour, una prenotazione o un viaggio personalizzato? Il nostro team con sede in Svizzera Vi risponderà di norma entro poche ore."
+        "title": "Contattaci",
+        "subtitle": "Siamo qui per aiutarti",
+        "description": "Hai domande su un tour, hai bisogno di assistenza per una prenotazione o vuoi un itinerario personalizzato? Il nostro team e pronto ad aiutarti.",
+        "cards": {
+            "email": {
+                "title": "Scrivici",
+                "description": "Per prenotazioni, richieste e organizzazione di viaggi personalizzati.",
+                "link": "info@gotripnow.ch"
+            },
+            "whatsapp": {
+                "title": "WhatsApp",
+                "description": "Disponibile tutti i giorni dalle 8:00 alle 20:00 CET.",
+                "link": "+41 78 222 12 41"
+            },
+            "responseTime": {
+                "title": "Tempi di risposta",
+                "description": "Di norma rispondiamo a tutti i messaggi entro poche ore."
+            }
+        }
     },
     "form": {
-        "title": "Invia un messaggio",
+        "title": "Inviaci un messaggio",
         "fields": {
             "name": {
-                "label": "Nome e Cognome",
-                "placeholder": "Il Suo nome completo"
+                "label": "Nome completo",
+                "placeholder": "Il tuo nome completo"
             },
             "email": {
                 "label": "Indirizzo e-mail",
-                "placeholder": "Il Suo indirizzo e-mail"
+                "placeholder": "Il tuo indirizzo e-mail"
             },
             "subject": {
                 "label": "Oggetto",
@@ -22,7 +37,7 @@
             },
             "message": {
                 "label": "Messaggio",
-                "placeholder": "La preghiamo di inserire qui il Suo messaggio..."
+                "placeholder": "Scrivi qui il tuo messaggio..."
             }
         },
         "subjectOptions": [
@@ -36,7 +51,7 @@
             },
             {
                 "value": "question",
-                "label": "Richiesta di informazioni generali"
+                "label": "Informazioni generali"
             },
             {
                 "value": "other",
@@ -44,28 +59,74 @@
             }
         ],
         "button": {
-            "label": "Invia il messaggio"
+            "label": "Invia messaggio"
         },
         "validation": {
-            "nameRequired": "Il campo nome è obbligatorio.",
+            "nameRequired": "Il nome e obbligatorio.",
             "nameMinLength": "Il nome deve contenere almeno 2 caratteri.",
-            "emailRequired": "L'indirizzo e-mail è obbligatorio.",
-            "emailInvalid": "La preghiamo di inserire un indirizzo e-mail valido.",
-            "subjectRequired": "La preghiamo di selezionare un oggetto.",
-            "messageRequired": "Il campo messaggio non può essere vuoto.",
+            "emailRequired": "L'indirizzo e-mail e obbligatorio.",
+            "emailInvalid": "Inserisci un indirizzo e-mail valido.",
+            "subjectRequired": "Seleziona un oggetto.",
+            "messageRequired": "Il campo messaggio non puo essere vuoto.",
             "messageMinLength": "Il messaggio deve contenere almeno 10 caratteri."
         }
     },
-    "details": {
-        "email": {
-            "title": "Contatto via e-mail",
-            "description": "Per prenotazioni, richieste di assistenza e itinerari su misura.",
-            "link": "info@gotripnow.ch"
-        },
-        "whatsapp": {
-            "title": "WhatsApp",
-            "description": "Servizio attivo tutti i giorni dalle ore 8:00 alle ore 20:00 CET.",
-            "link": "+41 78 222 12 41"
+    "picture": {
+        "heading": "Il tuo Viaggio inizia qui",
+        "headingAccent": "Viaggio",
+        "subtext": "Che tu stia pianificando un viaggio o abbia bisogno di un consiglio, siamo qui per rendere la tua esperienza di viaggio semplice e indimenticabile."
+    },
+    "faq": {
+        "eyebrow": "FAQ",
+        "title": "Domande frequenti",
+        "subtitle": "Trova risposte rapide alle domande piu comuni sui nostri tour, prenotazioni e servizi.",
+        "items": [
+            {
+                "question": "Come posso prenotare un tour?",
+                "answer": "Puoi prenotare un tour direttamente sul nostro sito selezionando il tour desiderato, scegliendo una data e completando il pagamento. Puoi anche contattarci tramite WhatsApp o e-mail per ricevere assistenza."
+            },
+            {
+                "question": "Cosa e incluso nel prezzo del tour?",
+                "answer": "Il prezzo include il trasporto, una guida professionale, i biglietti d'ingresso alle attrazioni elencate e un'assicurazione di viaggio. Eventuali servizi aggiuntivi saranno chiaramente indicati nella pagina del tour."
+            },
+            {
+                "question": "Posso personalizzare un itinerario?",
+                "answer": "Si. Offriamo itinerari completamente personalizzabili in base ai tuoi interessi e alla tua disponibilita. Contatta il nostro team e prepareremo l'esperienza giusta per te."
+            },
+            {
+                "question": "Cosa devo portare durante il tour?",
+                "answer": "Consigliamo scarpe comode, abbigliamento adatto alle condizioni meteorologiche, un documento d'identita valido, la conferma della prenotazione, acqua e i farmaci personali di cui potresti aver bisogno."
+            },
+            {
+                "question": "Qual e la vostra politica di cancellazione?",
+                "answer": "Le cancellazioni effettuate piu di 48 ore prima dell'inizio del tour hanno diritto a un rimborso completo. Le cancellazioni entro le 48 ore possono comportare una penale. Consulta la politica completa nella pagina di prenotazione."
+            },
+            {
+                "question": "I pasti sono inclusi nei tour?",
+                "answer": "I pasti non sono inclusi, salvo diversa indicazione nella pagina del tour. Prevediamo comunque soste presso ristoranti locali dove potrai assaporare la cucina tipica a tue spese."
+            },
+            {
+                "question": "Offrite sconti per gruppi?",
+                "answer": "Si, offriamo tariffe ridotte per gruppi di 8 o piu persone. Contattaci direttamente per ricevere un preventivo personalizzato in base alla dimensione del gruppo e alle preferenze del tour."
+            },
+            {
+                "question": "Offrite tour privati?",
+                "answer": "Si. I tour privati sono disponibili per singoli, coppie, famiglie e gruppi aziendali. Avrai un'esperienza completamente personalizzata e potrai procedere al tuo ritmo."
+            }
+        ],
+        "contact": {
+            "heading": "Hai ancora domande?",
+            "subtext": "Il nostro team e a tua disposizione. Contattaci e ti risponderemo il prima possibile.",
+            "whatsapp": {
+                "label": "WhatsApp",
+                "value": "+41 78 222 12 41",
+                "href": "https://wa.me/41782221241"
+            },
+            "email": {
+                "label": "E-mail",
+                "value": "info@gotripnow.ch",
+                "href": "mailto:info@gotripnow.ch"
+            }
         }
     }
 }

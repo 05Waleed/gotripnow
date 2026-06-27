@@ -1,34 +1,49 @@
 {
     "hero": {
-        "title": "Contacter ",
-        "titleLogo": "GoTrip",
-        "titleSuffix": "Now",
-        "description": "Vous avez des questions concernant un circuit, une réservation ou un voyage sur mesure ? Notre équipe basée en Suisse s'engage à vous répondre sous quelques heures."
+        "title": "Nous contacter",
+        "subtitle": "Nous sommes la pour vous aider",
+        "description": "Vous avez des questions sur une excursion, besoin d'aide pour une reservation ou souhaitez un itineraire personnalise ? Notre equipe est prete a vous aider.",
+        "cards": {
+            "email": {
+                "title": "Nous ecrire",
+                "description": "Pour les reservations, les demandes et les arrangements de voyage personnalises.",
+                "link": "info@gotripnow.ch"
+            },
+            "whatsapp": {
+                "title": "WhatsApp",
+                "description": "Disponible tous les jours de 8h00 a 20h00 CET.",
+                "link": "+41 78 222 12 41"
+            },
+            "responseTime": {
+                "title": "Delai de reponse",
+                "description": "Nous repondons generalement a tous les messages en quelques heures."
+            }
+        }
     },
     "form": {
-        "title": "Formulaire de contact",
+        "title": "Envoyer un message",
         "fields": {
             "name": {
                 "label": "Nom complet",
-                "placeholder": "Votre nom et prénom"
+                "placeholder": "Votre nom complet"
             },
             "email": {
                 "label": "Adresse e-mail",
                 "placeholder": "Votre adresse e-mail"
             },
             "subject": {
-                "label": "Objet",
-                "placeholder": "Sélectionnez un sujet"
+                "label": "Sujet",
+                "placeholder": "Choisir un sujet"
             },
             "message": {
                 "label": "Message",
-                "placeholder": "Veuillez rédiger votre message ici..."
+                "placeholder": "Veuillez saisir votre message ici..."
             }
         },
         "subjectOptions": [
             {
                 "value": "booking",
-                "label": "Demande de réservation"
+                "label": "Demande de reservation"
             },
             {
                 "value": "custom",
@@ -36,7 +51,7 @@
             },
             {
                 "value": "question",
-                "label": "Demande d'information générale"
+                "label": "Renseignement general"
             },
             {
                 "value": "other",
@@ -48,24 +63,70 @@
         },
         "validation": {
             "nameRequired": "Le nom est obligatoire.",
-            "nameMinLength": "Le nom doit comporter au moins 2 caractères.",
+            "nameMinLength": "Le nom doit comporter au moins 2 caracteres.",
             "emailRequired": "L'adresse e-mail est obligatoire.",
             "emailInvalid": "Veuillez saisir une adresse e-mail valide.",
-            "subjectRequired": "Veuillez sélectionner un objet.",
-            "messageRequired": "Le champ message ne peut pas être vide.",
-            "messageMinLength": "Le message doit comporter au moins 10 caractères."
+            "subjectRequired": "Veuillez selectionner un sujet.",
+            "messageRequired": "Le champ message ne peut pas etre vide.",
+            "messageMinLength": "Le message doit comporter au moins 10 caracteres."
         }
     },
-    "details": {
-        "email": {
-            "title": "Nous contacter par e-mail",
-            "description": "Pour les réservations, les demandes d'informations et les projets sur mesure.",
-            "link": "info@gotripnow.ch"
-        },
-        "whatsapp": {
-            "title": "WhatsApp",
-            "description": "Service disponible tous les jours de 8h00 à 20h00 CET.",
-            "link": "+41 78 222 12 41"
+    "picture": {
+        "heading": "Votre Voyage commence ici",
+        "headingAccent": "Voyage",
+        "subtext": "Que vous planifiez un sejour ou que vous ayez besoin d'aide pour decider, nous sommes la pour rendre votre experience de voyage simple et memorable."
+    },
+    "faq": {
+        "eyebrow": "FAQ",
+        "title": "Questions frequentes",
+        "subtitle": "Trouvez rapidement des reponses aux questions les plus courantes sur nos excursions, reservations et services.",
+        "items": [
+            {
+                "question": "Comment reserver une excursion ?",
+                "answer": "Vous pouvez reserver directement sur notre site en selectionnant l'excursion souhaitee, en choisissant une date et en finalisant le paiement. Vous pouvez egalement nous contacter par WhatsApp ou par e-mail."
+            },
+            {
+                "question": "Qu'est-ce qui est inclus dans le prix de l'excursion ?",
+                "answer": "Le prix comprend le transport, un guide professionnel, les droits d'entree aux sites mentionnes et une assurance voyage. Tout service supplementaire sera clairement indique sur la page de l'excursion."
+            },
+            {
+                "question": "Puis-je personnaliser un itineraire ?",
+                "answer": "Oui. Nous proposons des itineraires entierement personnalisables selon vos interets et votre disponibilite. Contactez notre equipe et nous preparerons l'experience qui vous convient."
+            },
+            {
+                "question": "Que dois-je apporter lors de l'excursion ?",
+                "answer": "Nous recommandons des chaussures confortables, des vetements adaptes a la meteo, une piece d'identite valide, votre confirmation de reservation, de l'eau et tout medicament personnel dont vous pourriez avoir besoin."
+            },
+            {
+                "question": "Quelle est votre politique d'annulation ?",
+                "answer": "Les annulations effectuees plus de 48 heures avant le debut de l'excursion donnent droit a un remboursement complet. Les annulations dans les 48 heures peuvent entrainer des frais. Veuillez consulter la politique complete sur la page de reservation."
+            },
+            {
+                "question": "Les repas sont-ils inclus dans les excursions ?",
+                "answer": "Les repas ne sont pas inclus, sauf indication contraire sur la page de l'excursion. Nous prevoyons des arrets dans des restaurants locaux ou vous pouvez decouvrir la cuisine regionale a votre propre frais."
+            },
+            {
+                "question": "Proposez-vous des tarifs de groupe ?",
+                "answer": "Oui, nous offrons des tarifs reduits pour les groupes de 8 personnes ou plus. Contactez-nous directement pour recevoir un devis adapte a votre groupe et a vos preferences."
+            },
+            {
+                "question": "Proposez-vous des excursions privees ?",
+                "answer": "Oui. Les excursions privees sont disponibles pour les particuliers, les couples, les familles et les groupes d'entreprise. Vous beneficiez d'une experience entierement personnalisee a votre propre rythme."
+            }
+        ],
+        "contact": {
+            "heading": "Vous avez encore des questions ?",
+            "subtext": "Notre equipe est disponible pour vous aider. Contactez-nous et nous vous repondrons dans les plus brefs delais.",
+            "whatsapp": {
+                "label": "WhatsApp",
+                "value": "+41 78 222 12 41",
+                "href": "https://wa.me/41782221241"
+            },
+            "email": {
+                "label": "E-mail",
+                "value": "info@gotripnow.ch",
+                "href": "mailto:info@gotripnow.ch"
+            }
         }
     }
 }

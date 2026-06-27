@@ -1,16 +1,31 @@
 {
     "hero": {
-        "title": "Kontaktieren Sie ",
-        "titleLogo": "GoTrip",
-        "titleSuffix": "Now",
-        "description": "Haben Sie Fragen zu einer Tour, einer Buchung oder einer individuellen Reise? Unsere Mitarbeitenden mit Sitz in der Schweiz antworten in der Regel innerhalb weniger Stunden."
+        "title": "Kontakt aufnehmen",
+        "subtitle": "Wir sind fur Sie da",
+        "description": "Haben Sie Fragen zu einer Tour, benotigen Sie Hilfe bei einer Buchung oder mochten Sie eine individuelle Reiseroute? Unser Team hilft Ihnen gerne weiter.",
+        "cards": {
+            "email": {
+                "title": "E-Mail schreiben",
+                "description": "Fur Buchungen, Anfragen und individuelle Reiseplanungen.",
+                "link": "info@gotripnow.ch"
+            },
+            "whatsapp": {
+                "title": "WhatsApp",
+                "description": "Taglich erreichbar von 8:00 bis 20:00 Uhr MEZ.",
+                "link": "+41 78 222 12 41"
+            },
+            "responseTime": {
+                "title": "Antwortzeit",
+                "description": "Wir antworten in der Regel innerhalb weniger Stunden auf alle Nachrichten."
+            }
+        }
     },
     "form": {
-        "title": "Schreiben Sie uns eine Nachricht",
+        "title": "Nachricht senden",
         "fields": {
             "name": {
-                "label": "Name",
-                "placeholder": "Ihr Name"
+                "label": "Vollstandiger Name",
+                "placeholder": "Ihr vollstandiger Name"
             },
             "email": {
                 "label": "E-Mail-Adresse",
@@ -18,7 +33,7 @@
             },
             "subject": {
                 "label": "Betreff",
-                "placeholder": "Betreff auswählen"
+                "placeholder": "Betreff auswahlen"
             },
             "message": {
                 "label": "Nachricht",
@@ -32,7 +47,7 @@
             },
             {
                 "value": "custom",
-                "label": "Individuelle Reiseplanung"
+                "label": "Individuelle Reise"
             },
             {
                 "value": "question",
@@ -44,28 +59,74 @@
             }
         ],
         "button": {
-            "label": "Nachricht senden"
+            "label": "Nachricht absenden"
         },
         "validation": {
-            "nameRequired": "Die Angabe des Namens ist erforderlich.",
+            "nameRequired": "Name ist erforderlich.",
             "nameMinLength": "Der Name muss mindestens 2 Zeichen lang sein.",
-            "emailRequired": "Die Angabe der E-Mail-Adresse ist erforderlich.",
-            "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
-            "subjectRequired": "Bitte wählen Sie einen Betreff aus.",
-            "messageRequired": "Das Nachrichtenfeld darf nicht leer sein.",
-            "messageMinLength": "Die Nachricht muss mindestens 10 Zeichen enthalten."
+            "emailRequired": "E-Mail-Adresse ist erforderlich.",
+            "emailInvalid": "Bitte geben Sie eine gultige E-Mail-Adresse ein.",
+            "subjectRequired": "Bitte wahlen Sie einen Betreff aus.",
+            "messageRequired": "Das Nachrichtenfeld darf nicht leer bleiben.",
+            "messageMinLength": "Die Nachricht muss mindestens 10 Zeichen lang sein."
         }
     },
-    "details": {
-        "email": {
-            "title": "E-Mail-Kontakt",
-            "description": "Für Buchungen, Anfragen und individuelle Reiseplanungen.",
-            "link": "info@gotripnow.ch"
-        },
-        "whatsapp": {
-            "title": "WhatsApp",
-            "description": "Täglich von 08:00 bis 20:00 Uhr MEZ.",
-            "link": "+41 78 222 12 41"
+    "picture": {
+        "heading": "Ihre Reise beginnt hier",
+        "headingAccent": "Reise",
+        "subtext": "Ob Sie eine Reise planen oder noch unentschlossen sind, wir sorgen dafur, dass Ihr Reiseerlebnis reibungslos und unvergesslich wird."
+    },
+    "faq": {
+        "eyebrow": "FAQ",
+        "title": "Haufig gestellte Fragen",
+        "subtitle": "Hier finden Sie schnelle Antworten auf die haufigsten Fragen zu unseren Touren, Buchungen und Dienstleistungen.",
+        "items": [
+            {
+                "question": "Wie kann ich eine Tour buchen?",
+                "answer": "Sie konnen eine Tour direkt auf unserer Website buchen, indem Sie Ihre bevorzugte Tour auswahlen, ein Datum festlegen und den Bezahlvorgang abschliessen. Sie konnen uns auch per WhatsApp oder E-Mail kontaktieren."
+            },
+            {
+                "question": "Was ist im Tourpreis enthalten?",
+                "answer": "Im Tourpreis sind Transport, ein professioneller Reiseleiter, Eintrittsgebuhren fur die aufgefuhrten Sehenswurdigkeiten und eine Reiseversicherung enthalten. Zusatzliche Leistungen werden auf der Tourseite klar angegeben."
+            },
+            {
+                "question": "Kann ich eine Reiseroute anpassen?",
+                "answer": "Ja. Wir bieten vollstandig anpassbare Reiserouten je nach Ihren Interessen und Ihrem Zeitplan. Kontaktieren Sie unser Team und wir planen das passende Erlebnis fur Sie."
+            },
+            {
+                "question": "Was soll ich zur Tour mitbringen?",
+                "answer": "Wir empfehlen bequeme Wanderschuhe, der Witterung angepasste Kleidung, einen gultige Ausweis, Ihre Buchungsbestatigung, Wasser sowie personliche Medikamente, die Sie moglicherweise benotigen."
+            },
+            {
+                "question": "Wie lautet Ihre Stornierungsbedingungen?",
+                "answer": "Stornierungen, die mehr als 48 Stunden vor Tourbeginn erfolgen, haben Anspruch auf eine vollstandige Ruckerstattung. Bei Stornierungen innerhalb von 48 Stunden konnen Gebuhren anfallen. Bitte lesen Sie die vollstandigen Bedingungen auf der Buchungsseite."
+            },
+            {
+                "question": "Sind Mahlzeiten in den Touren enthalten?",
+                "answer": "Mahlzeiten sind nicht enthalten, sofern dies nicht auf der Tourseite angegeben ist. Wir planen jedoch Stopps in lokalen Restaurants, wo Sie die regionale Kuche auf eigene Kosten geniessen konnen."
+            },
+            {
+                "question": "Bieten Sie Gruppenrabatte an?",
+                "answer": "Ja, wir bieten ermassigste Preise fur Gruppen ab 8 Personen. Kontaktieren Sie uns direkt fur ein Angebot, das auf Ihre Gruppengrosse und Tourpraferenzen zugeschnitten ist."
+            },
+            {
+                "question": "Bieten Sie Privattouren an?",
+                "answer": "Ja. Privattouren sind fur Einzelpersonen, Paare, Familien und Gruppen verfugbar. Sie erleben eine vollstandig personalisierte Tour in Ihrem eigenen Tempo."
+            }
+        ],
+        "contact": {
+            "heading": "Noch Fragen?",
+            "subtext": "Unser Team ist fur Sie da. Kontaktieren Sie uns und wir melden uns so bald wie moglich bei Ihnen.",
+            "whatsapp": {
+                "label": "WhatsApp",
+                "value": "+41 78 222 12 41",
+                "href": "https://wa.me/41782221241"
+            },
+            "email": {
+                "label": "E-Mail",
+                "value": "info@gotripnow.ch",
+                "href": "mailto:info@gotripnow.ch"
+            }
         }
     }
 }

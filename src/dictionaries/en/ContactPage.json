@@ -1,9 +1,24 @@
 {
     "hero": {
-        "title": "Contact ",
-        "titleLogo": "GoTrip",
-        "titleSuffix": "Now",
-        "description": "Do you have inquiries regarding a tour, a booking, or a customized itinerary? Our Switzerland-based team typically responds within a few hours."
+        "title": "Get In Touch",
+        "subtitle": "We are here to help",
+        "description": "Have questions about a tour, need help with a booking, or want a custom itinerary? Our team is ready to assist you.",
+        "cards": {
+            "email": {
+                "title": "Email Us",
+                "description": "For bookings, inquiries, and custom travel arrangements.",
+                "link": "info@gotripnow.ch"
+            },
+            "whatsapp": {
+                "title": "WhatsApp",
+                "description": "Available daily from 8:00 AM to 8:00 PM CET.",
+                "link": "+41 78 222 12 41"
+            },
+            "responseTime": {
+                "title": "Response Time",
+                "description": "We typically respond to all messages within a few hours."
+            }
+        }
     },
     "form": {
         "title": "Send Us a Message",
@@ -32,7 +47,7 @@
             },
             {
                 "value": "custom",
-                "label": "Customized Travel"
+                "label": "Custom Travel"
             },
             {
                 "value": "question",
@@ -48,24 +63,70 @@
         },
         "validation": {
             "nameRequired": "Name is required.",
-            "nameMinLength": "Name must consist of at least 2 characters.",
+            "nameMinLength": "Name must be at least 2 characters long.",
             "emailRequired": "Email address is required.",
             "emailInvalid": "Please enter a valid email address.",
             "subjectRequired": "Please select a subject.",
             "messageRequired": "The message field cannot be left blank.",
-            "messageMinLength": "The message must consist of at least 10 characters."
+            "messageMinLength": "The message must be at least 10 characters long."
         }
     },
-    "details": {
-        "email": {
-            "title": "Email Correspondence",
-            "description": "For bookings, inquiries, and custom travel arrangements.",
-            "link": "info@gotripnow.ch"
-        },
-        "whatsapp": {
-            "title": "WhatsApp",
-            "description": "Available daily from 8:00 AM to 8:00 PM CET.",
-            "link": "+41 78 222 12 41"
+    "picture": {
+        "heading": "Your Journey Starts Here",
+        "headingAccent": "Journey",
+        "subtext": "Whether you are planning a trip or need help deciding, we are here to make your travel experience smooth and memorable."
+    },
+    "faq": {
+        "eyebrow": "FAQ",
+        "title": "Frequently Asked Questions",
+        "subtitle": "Find quick answers to the most common questions about our tours, bookings, and services.",
+        "items": [
+            {
+                "question": "How do I book a tour?",
+                "answer": "You can book a tour directly on our website by selecting your preferred tour, choosing a date, and completing the checkout process. You can also contact us by WhatsApp or email for help."
+            },
+            {
+                "question": "What is included in the tour price?",
+                "answer": "Our tour prices include transportation, a professional guide, entrance fees to listed attractions, and travel insurance. Any additional services will be clearly stated on the tour page."
+            },
+            {
+                "question": "Can I customize a tour itinerary?",
+                "answer": "Yes. We offer fully customizable itineraries based on your interests and schedule. Contact our team and we will plan the right experience for you."
+            },
+            {
+                "question": "What should I bring on the tour?",
+                "answer": "We recommend comfortable walking shoes, clothing suited to the weather, a valid ID, your booking confirmation, water, and any personal medications you may need."
+            },
+            {
+                "question": "What is your cancellation policy?",
+                "answer": "Cancellations made more than 48 hours before the tour start are eligible for a full refund. Cancellations within 48 hours may incur a fee. Please review the full policy on the booking page."
+            },
+            {
+                "question": "Are meals included in the tours?",
+                "answer": "Meals are not included unless stated on the tour page. We do plan stops at local restaurants where you can enjoy the local cuisine at your own cost."
+            },
+            {
+                "question": "Do you offer group discounts?",
+                "answer": "Yes, we offer reduced rates for groups of 8 or more. Contact us directly for a quote tailored to your group size and tour preferences."
+            },
+            {
+                "question": "Do you offer private tours?",
+                "answer": "Yes. Private tours are available for individuals, couples, families, and corporate groups. You will have a fully personalised experience at your own pace."
+            }
+        ],
+        "contact": {
+            "heading": "Still have questions?",
+            "subtext": "Our team is here to help. Contact us and we will get back to you as soon as possible.",
+            "whatsapp": {
+                "label": "WhatsApp",
+                "value": "+41 78 222 12 41",
+                "href": "https://wa.me/41782221241"
+            },
+            "email": {
+                "label": "Email",
+                "value": "info@gotripnow.ch",
+                "href": "mailto:info@gotripnow.ch"
+            }
         }
     }
 }
