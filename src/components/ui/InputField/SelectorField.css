@@ -1,0 +1,60 @@
+.selector-field-container {
+    width: 100%;
+    border-radius: 14px;
+    background-color: #eaeaea61;
+    border: 1px solid #eaeaea;
+    transition: border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    /* Adds the custom arrow icon at the right end */
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+}
+
+.selector-field-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.selector-field-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    color: #666;
+}
+
+.selector-field-container select {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0.9rem 2.5rem 0.9rem 0.75rem;
+    border-radius: 14px;
+    background-color: transparent;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.selector-field-container--error {
+    border-color: #e53e3e;
+    background-color: #fff5f5;
+}
+
+.selector-field-icon--error {
+    color: #e53e3e;
+}
+
+.selector-field-error {
+    font-size: 0.75rem;
+    color: #e53e3e;
+    font-weight: bold;
+    margin-top: 0.25rem;
+}

@@ -1,6 +1,6 @@
-import TourHero from "@/components/TourHero/TourHero";
-import TourSection from "@/components/TourSection/TourSection";
-import { TourData } from "@/components/TourCard/TourCard";
+import TourHero from "@/components/Tour/TourHero/TourHero";
+import TourSection from "@/components/Tour/TourSection/TourSection";
+import { TourData } from "@/components/Tour/TourCard/TourCard";
 import PlanTourCTA from "@/components/PlanTourCTA/PlanTourCTA";
 import { getDictionary, Locale } from "../../dictionaries";
 

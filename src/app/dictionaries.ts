@@ -13,6 +13,7 @@ const loaders = {
     VideoDay: () => import("../dictionaries/en/VideoDay.json").then((m) => m.default),
     PlanTourCTA: () => import("../dictionaries/en/PlanTourCTA.json").then((m) => m.default),
     AboutPage: () => import("../dictionaries/en/AboutPage.json").then((m) => m.default),
+    ContactPage: () => import("../dictionaries/en/ContactPage.json").then((m) => m.default),
   },
   de: {
     Hero: () => import("../dictionaries/de/Hero.json").then((m) => m.default),
@@ -24,6 +25,7 @@ const loaders = {
     VideoDay: () => import("../dictionaries/de/VideoDay.json").then((m) => m.default),
     PlanTourCTA: () => import("../dictionaries/de/PlanTourCTA.json").then((m) => m.default),
     AboutPage: () => import("../dictionaries/de/AboutPage.json").then((m) => m.default),
+    ContactPage: () => import("../dictionaries/de/ContactPage.json").then((m) => m.default),
   },
   fr: {
     Hero: () => import("../dictionaries/fr/Hero.json").then((m) => m.default),
@@ -35,6 +37,7 @@ const loaders = {
     VideoDay: () => import("../dictionaries/fr/VideoDay.json").then((m) => m.default),
     PlanTourCTA: () => import("../dictionaries/fr/PlanTourCTA.json").then((m) => m.default),
     AboutPage: () => import("../dictionaries/fr/AboutPage.json").then((m) => m.default),
+    ContactPage: () => import("../dictionaries/fr/ContactPage.json").then((m) => m.default),
   },
   it: {
     Hero: () => import("../dictionaries/it/Hero.json").then((m) => m.default),
@@ -46,6 +49,7 @@ const loaders = {
     VideoDay: () => import("../dictionaries/it/VideoDay.json").then((m) => m.default),
     PlanTourCTA: () => import("../dictionaries/it/PlanTourCTA.json").then((m) => m.default),
     AboutPage: () => import("../dictionaries/it/AboutPage.json").then((m) => m.default),
+    ContactPage: () => import("../dictionaries/it/ContactPage.json").then((m) => m.default),
   },
 };
 
@@ -61,6 +65,7 @@ export const getDictionary = async (locale: Locale) => {
     videoDayData,
     planTourCTAData,
     aboutPageData,
+    contactPageData,
   ] = await Promise.all([
     currentLoader.Hero(),
     currentLoader.Navbar(),
@@ -71,8 +76,8 @@ export const getDictionary = async (locale: Locale) => {
     currentLoader.VideoDay(),
     currentLoader.PlanTourCTA(),
     currentLoader.AboutPage(),
+    currentLoader.ContactPage(),
   ]);
-
   return {
     Hero: heroData,
     Navbar: navbarData,
@@ -83,5 +88,6 @@ export const getDictionary = async (locale: Locale) => {
     VideoDay: videoDayData,
     PlanTourCTA: planTourCTAData,
     AboutPage: aboutPageData,
+    ContactPage: contactPageData,
   };
 };

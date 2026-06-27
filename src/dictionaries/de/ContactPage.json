@@ -1,0 +1,71 @@
+{
+    "hero": {
+        "title": "Kontaktieren Sie ",
+        "titleLogo": "GoTrip",
+        "titleSuffix": "Now",
+        "description": "Haben Sie Fragen zu einer Tour, einer Buchung oder einer individuellen Reise? Unsere Mitarbeitenden mit Sitz in der Schweiz antworten in der Regel innerhalb weniger Stunden."
+    },
+    "form": {
+        "title": "Schreiben Sie uns eine Nachricht",
+        "fields": {
+            "name": {
+                "label": "Name",
+                "placeholder": "Ihr Name"
+            },
+            "email": {
+                "label": "E-Mail-Adresse",
+                "placeholder": "Ihre E-Mail-Adresse"
+            },
+            "subject": {
+                "label": "Betreff",
+                "placeholder": "Betreff auswählen"
+            },
+            "message": {
+                "label": "Nachricht",
+                "placeholder": "Bitte geben Sie hier Ihre Nachricht ein..."
+            }
+        },
+        "subjectOptions": [
+            {
+                "value": "booking",
+                "label": "Buchungsanfrage"
+            },
+            {
+                "value": "custom",
+                "label": "Individuelle Reiseplanung"
+            },
+            {
+                "value": "question",
+                "label": "Allgemeine Anfrage"
+            },
+            {
+                "value": "other",
+                "label": "Sonstiges"
+            }
+        ],
+        "button": {
+            "label": "Nachricht senden"
+        },
+        "validation": {
+            "nameRequired": "Die Angabe des Namens ist erforderlich.",
+            "nameMinLength": "Der Name muss mindestens 2 Zeichen lang sein.",
+            "emailRequired": "Die Angabe der E-Mail-Adresse ist erforderlich.",
+            "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+            "subjectRequired": "Bitte wählen Sie einen Betreff aus.",
+            "messageRequired": "Das Nachrichtenfeld darf nicht leer sein.",
+            "messageMinLength": "Die Nachricht muss mindestens 10 Zeichen enthalten."
+        }
+    },
+    "details": {
+        "email": {
+            "title": "E-Mail-Kontakt",
+            "description": "Für Buchungen, Anfragen und individuelle Reiseplanungen.",
+            "link": "info@gotripnow.ch"
+        },
+        "whatsapp": {
+            "title": "WhatsApp",
+            "description": "Täglich von 08:00 bis 20:00 Uhr MEZ.",
+            "link": "+41 78 222 12 41"
+        }
+    }
+}

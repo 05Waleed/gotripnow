@@ -2,11 +2,11 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import './ToursSearchBar.css';
-import TourLocationField from '../ui/TourLocationField/TourLocationField';
-import TourTypeField from '../ui/TourTypeField/TourTypeField';
-import TourPassengerField from '../ui/TourPassengerField/TourPassengerField';
-import TourSearchBttn from '../ui/TourSearchBttn/TourSearchBttn';
-import type { HeroDict } from '../Hero/Hero';
+import TourLocationField from '@/components/ui/TourLocationField/TourLocationField';
+import TourTypeField from '@/components/ui/TourTypeField/TourTypeField';
+import TourPassengerField from '@/components/ui/TourPassengerField/TourPassengerField';
+import TourSearchBttn from '@/components/ui/TourSearchBttn/TourSearchBttn';
+import type { HeroDict } from '@/components/Hero/Hero';
 
 type SearchDict = HeroDict['search'];
 type ActiveField = 'location' | 'type' | 'passenger' | null;

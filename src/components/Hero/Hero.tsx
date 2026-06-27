@@ -1,7 +1,7 @@
 // gotripnow/src/components/Hero/Hero.tsx
 import './Hero.css';
 import Image from 'next/image';
-import ToursSearchBar from '../ToursSearchBar/ToursSearchBar';
+import ToursSearchBar from '../Tour/ToursSearchBar/ToursSearchBar';
 
 export interface HeroDict {
     hero: { title: string; subtitle: string };

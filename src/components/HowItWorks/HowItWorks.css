@@ -5,7 +5,6 @@
 .how-it-works-container {
     text-align: center;
     margin: 8rem auto;
-    font-family: system-ui, -apple-system, sans-serif;
 }
 
 .how-it-works-title {
@@ -33,7 +32,7 @@
 
 .how-it-works-step {
     background-color: #ffffff;
-    border: 1px solid #f3f4f6;
+    border: 1px solid #eaeaea;
     border-radius: 24px;
     padding: 2rem 1.5rem;
     width: 360px;

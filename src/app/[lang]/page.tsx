@@ -1,8 +1,8 @@
 import Hero from "@/components/Hero/Hero";
-import TourSection from "@/components/TourSection/TourSection";
+import TourSection from "@/components/Tour/TourSection/TourSection";
 import CitiesShortcut from "@/components/CitiesShortcut/CitiesShortcut";
 import { getDictionary, Locale } from "../dictionaries";
-import { TourData } from "@/components/TourCard/TourCard";
+import { TourData } from "@/components/Tour/TourCard/TourCard";
 import Whyus from "@/components/Whyus/Whyus";
 import Reviews from "@/components/Reviews/Reviews";
 import VideoDay from "@/components/VideoDay/VideoDay";

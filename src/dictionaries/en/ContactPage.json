@@ -1,0 +1,71 @@
+{
+    "hero": {
+        "title": "Contact ",
+        "titleLogo": "GoTrip",
+        "titleSuffix": "Now",
+        "description": "Do you have inquiries regarding a tour, a booking, or a customized itinerary? Our Switzerland-based team typically responds within a few hours."
+    },
+    "form": {
+        "title": "Send Us a Message",
+        "fields": {
+            "name": {
+                "label": "Full Name",
+                "placeholder": "Your full name"
+            },
+            "email": {
+                "label": "Email Address",
+                "placeholder": "Your email address"
+            },
+            "subject": {
+                "label": "Subject",
+                "placeholder": "Select a subject"
+            },
+            "message": {
+                "label": "Message",
+                "placeholder": "Please enter your message here..."
+            }
+        },
+        "subjectOptions": [
+            {
+                "value": "booking",
+                "label": "Booking Inquiry"
+            },
+            {
+                "value": "custom",
+                "label": "Customized Travel"
+            },
+            {
+                "value": "question",
+                "label": "General Inquiry"
+            },
+            {
+                "value": "other",
+                "label": "Other"
+            }
+        ],
+        "button": {
+            "label": "Submit Message"
+        },
+        "validation": {
+            "nameRequired": "Name is required.",
+            "nameMinLength": "Name must consist of at least 2 characters.",
+            "emailRequired": "Email address is required.",
+            "emailInvalid": "Please enter a valid email address.",
+            "subjectRequired": "Please select a subject.",
+            "messageRequired": "The message field cannot be left blank.",
+            "messageMinLength": "The message must consist of at least 10 characters."
+        }
+    },
+    "details": {
+        "email": {
+            "title": "Email Correspondence",
+            "description": "For bookings, inquiries, and custom travel arrangements.",
+            "link": "info@gotripnow.ch"
+        },
+        "whatsapp": {
+            "title": "WhatsApp",
+            "description": "Available daily from 8:00 AM to 8:00 PM CET.",
+            "link": "+41 78 222 12 41"
+        }
+    }
+}
