@@ -1,4 +1,50 @@
 {
+    "TourHero": {
+        "title": "Schweiz entdecken",
+        "subtitle": "Finden Sie die perfekte Tour für Ihr nächstes Abenteuer",
+        "search": {
+            "button": "Touren suchen",
+            "location": {
+                "placeholder": "Wohin möchten Sie reisen?",
+                "dropdownTitle": "Abfahrtsort auswählen",
+                "noResults": "Keine Ziele gefunden",
+                "errorRequired": "Bitte wählen Sie einen Abfahrtsort aus"
+            },
+            "duration": {
+                "placeholder": "Dauer auswählen",
+                "dropdownTitle": "Tour-Dauer",
+                "errorRequired": "Bitte wählen Sie eine bevorzugte Dauer aus",
+                "options": {
+                    "halfDay": {
+                        "label": "Halbtags",
+                        "description": "Unter 5 Stunden Erkundung"
+                    },
+                    "fullDay": {
+                        "label": "Ganztags",
+                        "description": "5 bis 10 Stunden volles Abenteuer"
+                    },
+                    "twoDays": {
+                        "label": "Mehrtägig",
+                        "description": "Ab 2 Tagen intensives Erlebnis"
+                    }
+                }
+            },
+            "travelers": {
+                "triggerSingular": "Reisender",
+                "triggerPlural": "Reisende",
+                "dropdownTitle": "Anzahl der Fahrgäste",
+                "adults": {
+                    "label": "Erwachsene",
+                    "description": "Ab 13 Jahren"
+                },
+                "children": {
+                    "label": "Kinder",
+                    "description": "Im Alter von 2 bis 12 Jahren"
+                },
+                "done": "Anwenden"
+            }
+        }
+    },
     "ui": {
         "sectionTitle": "Touren in {city}",
         "buttons": {

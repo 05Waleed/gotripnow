@@ -23,7 +23,8 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <>
-      <TourHero dict={dict.Hero} />
+      <TourHero dict={dict.Tours.TourHero} />
+
       {Object.entries(toursByCity).map(([city, tours]) => {
         const template = dict.Tours.ui.sectionTitle || "Tours in {city}";
         const sectionUi = {

@@ -1,7 +1,10 @@
+'use client'
 import './TourHero.css'
 import ToursSearchBar from '../ToursSearchBar/ToursSearchBar';
 
 export interface TourHeroDict {
+    title: string;
+    subtitle: string;
     search: {
         button: string;
         location: {
@@ -20,7 +23,6 @@ export interface TourHeroDict {
                 twoDays: { label: string; description: string };
             };
         };
-        // Add this key to match the structure expected by ToursSearchBar
         travelers: {
             triggerSingular: string;
             triggerPlural: string;
@@ -41,8 +43,8 @@ export default function TourHero({ dict }: TourHeroProps) {
         <div className='tour-hero-wrapper'>
             <div className='tour-hero large-screen-max-width'>
                 <div className="tour-hero-text">
-                    <h1>All Switzerland tours</h1>
-                    <h2>Private, guided day trips departing from Zürich, Basel and Geneva.</h2>
+                    <h1>{dict.title}</h1>
+                    <h2>{dict.subtitle}</h2>
                 </div>
                 <ToursSearchBar dict={dict.search} />
             </div>

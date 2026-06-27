@@ -1,4 +1,50 @@
 {
+    "TourHero": {
+        "title": "Explorez la Suisse",
+        "subtitle": "Trouvez le tour parfait pour votre prochaine aventure",
+        "search": {
+            "button": "Rechercher",
+            "location": {
+                "placeholder": "Où voulez-vous aller ?",
+                "dropdownTitle": "Sélectionnez la ville de départ",
+                "noResults": "Aucune destination trouvée",
+                "errorRequired": "Veuillez choisir une ville de départ"
+            },
+            "duration": {
+                "placeholder": "Sélectionnez la durée",
+                "dropdownTitle": "Durée de l'excursion",
+                "errorRequired": "Veuillez choisir une durée préférée",
+                "options": {
+                    "halfDay": {
+                        "label": "Demi-journée",
+                        "description": "Moins de 5 heures d'exploration"
+                    },
+                    "fullDay": {
+                        "label": "Journée complète",
+                        "description": "De 5 à 10 heures de pure aventure"
+                    },
+                    "twoDays": {
+                        "label": "Plusieurs jours",
+                        "description": "Voyage immersif de 2 jours ou plus"
+                    }
+                }
+            },
+            "travelers": {
+                "triggerSingular": "voyageur",
+                "triggerPlural": "voyageurs",
+                "dropdownTitle": "Nombre de passagers",
+                "adults": {
+                    "label": "Adultes",
+                    "description": "Âgés de 13 ans ou plus"
+                },
+                "children": {
+                    "label": "Enfants",
+                    "description": "Âgés de 2 à 12 ans"
+                },
+                "done": "Appliquer"
+            }
+        }
+    },
     "ui": {
         "sectionTitle": "Visites à {city}",
         "buttons": {
