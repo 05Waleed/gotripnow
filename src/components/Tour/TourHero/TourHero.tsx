@@ -7,11 +7,12 @@ export interface TourHeroDict {
     subtitle: string;
     search: {
         button: string;
-        location: {
+        season: {
             placeholder: string;
             dropdownTitle: string;
             noResults: string;
             errorRequired: string;
+            suggestions: { season: string; period: string }[];
         };
         duration: {
             placeholder: string;
@@ -27,11 +28,11 @@ export interface TourHeroDict {
             triggerSingular: string;
             triggerPlural: string;
             dropdownTitle: string;
+            done: string;
             adults: { label: string; description: string };
             children: { label: string; description: string };
-            done: string;
         };
-    }
+    };
 }
 
 interface TourHeroProps {

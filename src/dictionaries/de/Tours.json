@@ -4,11 +4,29 @@
         "subtitle": "Finden Sie die perfekte Tour für Ihr nächstes Abenteuer",
         "search": {
             "button": "Touren suchen",
-            "location": {
-                "placeholder": "Wohin möchten Sie reisen?",
-                "dropdownTitle": "Abfahrtsort auswählen",
-                "noResults": "Keine Ziele gefunden",
-                "errorRequired": "Bitte wählen Sie einen Abfahrtsort aus"
+            "season": {
+                "placeholder": "Wann möchten Sie reisen?",
+                "dropdownTitle": "Reisesaison auswählen",
+                "noResults": "Keine Saisons gefunden",
+                "errorRequired": "Bitte wählen Sie eine Reisesaison aus",
+                "suggestions": [
+                    {
+                        "season": "Winter",
+                        "period": "Dezember – Februar"
+                    },
+                    {
+                        "season": "Frühling",
+                        "period": "März – Mai"
+                    },
+                    {
+                        "season": "Sommer",
+                        "period": "Juni – August"
+                    },
+                    {
+                        "season": "Herbst",
+                        "period": "September – November"
+                    }
+                ]
             },
             "duration": {
                 "placeholder": "Dauer auswählen",

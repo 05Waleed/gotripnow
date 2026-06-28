@@ -5,11 +5,29 @@
   },
   "search": {
     "button": "Cerca",
-    "location": {
-      "placeholder": "Città di partenza",
-      "dropdownTitle": "Suggerimenti",
-      "noResults": "Nessuna destinazione trovata",
-      "errorRequired": "Seleziona una città"
+    "season": {
+      "placeholder": "Quando desidera viaggiare?",
+      "dropdownTitle": "Seleziona la stagione di viaggio",
+      "noResults": "Nessuna stagione trovata",
+      "errorRequired": "Si prega di selezionare una stagione di viaggio",
+      "suggestions": [
+        {
+          "season": "Inverno",
+          "period": "Dicembre – Febbraio"
+        },
+        {
+          "season": "Primavera",
+          "period": "Marzo – Maggio"
+        },
+        {
+          "season": "Estate",
+          "period": "Giugno – Agosto"
+        },
+        {
+          "season": "Autunno",
+          "period": "Settembre – Novembre"
+        }
+      ]
     },
     "duration": {
       "placeholder": "Seleziona durata",

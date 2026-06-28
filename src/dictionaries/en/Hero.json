@@ -5,11 +5,29 @@
   },
   "search": {
     "button": "Search",
-    "location": {
-      "placeholder": "Departure City",
-      "dropdownTitle": "Suggestions",
-      "noResults": "No destinations found",
-      "errorRequired": "Please select a city"
+    "season": {
+      "placeholder": "When do you want to travel?",
+      "dropdownTitle": "Select Travel Season",
+      "noResults": "No seasons found",
+      "errorRequired": "Please select a travel season",
+      "suggestions": [
+        {
+          "season": "Winter",
+          "period": "December – February"
+        },
+        {
+          "season": "Spring",
+          "period": "March – May"
+        },
+        {
+          "season": "Summer",
+          "period": "June – August"
+        },
+        {
+          "season": "Autumn",
+          "period": "September – November"
+        }
+      ]
     },
     "duration": {
       "placeholder": "Select tour duration",

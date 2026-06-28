@@ -4,13 +4,39 @@ import React, { useState, useEffect, useRef } from 'react';
 import './ToursSearchBar.css';
 import TourLocationField from '@/components/ui/TourLocationField/TourLocationField';
 import TourTypeField from '@/components/ui/TourTypeField/TourTypeField';
-import TourPassengerField from '@/components/ui/TourPassengerField/TourPassengerField';
 import TourSearchBttn from '@/components/ui/TourSearchBttn/TourSearchBttn';
-import type { HeroDict } from '@/components/Hero/Hero';
 
-type SearchDict = HeroDict['search'];
-type ActiveField = 'location' | 'type' | 'passenger' | null;
-interface FormErrors { location: string; type: string }
+interface SearchDict {
+    button: string;
+    season: {
+        placeholder: string;
+        dropdownTitle: string;
+        noResults: string;
+        errorRequired: string;
+        suggestions: { season: string; period: string }[];
+    };
+    duration: {
+        placeholder: string;
+        dropdownTitle: string;
+        errorRequired: string;
+        options: {
+            halfDay: { label: string; description: string };
+            fullDay: { label: string; description: string };
+            twoDays: { label: string; description: string };
+        };
+    };
+    travelers: {
+        triggerSingular: string;
+        triggerPlural: string;
+        dropdownTitle: string;
+        adults: { label: string; description: string };
+        children: { label: string; description: string };
+        done: string;
+    };
+}
+
+type ActiveField = 'season' | 'type' | 'passenger' | null;
+interface FormErrors { season: string; type: string }
 
 interface ToursSearchBarProps {
     dict: SearchDict;
@@ -18,9 +44,9 @@ interface ToursSearchBarProps {
 
 export default function ToursSearchBar({ dict }: ToursSearchBarProps) {
     const [activeField, setActiveField] = useState<ActiveField>(null);
-    const [location, setLocation] = useState('');
+    const [season, setSeason] = useState('');
     const [tourType, setTourType] = useState('');
-    const [errors, setErrors] = useState<FormErrors>({ location: '', type: '' });
+    const [errors, setErrors] = useState<FormErrors>({ season: '', type: '' });
     const cardRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -34,26 +60,26 @@ export default function ToursSearchBar({ dict }: ToursSearchBarProps) {
     }, []);
 
     function handleSearch() {
-        const newErrors: FormErrors = { location: '', type: '' };
-        if (!location.trim()) newErrors.location = dict.location.errorRequired;
+        const newErrors: FormErrors = { season: '', type: '' };
+        if (!season.trim()) newErrors.season = dict.season.errorRequired;
         if (!tourType) newErrors.type = dict.duration.errorRequired;
         setErrors(newErrors);
-        if (newErrors.location || newErrors.type) return;
+        if (newErrors.season || newErrors.type) return;
         setActiveField(null);
-        console.log('Search:', { location, tourType });
+        console.log('Search:', { season, tourType });
     }
 
     return (
         <div className="tsb-wrapper">
             <div className="tsb-card" ref={cardRef}>
                 <TourLocationField
-                    dict={dict.location}
-                    isOpen={activeField === 'location'}
-                    onOpen={() => setActiveField('location')}
+                    dict={dict.season}
+                    isOpen={activeField === 'season'}
+                    onOpen={() => setActiveField('season')}
                     onClose={() => setActiveField(null)}
-                    onSelect={(city) => {
-                        setLocation(city);
-                        setErrors((e) => ({ ...e, location: '' }));
+                    onSelect={(value) => {
+                        setSeason(value);
+                        setErrors((e) => ({ ...e, season: '' }));
                         setActiveField('type');
                     }}
                 />
@@ -70,22 +96,16 @@ export default function ToursSearchBar({ dict }: ToursSearchBarProps) {
                     }}
                 />
                 <div className="tsb-divider" />
-                <TourPassengerField
-                    dict={dict.travelers}
-                    isOpen={activeField === 'passenger'}
-                    onOpen={() => setActiveField('passenger')}
-                    onClose={() => setActiveField(null)}
-                />
                 <TourSearchBttn label={dict.button} onClick={handleSearch} />
             </div>
 
             <div className="tsb-errors" role="alert" aria-live="polite">
-                {errors.location && (
+                {errors.season && (
                     <span className="tsb-error-item">
                         <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
                         </svg>
-                        {errors.location}
+                        {errors.season}
                     </span>
                 )}
                 {errors.type && (

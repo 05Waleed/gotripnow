@@ -1,4 +1,3 @@
-// gotripnow/src/components/Hero/Hero.tsx
 import './Hero.css';
 import Image from 'next/image';
 import ToursSearchBar from '../Tour/ToursSearchBar/ToursSearchBar';
@@ -7,9 +6,17 @@ export interface HeroDict {
     hero: { title: string; subtitle: string };
     search: {
         button: string;
-        location: { placeholder: string; dropdownTitle: string; noResults: string; errorRequired: string };
+        season: {
+            placeholder: string;
+            dropdownTitle: string;
+            noResults: string;
+            errorRequired: string;
+            suggestions: { season: string; period: string }[];
+        };
         duration: {
-            placeholder: string; dropdownTitle: string; errorRequired: string;
+            placeholder: string;
+            dropdownTitle: string;
+            errorRequired: string;
             options: {
                 halfDay: { label: string; description: string };
                 fullDay: { label: string; description: string };
@@ -17,7 +24,10 @@ export interface HeroDict {
             };
         };
         travelers: {
-            triggerSingular: string; triggerPlural: string; dropdownTitle: string; done: string;
+            triggerSingular: string;
+            triggerPlural: string;
+            dropdownTitle: string;
+            done: string;
             adults: { label: string; description: string };
             children: { label: string; description: string };
         };

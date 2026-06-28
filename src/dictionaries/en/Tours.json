@@ -4,11 +4,29 @@
         "subtitle": "Find the perfect tour for your next adventure",
         "search": {
             "button": "Search Tours",
-            "location": {
-                "placeholder": "Where do you want to go?",
-                "dropdownTitle": "Select Departure City",
-                "noResults": "No destinations found",
-                "errorRequired": "Please choose a departure city"
+            "season": {
+                "placeholder": "When do you want to travel?",
+                "dropdownTitle": "Select Travel Season",
+                "noResults": "No seasons found",
+                "errorRequired": "Please select a travel season",
+                "suggestions": [
+                    {
+                        "season": "Winter",
+                        "period": "December – February"
+                    },
+                    {
+                        "season": "Spring",
+                        "period": "March – May"
+                    },
+                    {
+                        "season": "Summer",
+                        "period": "June – August"
+                    },
+                    {
+                        "season": "Autumn",
+                        "period": "September – November"
+                    }
+                ]
             },
             "duration": {
                 "placeholder": "Select duration",

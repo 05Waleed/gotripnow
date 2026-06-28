@@ -1,31 +1,29 @@
-// gotripnow/src/components/ui/TourLocationField/TourLocationField.tsx
 'use client';
 import React, { useEffect, useRef } from 'react';
 import './TourLocationField.css';
-import type { HeroDict } from '../../Hero/Hero';
 
-type LocationDict = HeroDict['search']['location'];
+interface SuggestionItem { season: string; period: string }
 
-interface SuggestionItem { city: string; country: string }
-
-const SUGGESTIONS: SuggestionItem[] = [
-    { city: 'Zurich', country: 'Switzerland' },
-    { city: 'Geneva', country: 'Switzerland' },
-    { city: 'Basel', country: 'Switzerland' },
-];
+interface SeasonDict {
+    placeholder: string;
+    dropdownTitle: string;
+    noResults: string;
+    errorRequired: string;
+    suggestions: SuggestionItem[];
+}
 
 interface TourLocationFieldProps {
-    dict: LocationDict;
+    dict: SeasonDict;
     isOpen: boolean;
     onOpen: () => void;
     onClose: () => void;
-    onSelect: (city: string) => void;
+    onSelect: (season: string) => void;
 }
 
-function PinIcon() {
+function CalendarIcon() {
     return (
         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z" />
         </svg>
     );
 }
@@ -38,21 +36,20 @@ export default function TourLocationField({ dict, isOpen, onOpen, onClose, onSel
         if (isOpen) setTimeout(() => inputRef.current?.focus(), 0);
     }, [isOpen]);
 
-    const filtered = SUGGESTIONS.filter(
-        (item) =>
-            item.city.toLowerCase().includes(query.toLowerCase()) ||
-            item.country.toLowerCase().includes(query.toLowerCase())
+    const filtered = dict.suggestions.filter((item) =>
+        item.season.toLowerCase().includes(query.toLowerCase()) ||
+        item.period.toLowerCase().includes(query.toLowerCase())
     );
 
-    const handleSelect = (city: string) => {
-        setQuery(city);
-        onSelect(city);
+    const handleSelect = (season: string) => {
+        setQuery(season);
+        onSelect(season);
     };
 
     return (
         <div className="tlf-wrapper">
             <div className={`tlf-input-container${isOpen ? ' active' : ''}`}>
-                <span className="tlf-field-icon"><PinIcon /></span>
+                <span className="tlf-field-icon"><CalendarIcon /></span>
                 <span className="tlf-icon-sep" />
                 <input
                     ref={inputRef}
@@ -63,7 +60,6 @@ export default function TourLocationField({ dict, isOpen, onOpen, onClose, onSel
                     onFocus={onOpen}
                 />
             </div>
-
             {isOpen && (
                 <div className="tlf-dropdown">
                     <div className="tlf-dropdown-title">{dict.dropdownTitle}</div>
@@ -74,16 +70,14 @@ export default function TourLocationField({ dict, isOpen, onOpen, onClose, onSel
                                     key={index}
                                     className="tlf-suggestion-item"
                                     onMouseDown={(e) => e.preventDefault()}
-                                    onClick={() => handleSelect(item.city)}
+                                    onClick={() => handleSelect(item.season)}
                                 >
                                     <div className="tlf-icon-container">
-                                        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
-                                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                                        </svg>
+                                        <CalendarIcon />
                                     </div>
                                     <div className="tlf-text-container">
-                                        <span className="tlf-city">{item.city}</span>
-                                        <span className="tlf-country">{item.country}</span>
+                                        <span className="tlf-city">{item.season}</span>
+                                        <span className="tlf-country">{item.period}</span>
                                     </div>
                                 </li>
                             ))

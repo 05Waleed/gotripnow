@@ -5,16 +5,34 @@
   },
   "search": {
     "button": "Suchen",
-    "location": {
-      "placeholder": "Abflugort",
-      "dropdownTitle": "Vorschläge",
-      "noResults": "Keine Ziele gefunden",
-      "errorRequired": "Bitte wähle eine Stadt aus"
+    "season": {
+      "placeholder": "Wann möchten Sie reisen?",
+      "dropdownTitle": "Reisesaison auswählen",
+      "noResults": "Keine Saisons gefunden",
+      "errorRequired": "Bitte wählen Sie eine Reisesaison aus",
+      "suggestions": [
+        {
+          "season": "Winter",
+          "period": "Dezember – Februar"
+        },
+        {
+          "season": "Frühling",
+          "period": "März – Mai"
+        },
+        {
+          "season": "Sommer",
+          "period": "Juni – August"
+        },
+        {
+          "season": "Herbst",
+          "period": "September – November"
+        }
+      ]
     },
     "duration": {
       "placeholder": "Tourdauer wählen",
       "dropdownTitle": "Dauer",
-      "errorRequired": "Bitte wähle eine Tourdauer aus",
+      "errorRequired": "Bitte wählen Sie eine Tourdauer aus",
       "options": {
         "halfDay": {
           "label": "Halber Tag",
