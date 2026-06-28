@@ -48,7 +48,10 @@ export default function TourLocationField({ dict, isOpen, onOpen, onClose, onSel
 
     return (
         <div className="tlf-wrapper">
-            <div className={`tlf-input-container${isOpen ? ' active' : ''}`}>
+            <div
+                className={`tlf-input-container${isOpen ? ' active' : ''}`}
+                onClick={onOpen}
+            >
                 <span className="tlf-field-icon"><CalendarIcon /></span>
                 <span className="tlf-icon-sep" />
                 <input
@@ -56,8 +59,8 @@ export default function TourLocationField({ dict, isOpen, onOpen, onClose, onSel
                     type="text"
                     placeholder={dict.placeholder}
                     value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    onFocus={onOpen}
+                    readOnly
+                    style={{ cursor: 'pointer' }}
                 />
             </div>
             {isOpen && (
