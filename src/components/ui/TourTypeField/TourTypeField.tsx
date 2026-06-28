@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import './TourTypeField.css';
 import type { HeroDict } from '../../Hero/Hero';
 
@@ -11,6 +11,8 @@ interface TourTypeFieldProps {
     onOpen: () => void;
     onClose: () => void;
     onSelect: (value: string) => void;
+    /** When true the field clears its internal selection (driven by parent reset) */
+    resetSignal?: boolean;
 }
 
 function ClockFieldIcon() {
@@ -29,19 +31,33 @@ function ClockDropdownIcon() {
     );
 }
 
-export default function TourTypeField({ dict, isOpen, onOpen, onClose, onSelect }: TourTypeFieldProps) {
+export default function TourTypeField({
+    dict,
+    isOpen,
+    onOpen,
+    onClose,
+    onSelect,
+    resetSignal,
+}: TourTypeFieldProps) {
     const [selectedValue, setSelectedValue] = React.useState('');
 
-    // Map static keys to dict options so labels come from the dictionary
+    // Clear internal state when parent signals a reset
+    useEffect(() => {
+        if (resetSignal) {
+            setSelectedValue('');
+        }
+    }, [resetSignal]);
+
     const options = [
-        { value: 'half-day', ...dict.options.halfDay },
-        { value: 'full-day', ...dict.options.fullDay },
-        { value: 'two-days', ...dict.options.twoDays },
+        { value: 'halfDay', ...dict.options.halfDay },
+        { value: 'fullDay', ...dict.options.fullDay },
+        { value: 'twoDays', ...dict.options.twoDays },
     ];
 
     const handleSelect = (value: string) => {
         setSelectedValue(value);
         onSelect(value);
+        onClose();
     };
 
     const currentLabel = options.find((o) => o.value === selectedValue)?.label;

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import './ToursSearchBar.css';
 import TourLocationField from '@/components/ui/TourLocationField/TourLocationField';
 import TourTypeField from '@/components/ui/TourTypeField/TourTypeField';
@@ -40,14 +41,24 @@ interface FormErrors { season: string; type: string }
 
 interface ToursSearchBarProps {
     dict: SearchDict;
+    redirectTo?: string;
 }
 
-export default function ToursSearchBar({ dict }: ToursSearchBarProps) {
+export default function ToursSearchBar({ dict, redirectTo }: ToursSearchBarProps) {
+    const router = useRouter();
+    const searchParams = useSearchParams();
+
     const [activeField, setActiveField] = useState<ActiveField>(null);
     const [season, setSeason] = useState('');
     const [tourType, setTourType] = useState('');
     const [errors, setErrors] = useState<FormErrors>({ season: '', type: '' });
     const cardRef = useRef<HTMLDivElement>(null);
+
+    const hasActiveFilters = !!(
+        season || tourType ||
+        searchParams.get('season') ||
+        searchParams.get('type')
+    );
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -65,8 +76,25 @@ export default function ToursSearchBar({ dict }: ToursSearchBarProps) {
         if (!tourType) newErrors.type = dict.duration.errorRequired;
         setErrors(newErrors);
         if (newErrors.season || newErrors.type) return;
+
         setActiveField(null);
-        console.log('Search:', { season, tourType });
+        const params = new URLSearchParams();
+        params.set('season', season);
+        params.set('type', tourType);
+
+        if (redirectTo) {
+            router.push(`${redirectTo}?${params.toString()}`);
+        } else {
+            router.push(`?${params.toString()}`);
+        }
+    }
+
+    function handleReset() {
+        setSeason('');
+        setTourType('');
+        setErrors({ season: '', type: '' });
+        setActiveField(null);
+        if (!redirectTo) router.push('?');
     }
 
     return (
@@ -82,6 +110,7 @@ export default function ToursSearchBar({ dict }: ToursSearchBarProps) {
                         setErrors((e) => ({ ...e, season: '' }));
                         setActiveField('type');
                     }}
+                    resetSignal={season === ''}
                 />
                 <div className="tsb-divider" />
                 <TourTypeField
@@ -94,9 +123,37 @@ export default function ToursSearchBar({ dict }: ToursSearchBarProps) {
                         setErrors((e) => ({ ...e, type: '' }));
                         setActiveField('passenger');
                     }}
+                    resetSignal={tourType === ''}
                 />
                 <div className="tsb-divider" />
                 <TourSearchBttn label={dict.button} onClick={handleSearch} />
+            </div>
+
+            {/* Clear sits OUTSIDE the card — floats as a small tag below on mobile,
+                beside the card on desktop via absolute positioning */}
+            <div className={`tsb-clear-row${hasActiveFilters ? ' tsb-clear-row--visible' : ''}`}>
+                <button
+                    className="tsb-clear-btn"
+                    onClick={handleReset}
+                    aria-label="Clear search filters"
+                    type="button"
+                    tabIndex={hasActiveFilters ? 0 : -1}
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        width="12"
+                        height="12"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        aria-hidden="true"
+                    >
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                    Clear filters
+                </button>
             </div>
 
             <div className="tsb-errors" role="alert" aria-live="polite">

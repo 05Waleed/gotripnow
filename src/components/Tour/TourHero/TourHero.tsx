@@ -1,5 +1,5 @@
-'use client'
-import './TourHero.css'
+'use client';
+import './TourHero.css';
 import ToursSearchBar from '../ToursSearchBar/ToursSearchBar';
 
 export interface TourHeroDict {
@@ -37,18 +37,20 @@ export interface TourHeroDict {
 
 interface TourHeroProps {
     dict: TourHeroDict;
+    /** When set, search redirects to this path instead of updating params in place */
+    redirectTo?: string;
 }
 
-export default function TourHero({ dict }: TourHeroProps) {
+export default function TourHero({ dict, redirectTo }: TourHeroProps) {
     return (
-        <div className='tour-hero-wrapper'>
-            <div className='tour-hero large-screen-max-width'>
+        <div className="tour-hero-wrapper">
+            <div className="tour-hero large-screen-max-width">
                 <div className="tour-hero-text">
                     <h1>{dict.title}</h1>
                     <h2>{dict.subtitle}</h2>
                 </div>
-                <ToursSearchBar dict={dict.search} />
+                <ToursSearchBar dict={dict.search} redirectTo={redirectTo} />
             </div>
         </div>
-    )
+    );
 }

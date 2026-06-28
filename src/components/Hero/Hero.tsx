@@ -36,9 +36,11 @@ export interface HeroDict {
 
 interface HeroProps {
     dict: HeroDict;
+    /** Full path to tours page e.g. "/en/tours". When provided, search redirects there. */
+    redirectTo?: string;
 }
 
-export default function Hero({ dict }: HeroProps) {
+export default function Hero({ dict, redirectTo }: HeroProps) {
     return (
         <section className="hero-container">
             <Image
@@ -55,7 +57,7 @@ export default function Hero({ dict }: HeroProps) {
                     <h2 className="hero-content-subtitle">{dict.hero.subtitle}</h2>
                 </div>
                 <div className="hero-searchbar-wrapper">
-                    <ToursSearchBar dict={dict.search} />
+                    <ToursSearchBar dict={dict.search} redirectTo={redirectTo} />
                 </div>
             </div>
         </section>

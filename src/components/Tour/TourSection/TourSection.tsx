@@ -50,7 +50,7 @@ export default function TourSection({ ui, tours, layout = 'slider' }: TourSectio
     const isScrolling = useRef(false);
 
     useEffect(() => {
-        setActivePage((p) => Math.min(p, totalPages - 1));
+        setActivePage((p) => Math.min(p, Math.max(totalPages - 1, 0)));
     }, [totalPages]);
 
     const goToPage = useCallback((page: number) => {
@@ -75,15 +75,20 @@ export default function TourSection({ ui, tours, layout = 'slider' }: TourSectio
     const handlePrev = () => goToPage(Math.max(activePage - 1, 0));
     const handleNext = () => goToPage(Math.min(activePage + 1, totalPages - 1));
 
-    const cardUiData = {
+    // Pull only the labels TourCard needs
+    const cardUiData: {
+        seeDetails: string;
+        priceFrom: string;
+        reviews: string;
+        currency: string;
+    } = {
         seeDetails: ui.buttons.seeDetails,
         priceFrom: ui.labels.priceFrom,
         reviews: ui.labels.reviews,
-        currency: ui.labels.currency
+        currency: ui.labels.currency,
     };
 
     return (
-        /* We inject a layout class to let our CSS handle the responsive override */
         <section className={`tours-section large-screen-max-width tours-layout-${layout}`}>
             <div className="tours-section-header">
                 <h2 className="tours-section-title">{ui.sectionTitle}</h2>
@@ -115,7 +120,10 @@ export default function TourSection({ ui, tours, layout = 'slider' }: TourSectio
                         style={{ '--cards-per-page': cardsPerPage } as React.CSSProperties}
                     >
                         {tours
-                            .slice(pageIndex * cardsPerPage, pageIndex * cardsPerPage + cardsPerPage)
+                            .slice(
+                                pageIndex * cardsPerPage,
+                                pageIndex * cardsPerPage + cardsPerPage
+                            )
                             .map((tour) => (
                                 <TourCard
                                     key={tour.id}
@@ -127,7 +135,11 @@ export default function TourSection({ ui, tours, layout = 'slider' }: TourSectio
                 ))}
             </div>
 
-            <div className="tours-dots" role="tablist" aria-label={`${ui.sectionTitle} pages`}>
+            <div
+                className="tours-dots"
+                role="tablist"
+                aria-label={`${ui.sectionTitle} pages`}
+            >
                 {Array.from({ length: totalPages }).map((_, i) => (
                     <button
                         key={i}

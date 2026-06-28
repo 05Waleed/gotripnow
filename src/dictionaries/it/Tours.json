@@ -1,14 +1,14 @@
 {
     "TourHero": {
-        "title": "Esplora la Svizzera",
-        "subtitle": "Trova il tour perfetto per la tua prossima avventura",
+        "title": "Scoprite la Svizzera",
+        "subtitle": "Trovate il tour ideale per il vostro prossimo viaggio",
         "search": {
-            "button": "Cerca Tour",
+            "button": "Cerca tour",
             "season": {
-                "placeholder": "Quando desidera viaggiare?",
-                "dropdownTitle": "Seleziona la stagione di viaggio",
+                "placeholder": "Quando desiderate viaggiare?",
+                "dropdownTitle": "Selezionate una stagione",
                 "noResults": "Nessuna stagione trovata",
-                "errorRequired": "Si prega di selezionare una stagione di viaggio",
+                "errorRequired": "Selezionate una stagione di viaggio",
                 "suggestions": [
                     {
                         "season": "Inverno",
@@ -29,55 +29,55 @@
                 ]
             },
             "duration": {
-                "placeholder": "Seleziona la durata",
+                "placeholder": "Selezionate una durata",
                 "dropdownTitle": "Durata del tour",
-                "errorRequired": "Scegli la durata desiderata",
+                "errorRequired": "Selezionate una durata",
                 "options": {
                     "halfDay": {
                         "label": "Mezza giornata",
-                        "description": "Meno di 5 ore di esplorazione"
+                        "description": "Meno di 5 ore"
                     },
                     "fullDay": {
                         "label": "Giornata intera",
-                        "description": "Da 5 a 10 ore di avventura completa"
+                        "description": "Da 5 a 10 ore"
                     },
                     "twoDays": {
                         "label": "Più giorni",
-                        "description": "Viaggio immersivo di oltre 2 giorni"
+                        "description": "2 o più giorni"
                     }
                 }
             },
             "travelers": {
                 "triggerSingular": "Viaggiatore",
                 "triggerPlural": "Viaggiatori",
-                "dropdownTitle": "Numero di passeggeri",
+                "dropdownTitle": "Numero di viaggiatori",
                 "adults": {
                     "label": "Adulti",
                     "description": "Dai 13 anni in su"
                 },
                 "children": {
                     "label": "Bambini",
-                    "description": "Età compresa tra 2 e 12 anni"
+                    "description": "Da 2 a 12 anni"
                 },
                 "done": "Applica"
             }
         }
     },
     "ui": {
-        "sectionTitle": "Tour a {city}",
+        "sectionTitle": "Tour – {season}",
         "buttons": {
-            "seeDetails": "Vedi dettagli",
+            "seeDetails": "Visualizza dettagli",
             "previous": "Pagina precedente",
             "next": "Pagina successiva"
         },
         "labels": {
-            "priceFrom": "Da",
+            "priceFrom": "A partire da",
             "reviews": "recensioni",
             "currency": "CHF"
         }
     },
     "citiesShortcut": {
-        "sectionTitle": "Città Popolari",
+        "sectionTitle": "Città più visitate",
         "cities": [
             {
                 "id": 1,
@@ -113,48 +113,1108 @@
     },
     "tours": [
         {
-            "id": "zurich-old-town-walking",
-            "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurigo",
-            "duration": "half-day",
-            "durationLabel": "4 ore",
-            "title": "Tour a piedi della città vecchia di Zurigo",
-            "price": 49,
-            "rating": 4.8,
-            "reviewCount": 120
+            "category": "Tutto l'anno",
+            "season": "Disponibile in qualsiasi periodo",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Tour express alle cascate del Reno da Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-e-bike-city-exploration",
+                    "name": "Tour guidato di Zurigo in bicicletta elettrica",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 55,
+                    "rating": 4.8,
+                    "reviewCount": 42,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-urban-craft-beer-crawl",
+                    "name": "Tour delle birre artigianali nel quartiere Zurigo-Ovest",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 69,
+                    "rating": 4.5,
+                    "reviewCount": 57,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Passeggiata dei fantasmi e storia oscura di Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-old-town-chocolate",
+                    "name": "Tour del cioccolato nel centro storico di Ginevra e gita in barca",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 125,
+                    "rating": 4.9,
+                    "reviewCount": 310,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-scenic-lake-cruise",
+                    "name": "Crociera panoramica sul lago di Ginevra con audioguida",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 25,
+                    "rating": 4.3,
+                    "reviewCount": 435,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-gruyeres-cheese-chocolate",
+                    "name": "Gita a Gruyères con caseificio e fabbrica di cioccolato",
+                    "city": "Ginevra",
+                    "duration": "fullDay",
+                    "price": 193,
+                    "rating": 4.6,
+                    "reviewCount": 84,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Tour di Ginevra: quartiere ONU e centro storico",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Passeggiata nel centro storico di Basilea tra tesori nascosti",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-rhine-river-cruise",
+                    "name": "Crociera sul Reno a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 28,
+                    "rating": 4.5,
+                    "reviewCount": 98,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Tour di arte e architettura a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-culinary-food-trail",
+                    "name": "Percorso gastronomico e degustazioni a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 85,
+                    "rating": 4.6,
+                    "reviewCount": 73,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                }
+            ]
         },
         {
-            "id": "zurich-city-highlights-cruise",
-            "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurigo",
-            "duration": "half-day",
-            "durationLabel": "3 ore",
-            "title": "Attrazioni di Zurigo e crociera sul lago",
-            "price": 65,
-            "rating": 4.7,
-            "reviewCount": 85
+            "category": "Inverno",
+            "season": "Dicembre – Febbraio",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Tour express alle cascate del Reno da Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-mount-titlis-day-trip",
+                    "name": "Gita invernale al Titlis",
+                    "city": "Zurigo",
+                    "duration": "fullDay",
+                    "price": 165,
+                    "rating": 4.9,
+                    "reviewCount": 318,
+                    "seasons": [
+                        "Inverno"
+                    ],
+                    "is_highlight": true,
+                    "notes": "Consigliato in inverno per l'accesso al ghiacciaio e le attività sulla neve."
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Passeggiata dei fantasmi e storia oscura di Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Tour di Ginevra: quartiere ONU e centro storico",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Passeggiata nel centro storico di Basilea tra tesori nascosti",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Tour di arte e architettura a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                }
+            ]
         },
         {
-            "id": "zurich-fondue-tuk-tuk",
-            "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurigo",
-            "duration": "short",
-            "durationLabel": "2 ore",
-            "title": "Tour di Zurigo in Tuk-Tuk con fonduta svizzera",
-            "price": 89,
-            "rating": 4.9,
-            "reviewCount": 64
+            "category": "Primavera",
+            "season": "Marzo – Maggio",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Tour express alle cascate del Reno da Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-e-bike-city-exploration",
+                    "name": "Tour guidato di Zurigo in bicicletta elettrica",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 55,
+                    "rating": 4.8,
+                    "reviewCount": 42,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-urban-craft-beer-crawl",
+                    "name": "Tour delle birre artigianali nel quartiere Zurigo-Ovest",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 69,
+                    "rating": 4.5,
+                    "reviewCount": 57,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-sunset-uetliberg-hike",
+                    "name": "Escursione al tramonto sull'Uetliberg con aperitivo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 39,
+                    "rating": 4.6,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Passeggiata dei fantasmi e storia oscura di Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-old-town-chocolate",
+                    "name": "Tour del cioccolato nel centro storico di Ginevra e gita in barca",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 125,
+                    "rating": 4.9,
+                    "reviewCount": 310,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-scenic-lake-cruise",
+                    "name": "Crociera panoramica sul lago di Ginevra con audioguida",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 25,
+                    "rating": 4.3,
+                    "reviewCount": 435,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-annecy-day-trip",
+                    "name": "Gita ad Annecy da Ginevra",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 61,
+                    "rating": 4.6,
+                    "reviewCount": 117,
+                    "seasons": [
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-gruyeres-cheese-chocolate",
+                    "name": "Gita a Gruyères con caseificio e fabbrica di cioccolato",
+                    "city": "Ginevra",
+                    "duration": "fullDay",
+                    "price": 193,
+                    "rating": 4.6,
+                    "reviewCount": 84,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Tour di Ginevra: quartiere ONU e centro storico",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Passeggiata nel centro storico di Basilea tra tesori nascosti",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-rhine-river-cruise",
+                    "name": "Crociera sul Reno a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 28,
+                    "rating": 4.5,
+                    "reviewCount": 98,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Tour di arte e architettura a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-culinary-food-trail",
+                    "name": "Percorso gastronomico e degustazioni a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 85,
+                    "rating": 4.6,
+                    "reviewCount": 73,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                }
+            ]
         },
         {
-            "id": "zurich-lindt-chocolate-adventure",
-            "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurigo",
-            "duration": "half-day",
-            "durationLabel": "4.5 ore",
-            "title": "Tour di Zurigo in sidecar e Museo del cioccolato Lindt",
-            "price": 75,
-            "rating": 4.6,
-            "reviewCount": 142
+            "category": "Estate",
+            "season": "Giugno – Agosto",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Tour express alle cascate del Reno da Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-e-bike-city-exploration",
+                    "name": "Tour guidato di Zurigo in bicicletta elettrica",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 55,
+                    "rating": 4.8,
+                    "reviewCount": 42,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-urban-craft-beer-crawl",
+                    "name": "Tour delle birre artigianali nel quartiere Zurigo-Ovest",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 69,
+                    "rating": 4.5,
+                    "reviewCount": 57,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-sunset-uetliberg-hike",
+                    "name": "Escursione al tramonto sull'Uetliberg con aperitivo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 39,
+                    "rating": 4.6,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Passeggiata dei fantasmi e storia oscura di Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-old-town-chocolate",
+                    "name": "Tour del cioccolato nel centro storico di Ginevra e gita in barca",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 125,
+                    "rating": 4.9,
+                    "reviewCount": 310,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-scenic-lake-cruise",
+                    "name": "Crociera panoramica sul lago di Ginevra con audioguida",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 25,
+                    "rating": 4.3,
+                    "reviewCount": 435,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-chamonix-mont-blanc",
+                    "name": "Gita a Chamonix e al Monte Bianco da Ginevra",
+                    "city": "Ginevra",
+                    "duration": "fullDay",
+                    "price": 123,
+                    "rating": 4.8,
+                    "reviewCount": 678,
+                    "seasons": [
+                        "Estate"
+                    ],
+                    "is_highlight": true,
+                    "notes": "Consigliato da giugno a settembre per condizioni ottimali in montagna."
+                },
+                {
+                    "id": "geneva-annecy-day-trip",
+                    "name": "Gita ad Annecy da Ginevra",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 61,
+                    "rating": 4.6,
+                    "reviewCount": 117,
+                    "seasons": [
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-gruyeres-cheese-chocolate",
+                    "name": "Gita a Gruyères con caseificio e fabbrica di cioccolato",
+                    "city": "Ginevra",
+                    "duration": "fullDay",
+                    "price": 193,
+                    "rating": 4.6,
+                    "reviewCount": 84,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Tour di Ginevra: quartiere ONU e centro storico",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Passeggiata nel centro storico di Basilea tra tesori nascosti",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-rhine-river-cruise",
+                    "name": "Crociera sul Reno a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 28,
+                    "rating": 4.5,
+                    "reviewCount": 98,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Tour di arte e architettura a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-culinary-food-trail",
+                    "name": "Percorso gastronomico e degustazioni a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 85,
+                    "rating": 4.6,
+                    "reviewCount": 73,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-black-forest-express",
+                    "name": "Gita nella Foresta Nera da Basilea",
+                    "city": "Basilea",
+                    "duration": "fullDay",
+                    "price": 110,
+                    "rating": 4.7,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "category": "Autunno",
+            "season": "Settembre – Novembre",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Tour express alle cascate del Reno da Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-e-bike-city-exploration",
+                    "name": "Tour guidato di Zurigo in bicicletta elettrica",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 55,
+                    "rating": 4.8,
+                    "reviewCount": 42,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-urban-craft-beer-crawl",
+                    "name": "Tour delle birre artigianali nel quartiere Zurigo-Ovest",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 69,
+                    "rating": 4.5,
+                    "reviewCount": 57,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-sunset-uetliberg-hike",
+                    "name": "Escursione al tramonto sull'Uetliberg con aperitivo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 39,
+                    "rating": 4.6,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Passeggiata dei fantasmi e storia oscura di Zurigo",
+                    "city": "Zurigo",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-scenic-lake-cruise",
+                    "name": "Crociera panoramica sul lago di Ginevra con audioguida",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 25,
+                    "rating": 4.3,
+                    "reviewCount": 435,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-annecy-day-trip",
+                    "name": "Gita ad Annecy da Ginevra",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 61,
+                    "rating": 4.6,
+                    "reviewCount": 117,
+                    "seasons": [
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-gruyeres-cheese-chocolate",
+                    "name": "Gita a Gruyères con caseificio e fabbrica di cioccolato",
+                    "city": "Ginevra",
+                    "duration": "fullDay",
+                    "price": 193,
+                    "rating": 4.6,
+                    "reviewCount": 84,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Tour di Ginevra: quartiere ONU e centro storico",
+                    "city": "Ginevra",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Passeggiata nel centro storico di Basilea tra tesori nascosti",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-rhine-river-cruise",
+                    "name": "Crociera sul Reno a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 28,
+                    "rating": 4.5,
+                    "reviewCount": 98,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Tour di arte e architettura a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Inverno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-alsace-wine-day-trip",
+                    "name": "Tour nella regione vinicola dell'Alsazia e Colmar da Basilea",
+                    "city": "Basilea",
+                    "duration": "fullDay",
+                    "price": 145,
+                    "rating": 4.9,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Autunno"
+                    ],
+                    "is_highlight": true,
+                    "notes": "Ideale in autunno durante la vendemmia in Alsazia."
+                },
+                {
+                    "id": "basel-culinary-food-trail",
+                    "name": "Percorso gastronomico e degustazioni a Basilea",
+                    "city": "Basilea",
+                    "duration": "halfDay",
+                    "price": 85,
+                    "rating": 4.6,
+                    "reviewCount": 73,
+                    "seasons": [
+                        "Tutto l'anno",
+                        "Primavera",
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-black-forest-express",
+                    "name": "Gita nella Foresta Nera da Basilea",
+                    "city": "Basilea",
+                    "duration": "fullDay",
+                    "price": 110,
+                    "rating": 4.7,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Estate",
+                        "Autunno"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                }
+            ]
         }
     ]
 }

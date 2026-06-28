@@ -1,12 +1,12 @@
 {
     "TourHero": {
         "title": "Explore Switzerland",
-        "subtitle": "Find the right tour for your next trip",
+        "subtitle": "Find the perfect tour for your next adventure",
         "search": {
             "button": "Search Tours",
             "season": {
-                "placeholder": "When would you like to travel?",
-                "dropdownTitle": "Select a Season",
+                "placeholder": "When do you want to travel?",
+                "dropdownTitle": "Select Travel Season",
                 "noResults": "No seasons found",
                 "errorRequired": "Please select a travel season",
                 "suggestions": [
@@ -29,42 +29,42 @@
                 ]
             },
             "duration": {
-                "placeholder": "Select a duration",
+                "placeholder": "Select duration",
                 "dropdownTitle": "Tour Duration",
-                "errorRequired": "Please select a duration",
+                "errorRequired": "Please choose a preferred duration",
                 "options": {
                     "halfDay": {
                         "label": "Half-day",
-                        "description": "Under 5 hours"
+                        "description": "Under 5 hours of exploration"
                     },
                     "fullDay": {
-                        "label": "Full day",
-                        "description": "5 to 10 hours"
+                        "label": "Full-day",
+                        "description": "5 to 10 hours full adventure"
                     },
                     "twoDays": {
                         "label": "Multi-day",
-                        "description": "2 or more days"
+                        "description": "2+ days immersive journey"
                     }
                 }
             },
             "travelers": {
-                "triggerSingular": "Traveller",
-                "triggerPlural": "Travellers",
-                "dropdownTitle": "Number of Travellers",
+                "triggerSingular": "Traveler",
+                "triggerPlural": "Travelers",
+                "dropdownTitle": "Number of Passengers",
                 "adults": {
                     "label": "Adults",
-                    "description": "Age 13 and above"
+                    "description": "Ages 13 or above"
                 },
                 "children": {
                     "label": "Children",
-                    "description": "Age 2 to 12"
+                    "description": "Ages 2 to 12"
                 },
                 "done": "Apply"
             }
         }
     },
     "ui": {
-        "sectionTitle": "{season} Tours",
+        "sectionTitle": "Tours in {city}",
         "buttons": {
             "seeDetails": "See Details",
             "previous": "Previous page",
@@ -114,7 +114,7 @@
     "tours": [
         {
             "category": "Year-round",
-            "season": "Available Any Time",
+            "season": "Visit Anytime",
             "destinations": [
                 {
                     "id": "zurich-rhine-falls-express",
@@ -153,7 +153,7 @@
                 },
                 {
                     "id": "zurich-urban-craft-beer-crawl",
-                    "name": "Zurich West Urban Craft Beer Tour",
+                    "name": "Zurich West Urban Craft Beer Crawl",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 69,
@@ -170,7 +170,7 @@
                 },
                 {
                     "id": "zurich-ghost-walk-legends",
-                    "name": "Zurich Ghost Walk and Dark History Tour",
+                    "name": "Zurich Ghost Walk & Dark History Tour",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 29,
@@ -188,7 +188,7 @@
                 },
                 {
                     "id": "geneva-old-town-chocolate",
-                    "name": "Geneva Old Town Chocolate Tour and Boat Ride",
+                    "name": "Geneva Old Town Chocolate Tour & Boat Ride",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 125,
@@ -204,7 +204,7 @@
                 },
                 {
                     "id": "geneva-scenic-lake-cruise",
-                    "name": "Lake Geneva Scenic Cruise with Audio Guide",
+                    "name": "Scenic Lake Geneva Cruise with Audio Guide",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 25,
@@ -221,7 +221,7 @@
                 },
                 {
                     "id": "geneva-gruyeres-cheese-chocolate",
-                    "name": "Gruyères Day Trip with Cheese and Chocolate Factories",
+                    "name": "Gruyères Day Trip with Cheese & Chocolate Factories",
                     "city": "Geneva",
                     "duration": "fullDay",
                     "price": 193,
@@ -238,7 +238,7 @@
                 },
                 {
                     "id": "geneva-city-un-highlights",
-                    "name": "Geneva City Tour: UN Area and Old Town",
+                    "name": "Best of Geneva City Tour: UN Area & Old Town",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 56,
@@ -274,7 +274,7 @@
                 },
                 {
                     "id": "basel-rhine-river-cruise",
-                    "name": "Rhine River City Cruise",
+                    "name": "Scenic Rhine River City Cruise",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 28,
@@ -291,7 +291,7 @@
                 },
                 {
                     "id": "basel-art-museum-architecture",
-                    "name": "Basel Art and Architecture Tour",
+                    "name": "Basel Art & World-Class Architecture Tour",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 45,
@@ -309,7 +309,7 @@
                 },
                 {
                     "id": "basel-culinary-food-trail",
-                    "name": "Basel Food and Tasting Trail",
+                    "name": "Traditional Basel Culinary & Food Tasting Trail",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 85,
@@ -350,7 +350,7 @@
                 },
                 {
                     "id": "zurich-mount-titlis-day-trip",
-                    "name": "Mount Titlis Winter Day Trip",
+                    "name": "Mount Titlis Eternal Winter Day Trip",
                     "city": "Zurich",
                     "duration": "fullDay",
                     "price": 165,
@@ -364,7 +364,7 @@
                 },
                 {
                     "id": "zurich-ghost-walk-legends",
-                    "name": "Zurich Ghost Walk and Dark History Tour",
+                    "name": "Zurich Ghost Walk & Dark History Tour",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 29,
@@ -382,7 +382,7 @@
                 },
                 {
                     "id": "geneva-city-un-highlights",
-                    "name": "Geneva City Tour: UN Area and Old Town",
+                    "name": "Best of Geneva City Tour: UN Area & Old Town",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 56,
@@ -418,7 +418,7 @@
                 },
                 {
                     "id": "basel-art-museum-architecture",
-                    "name": "Basel Art and Architecture Tour",
+                    "name": "Basel Art & World-Class Architecture Tour",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 45,
@@ -477,7 +477,7 @@
                 },
                 {
                     "id": "zurich-urban-craft-beer-crawl",
-                    "name": "Zurich West Urban Craft Beer Tour",
+                    "name": "Zurich West Urban Craft Beer Crawl",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 69,
@@ -494,7 +494,7 @@
                 },
                 {
                     "id": "zurich-sunset-uetliberg-hike",
-                    "name": "Uetliberg Sunset Hike with Drinks",
+                    "name": "Uetliberg Mountain Sunset Hike & Aperitif",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 39,
@@ -510,7 +510,7 @@
                 },
                 {
                     "id": "zurich-ghost-walk-legends",
-                    "name": "Zurich Ghost Walk and Dark History Tour",
+                    "name": "Zurich Ghost Walk & Dark History Tour",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 29,
@@ -528,7 +528,7 @@
                 },
                 {
                     "id": "geneva-old-town-chocolate",
-                    "name": "Geneva Old Town Chocolate Tour and Boat Ride",
+                    "name": "Geneva Old Town Chocolate Tour & Boat Ride",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 125,
@@ -544,7 +544,7 @@
                 },
                 {
                     "id": "geneva-scenic-lake-cruise",
-                    "name": "Lake Geneva Scenic Cruise with Audio Guide",
+                    "name": "Scenic Lake Geneva Cruise with Audio Guide",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 25,
@@ -561,7 +561,7 @@
                 },
                 {
                     "id": "geneva-annecy-day-trip",
-                    "name": "Annecy Day Trip from Geneva",
+                    "name": "Annecy 'Venice of the Alps' Tour from Geneva",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 61,
@@ -577,7 +577,7 @@
                 },
                 {
                     "id": "geneva-gruyeres-cheese-chocolate",
-                    "name": "Gruyères Day Trip with Cheese and Chocolate Factories",
+                    "name": "Gruyères Day Trip with Cheese & Chocolate Factories",
                     "city": "Geneva",
                     "duration": "fullDay",
                     "price": 193,
@@ -594,7 +594,7 @@
                 },
                 {
                     "id": "geneva-city-un-highlights",
-                    "name": "Geneva City Tour: UN Area and Old Town",
+                    "name": "Best of Geneva City Tour: UN Area & Old Town",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 56,
@@ -630,7 +630,7 @@
                 },
                 {
                     "id": "basel-rhine-river-cruise",
-                    "name": "Rhine River City Cruise",
+                    "name": "Scenic Rhine River City Cruise",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 28,
@@ -647,7 +647,7 @@
                 },
                 {
                     "id": "basel-art-museum-architecture",
-                    "name": "Basel Art and Architecture Tour",
+                    "name": "Basel Art & World-Class Architecture Tour",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 45,
@@ -665,7 +665,7 @@
                 },
                 {
                     "id": "basel-culinary-food-trail",
-                    "name": "Basel Food and Tasting Trail",
+                    "name": "Traditional Basel Culinary & Food Tasting Trail",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 85,
@@ -723,7 +723,7 @@
                 },
                 {
                     "id": "zurich-urban-craft-beer-crawl",
-                    "name": "Zurich West Urban Craft Beer Tour",
+                    "name": "Zurich West Urban Craft Beer Crawl",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 69,
@@ -740,7 +740,7 @@
                 },
                 {
                     "id": "zurich-sunset-uetliberg-hike",
-                    "name": "Uetliberg Sunset Hike with Drinks",
+                    "name": "Uetliberg Mountain Sunset Hike & Aperitif",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 39,
@@ -756,7 +756,7 @@
                 },
                 {
                     "id": "zurich-ghost-walk-legends",
-                    "name": "Zurich Ghost Walk and Dark History Tour",
+                    "name": "Zurich Ghost Walk & Dark History Tour",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 29,
@@ -774,7 +774,7 @@
                 },
                 {
                     "id": "geneva-old-town-chocolate",
-                    "name": "Geneva Old Town Chocolate Tour and Boat Ride",
+                    "name": "Geneva Old Town Chocolate Tour & Boat Ride",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 125,
@@ -790,7 +790,7 @@
                 },
                 {
                     "id": "geneva-scenic-lake-cruise",
-                    "name": "Lake Geneva Scenic Cruise with Audio Guide",
+                    "name": "Scenic Lake Geneva Cruise with Audio Guide",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 25,
@@ -807,7 +807,7 @@
                 },
                 {
                     "id": "geneva-chamonix-mont-blanc",
-                    "name": "Chamonix and Mont Blanc Day Trip from Geneva",
+                    "name": "Chamonix & Mont-Blanc Day Trip from Geneva",
                     "city": "Geneva",
                     "duration": "fullDay",
                     "price": 123,
@@ -821,7 +821,7 @@
                 },
                 {
                     "id": "geneva-annecy-day-trip",
-                    "name": "Annecy Day Trip from Geneva",
+                    "name": "Annecy 'Venice of the Alps' Tour from Geneva",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 61,
@@ -837,7 +837,7 @@
                 },
                 {
                     "id": "geneva-gruyeres-cheese-chocolate",
-                    "name": "Gruyères Day Trip with Cheese and Chocolate Factories",
+                    "name": "Gruyères Day Trip with Cheese & Chocolate Factories",
                     "city": "Geneva",
                     "duration": "fullDay",
                     "price": 193,
@@ -854,7 +854,7 @@
                 },
                 {
                     "id": "geneva-city-un-highlights",
-                    "name": "Geneva City Tour: UN Area and Old Town",
+                    "name": "Best of Geneva City Tour: UN Area & Old Town",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 56,
@@ -890,7 +890,7 @@
                 },
                 {
                     "id": "basel-rhine-river-cruise",
-                    "name": "Rhine River City Cruise",
+                    "name": "Scenic Rhine River City Cruise",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 28,
@@ -907,7 +907,7 @@
                 },
                 {
                     "id": "basel-art-museum-architecture",
-                    "name": "Basel Art and Architecture Tour",
+                    "name": "Basel Art & World-Class Architecture Tour",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 45,
@@ -925,7 +925,7 @@
                 },
                 {
                     "id": "basel-culinary-food-trail",
-                    "name": "Basel Food and Tasting Trail",
+                    "name": "Traditional Basel Culinary & Food Tasting Trail",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 85,
@@ -942,7 +942,7 @@
                 },
                 {
                     "id": "basel-black-forest-express",
-                    "name": "Black Forest Day Tour from Basel",
+                    "name": "German Black Forest Highlights Tour from Basel",
                     "city": "Basel",
                     "duration": "fullDay",
                     "price": 110,
@@ -998,7 +998,7 @@
                 },
                 {
                     "id": "zurich-urban-craft-beer-crawl",
-                    "name": "Zurich West Urban Craft Beer Tour",
+                    "name": "Zurich West Urban Craft Beer Crawl",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 69,
@@ -1015,7 +1015,7 @@
                 },
                 {
                     "id": "zurich-sunset-uetliberg-hike",
-                    "name": "Uetliberg Sunset Hike with Drinks",
+                    "name": "Uetliberg Mountain Sunset Hike & Aperitif",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 39,
@@ -1031,7 +1031,7 @@
                 },
                 {
                     "id": "zurich-ghost-walk-legends",
-                    "name": "Zurich Ghost Walk and Dark History Tour",
+                    "name": "Zurich Ghost Walk & Dark History Tour",
                     "city": "Zurich",
                     "duration": "halfDay",
                     "price": 29,
@@ -1049,7 +1049,7 @@
                 },
                 {
                     "id": "geneva-scenic-lake-cruise",
-                    "name": "Lake Geneva Scenic Cruise with Audio Guide",
+                    "name": "Scenic Lake Geneva Cruise with Audio Guide",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 25,
@@ -1066,7 +1066,7 @@
                 },
                 {
                     "id": "geneva-annecy-day-trip",
-                    "name": "Annecy Day Trip from Geneva",
+                    "name": "Annecy 'Venice of the Alps' Tour from Geneva",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 61,
@@ -1082,7 +1082,7 @@
                 },
                 {
                     "id": "geneva-gruyeres-cheese-chocolate",
-                    "name": "Gruyères Day Trip with Cheese and Chocolate Factories",
+                    "name": "Gruyères Day Trip with Cheese & Chocolate Factories",
                     "city": "Geneva",
                     "duration": "fullDay",
                     "price": 193,
@@ -1099,7 +1099,7 @@
                 },
                 {
                     "id": "geneva-city-un-highlights",
-                    "name": "Geneva City Tour: UN Area and Old Town",
+                    "name": "Best of Geneva City Tour: UN Area & Old Town",
                     "city": "Geneva",
                     "duration": "halfDay",
                     "price": 56,
@@ -1135,7 +1135,7 @@
                 },
                 {
                     "id": "basel-rhine-river-cruise",
-                    "name": "Rhine River City Cruise",
+                    "name": "Scenic Rhine River City Cruise",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 28,
@@ -1152,7 +1152,7 @@
                 },
                 {
                     "id": "basel-art-museum-architecture",
-                    "name": "Basel Art and Architecture Tour",
+                    "name": "Basel Art & World-Class Architecture Tour",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 45,
@@ -1170,7 +1170,7 @@
                 },
                 {
                     "id": "basel-alsace-wine-day-trip",
-                    "name": "Alsace Wine Region and Colmar Tour from Basel",
+                    "name": "Alsace Wine Region & Colmar Tour from Basel",
                     "city": "Basel",
                     "duration": "fullDay",
                     "price": 145,
@@ -1184,7 +1184,7 @@
                 },
                 {
                     "id": "basel-culinary-food-trail",
-                    "name": "Basel Food and Tasting Trail",
+                    "name": "Traditional Basel Culinary & Food Tasting Trail",
                     "city": "Basel",
                     "duration": "halfDay",
                     "price": 85,
@@ -1201,7 +1201,7 @@
                 },
                 {
                     "id": "basel-black-forest-express",
-                    "name": "Black Forest Day Tour from Basel",
+                    "name": "German Black Forest Highlights Tour from Basel",
                     "city": "Basel",
                     "duration": "fullDay",
                     "price": 110,

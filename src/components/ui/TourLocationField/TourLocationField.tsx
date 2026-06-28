@@ -18,6 +18,8 @@ interface TourLocationFieldProps {
     onOpen: () => void;
     onClose: () => void;
     onSelect: (season: string) => void;
+    /** When true the field clears its internal selection (driven by parent reset) */
+    resetSignal?: boolean;
 }
 
 function CalendarIcon() {
@@ -28,22 +30,46 @@ function CalendarIcon() {
     );
 }
 
-export default function TourLocationField({ dict, isOpen, onOpen, onClose, onSelect }: TourLocationFieldProps) {
+export default function TourLocationField({
+    dict,
+    isOpen,
+    onOpen,
+    onClose,
+    onSelect,
+    resetSignal,
+}: TourLocationFieldProps) {
     const inputRef = useRef<HTMLInputElement>(null);
+    const [selected, setSelected] = React.useState('');
     const [query, setQuery] = React.useState('');
+
+    // Clear internal state when parent signals a reset
+    useEffect(() => {
+        if (resetSignal) {
+            setSelected('');
+            setQuery('');
+        }
+    }, [resetSignal]);
 
     useEffect(() => {
         if (isOpen) setTimeout(() => inputRef.current?.focus(), 0);
     }, [isOpen]);
 
-    const filtered = dict.suggestions.filter((item) =>
-        item.season.toLowerCase().includes(query.toLowerCase()) ||
-        item.period.toLowerCase().includes(query.toLowerCase())
+    const filtered = dict.suggestions.filter(
+        (item) =>
+            item.season.toLowerCase().includes(query.toLowerCase()) ||
+            item.period.toLowerCase().includes(query.toLowerCase())
     );
 
-    const handleSelect = (season: string) => {
-        setQuery(season);
-        onSelect(season);
+    const handleSelect = (item: SuggestionItem) => {
+        setSelected(item.season);
+        setQuery('');
+        onSelect(item.season);
+    };
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setQuery(e.target.value);
+        setSelected('');
+        if (!isOpen) onOpen();
     };
 
     return (
@@ -58,11 +84,12 @@ export default function TourLocationField({ dict, isOpen, onOpen, onClose, onSel
                     ref={inputRef}
                     type="text"
                     placeholder={dict.placeholder}
-                    value={query}
-                    readOnly
+                    value={isOpen ? query : selected}
+                    onChange={handleInputChange}
                     style={{ cursor: 'pointer' }}
                 />
             </div>
+
             {isOpen && (
                 <div className="tlf-dropdown">
                     <div className="tlf-dropdown-title">{dict.dropdownTitle}</div>
@@ -71,13 +98,11 @@ export default function TourLocationField({ dict, isOpen, onOpen, onClose, onSel
                             filtered.map((item, index) => (
                                 <li
                                     key={index}
-                                    className="tlf-suggestion-item"
+                                    className={`tlf-suggestion-item${selected === item.season ? ' selected' : ''}`}
                                     onMouseDown={(e) => e.preventDefault()}
-                                    onClick={() => handleSelect(item.season)}
+                                    onClick={() => handleSelect(item)}
                                 >
-                                    <div className="tlf-icon-container">
-                                        <CalendarIcon />
-                                    </div>
+                                    <div className="tlf-icon-container"><CalendarIcon /></div>
                                     <div className="tlf-text-container">
                                         <span className="tlf-city">{item.season}</span>
                                         <span className="tlf-country">{item.period}</span>

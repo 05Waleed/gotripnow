@@ -80,3 +80,70 @@
         gap: 0.3rem;
     }
 }
+
+/* ── Reset button ─────────────────────────────────────────── */
+
+/* ── Paste these rules into your ToursSearchBar.css ────────────────────────── */
+
+/* Wrapper row that holds the clear button — always in the DOM but hidden */
+.tsb-clear-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+    /* hidden state */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tsb-clear-row--visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* The pill button itself */
+.tsb-clear-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    border: 1.5px solid #d1d5db;
+    border-radius: 999px;
+    background: #fff;
+    color: #6b7280;
+    font-size: 0.775rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        border-color 0.18s ease,
+        color 0.18s ease,
+        background 0.18s ease,
+        box-shadow 0.18s ease;
+    white-space: nowrap;
+}
+
+.tsb-clear-btn:hover {
+    border-color: #c0392b;
+    color: #c0392b;
+    background: #fff5f5;
+    box-shadow: 0 1px 4px rgba(192, 57, 43, 0.12);
+}
+
+.tsb-clear-btn svg {
+    flex-shrink: 0;
+    transition: transform 0.18s ease;
+}
+
+.tsb-clear-btn:hover svg {
+    transform: rotate(90deg);
+}
+
+/* On mobile stack it full-width under the card, left-aligned */
+@media (max-width: 640px) {
+    .tsb-clear-row {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+}

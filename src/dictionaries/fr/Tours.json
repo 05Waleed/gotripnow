@@ -1,12 +1,12 @@
 {
     "TourHero": {
-        "title": "Explorez la Suisse",
-        "subtitle": "Trouvez le tour parfait pour votre prochaine aventure",
+        "title": "Découvrez la Suisse",
+        "subtitle": "Trouvez la visite idéale pour votre prochain voyage",
         "search": {
-            "button": "Rechercher",
+            "button": "Rechercher des visites",
             "season": {
                 "placeholder": "Quand souhaitez-vous voyager ?",
-                "dropdownTitle": "Sélectionner la saison de voyage",
+                "dropdownTitle": "Sélectionner une saison",
                 "noResults": "Aucune saison trouvée",
                 "errorRequired": "Veuillez sélectionner une saison de voyage",
                 "suggestions": [
@@ -29,42 +29,42 @@
                 ]
             },
             "duration": {
-                "placeholder": "Sélectionnez la durée",
-                "dropdownTitle": "Durée de l'excursion",
-                "errorRequired": "Veuillez choisir une durée préférée",
+                "placeholder": "Sélectionner une durée",
+                "dropdownTitle": "Durée de la visite",
+                "errorRequired": "Veuillez sélectionner une durée",
                 "options": {
                     "halfDay": {
                         "label": "Demi-journée",
-                        "description": "Moins de 5 heures d'exploration"
+                        "description": "Moins de 5 heures"
                     },
                     "fullDay": {
                         "label": "Journée complète",
-                        "description": "De 5 à 10 heures de pure aventure"
+                        "description": "5 à 10 heures"
                     },
                     "twoDays": {
                         "label": "Plusieurs jours",
-                        "description": "Voyage immersif de 2 jours ou plus"
+                        "description": "2 jours ou plus"
                     }
                 }
             },
             "travelers": {
-                "triggerSingular": "voyageur",
-                "triggerPlural": "voyageurs",
-                "dropdownTitle": "Nombre de passagers",
+                "triggerSingular": "Voyageur",
+                "triggerPlural": "Voyageurs",
+                "dropdownTitle": "Nombre de voyageurs",
                 "adults": {
                     "label": "Adultes",
-                    "description": "Âgés de 13 ans ou plus"
+                    "description": "À partir de 13 ans"
                 },
                 "children": {
                     "label": "Enfants",
-                    "description": "Âgés de 2 à 12 ans"
+                    "description": "De 2 à 12 ans"
                 },
                 "done": "Appliquer"
             }
         }
     },
     "ui": {
-        "sectionTitle": "Visites à {city}",
+        "sectionTitle": "Visites – {season}",
         "buttons": {
             "seeDetails": "Voir les détails",
             "previous": "Page précédente",
@@ -77,7 +77,7 @@
         }
     },
     "citiesShortcut": {
-        "sectionTitle": "Villes Populaires",
+        "sectionTitle": "Villes populaires",
         "cities": [
             {
                 "id": 1,
@@ -113,48 +113,1108 @@
     },
     "tours": [
         {
-            "id": "zurich-old-town-walking",
-            "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurich",
-            "duration": "half-day",
-            "durationLabel": "4 heures",
-            "title": "Visite à pied de la vieille ville de Zurich",
-            "price": 49,
-            "rating": 4.8,
-            "reviewCount": 120
+            "category": "Toute l'année",
+            "season": "Disponible à tout moment",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Visite express des chutes du Rhin depuis Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-e-bike-city-exploration",
+                    "name": "Visite guidée de Zurich en vélo électrique",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 55,
+                    "rating": 4.8,
+                    "reviewCount": 42,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-urban-craft-beer-crawl",
+                    "name": "Circuit bières artisanales dans le quartier de Zurich-Ouest",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 69,
+                    "rating": 4.5,
+                    "reviewCount": 57,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Promenade des fantômes et histoire sombre de Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-old-town-chocolate",
+                    "name": "Visite chocolat de la vieille ville de Genève et promenade en bateau",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 125,
+                    "rating": 4.9,
+                    "reviewCount": 310,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-scenic-lake-cruise",
+                    "name": "Croisière panoramique sur le lac Léman avec audioguide",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 25,
+                    "rating": 4.3,
+                    "reviewCount": 435,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-gruyeres-cheese-chocolate",
+                    "name": "Excursion à Gruyères avec fromagerie et chocolaterie",
+                    "city": "Genève",
+                    "duration": "fullDay",
+                    "price": 193,
+                    "rating": 4.6,
+                    "reviewCount": 84,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Visite de Genève : quartier de l'ONU et vieille ville",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Promenade dans la vieille ville de Bâle et ses trésors cachés",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-rhine-river-cruise",
+                    "name": "Croisière sur le Rhin à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 28,
+                    "rating": 4.5,
+                    "reviewCount": 98,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Visite art et architecture à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-culinary-food-trail",
+                    "name": "Parcours gastronomique et dégustation à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 85,
+                    "rating": 4.6,
+                    "reviewCount": 73,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                }
+            ]
         },
         {
-            "id": "zurich-city-highlights-cruise",
-            "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurich",
-            "duration": "half-day",
-            "durationLabel": "3 heures",
-            "title": "Points forts de Zurich et croisière sur le lac",
-            "price": 65,
-            "rating": 4.7,
-            "reviewCount": 85
+            "category": "Hiver",
+            "season": "Décembre – Février",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Visite express des chutes du Rhin depuis Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-mount-titlis-day-trip",
+                    "name": "Excursion hivernale au Titlis",
+                    "city": "Zurich",
+                    "duration": "fullDay",
+                    "price": 165,
+                    "rating": 4.9,
+                    "reviewCount": 318,
+                    "seasons": [
+                        "Hiver"
+                    ],
+                    "is_highlight": true,
+                    "notes": "Recommandé en hiver pour l'accès au glacier et les activités dans la neige."
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Promenade des fantômes et histoire sombre de Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Visite de Genève : quartier de l'ONU et vieille ville",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Promenade dans la vieille ville de Bâle et ses trésors cachés",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Visite art et architecture à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                }
+            ]
         },
         {
-            "id": "zurich-fondue-tuk-tuk",
-            "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurich",
-            "duration": "short",
-            "durationLabel": "2 heures",
-            "title": "Visite de Zurich en Tuk-Tuk avec fondue suisse",
-            "price": 89,
-            "rating": 4.9,
-            "reviewCount": 64
+            "category": "Printemps",
+            "season": "Mars – Mai",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Visite express des chutes du Rhin depuis Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-e-bike-city-exploration",
+                    "name": "Visite guidée de Zurich en vélo électrique",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 55,
+                    "rating": 4.8,
+                    "reviewCount": 42,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-urban-craft-beer-crawl",
+                    "name": "Circuit bières artisanales dans le quartier de Zurich-Ouest",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 69,
+                    "rating": 4.5,
+                    "reviewCount": 57,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-sunset-uetliberg-hike",
+                    "name": "Randonnée au coucher du soleil sur l'Uetliberg",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 39,
+                    "rating": 4.6,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Promenade des fantômes et histoire sombre de Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-old-town-chocolate",
+                    "name": "Visite chocolat de la vieille ville de Genève et promenade en bateau",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 125,
+                    "rating": 4.9,
+                    "reviewCount": 310,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-scenic-lake-cruise",
+                    "name": "Croisière panoramique sur le lac Léman avec audioguide",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 25,
+                    "rating": 4.3,
+                    "reviewCount": 435,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-annecy-day-trip",
+                    "name": "Excursion à Annecy depuis Genève",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 61,
+                    "rating": 4.6,
+                    "reviewCount": 117,
+                    "seasons": [
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-gruyeres-cheese-chocolate",
+                    "name": "Excursion à Gruyères avec fromagerie et chocolaterie",
+                    "city": "Genève",
+                    "duration": "fullDay",
+                    "price": 193,
+                    "rating": 4.6,
+                    "reviewCount": 84,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Visite de Genève : quartier de l'ONU et vieille ville",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Promenade dans la vieille ville de Bâle et ses trésors cachés",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-rhine-river-cruise",
+                    "name": "Croisière sur le Rhin à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 28,
+                    "rating": 4.5,
+                    "reviewCount": 98,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Visite art et architecture à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-culinary-food-trail",
+                    "name": "Parcours gastronomique et dégustation à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 85,
+                    "rating": 4.6,
+                    "reviewCount": 73,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                }
+            ]
         },
         {
-            "id": "zurich-lindt-chocolate-adventure",
-            "imageUrl": "/assets/city-img-1.jpg",
-            "city": "Zurich",
-            "duration": "half-day",
-            "durationLabel": "4.5 heures",
-            "title": "Visite de Zurich en side-car & Musée du chocolat Lindt",
-            "price": 75,
-            "rating": 4.6,
-            "reviewCount": 142
+            "category": "Été",
+            "season": "Juin – Août",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Visite express des chutes du Rhin depuis Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-e-bike-city-exploration",
+                    "name": "Visite guidée de Zurich en vélo électrique",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 55,
+                    "rating": 4.8,
+                    "reviewCount": 42,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-urban-craft-beer-crawl",
+                    "name": "Circuit bières artisanales dans le quartier de Zurich-Ouest",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 69,
+                    "rating": 4.5,
+                    "reviewCount": 57,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-sunset-uetliberg-hike",
+                    "name": "Randonnée au coucher du soleil sur l'Uetliberg",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 39,
+                    "rating": 4.6,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Promenade des fantômes et histoire sombre de Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-old-town-chocolate",
+                    "name": "Visite chocolat de la vieille ville de Genève et promenade en bateau",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 125,
+                    "rating": 4.9,
+                    "reviewCount": 310,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-scenic-lake-cruise",
+                    "name": "Croisière panoramique sur le lac Léman avec audioguide",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 25,
+                    "rating": 4.3,
+                    "reviewCount": 435,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-chamonix-mont-blanc",
+                    "name": "Excursion à Chamonix et au Mont Blanc depuis Genève",
+                    "city": "Genève",
+                    "duration": "fullDay",
+                    "price": 123,
+                    "rating": 4.8,
+                    "reviewCount": 678,
+                    "seasons": [
+                        "Été"
+                    ],
+                    "is_highlight": true,
+                    "notes": "Recommandé de juin à septembre pour des conditions idéales en montagne."
+                },
+                {
+                    "id": "geneva-annecy-day-trip",
+                    "name": "Excursion à Annecy depuis Genève",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 61,
+                    "rating": 4.6,
+                    "reviewCount": 117,
+                    "seasons": [
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-gruyeres-cheese-chocolate",
+                    "name": "Excursion à Gruyères avec fromagerie et chocolaterie",
+                    "city": "Genève",
+                    "duration": "fullDay",
+                    "price": 193,
+                    "rating": 4.6,
+                    "reviewCount": 84,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Visite de Genève : quartier de l'ONU et vieille ville",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Promenade dans la vieille ville de Bâle et ses trésors cachés",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-rhine-river-cruise",
+                    "name": "Croisière sur le Rhin à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 28,
+                    "rating": 4.5,
+                    "reviewCount": 98,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Visite art et architecture à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-culinary-food-trail",
+                    "name": "Parcours gastronomique et dégustation à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 85,
+                    "rating": 4.6,
+                    "reviewCount": 73,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-black-forest-express",
+                    "name": "Excursion en Forêt-Noire depuis Bâle",
+                    "city": "Bâle",
+                    "duration": "fullDay",
+                    "price": 110,
+                    "rating": 4.7,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "category": "Automne",
+            "season": "Septembre – Novembre",
+            "destinations": [
+                {
+                    "id": "zurich-rhine-falls-express",
+                    "name": "Visite express des chutes du Rhin depuis Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 59,
+                    "rating": 4.7,
+                    "reviewCount": 210,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-e-bike-city-exploration",
+                    "name": "Visite guidée de Zurich en vélo électrique",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 55,
+                    "rating": 4.8,
+                    "reviewCount": 42,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-urban-craft-beer-crawl",
+                    "name": "Circuit bières artisanales dans le quartier de Zurich-Ouest",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 69,
+                    "rating": 4.5,
+                    "reviewCount": 57,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-sunset-uetliberg-hike",
+                    "name": "Randonnée au coucher du soleil sur l'Uetliberg",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 39,
+                    "rating": 4.6,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "zurich-ghost-walk-legends",
+                    "name": "Promenade des fantômes et histoire sombre de Zurich",
+                    "city": "Zurich",
+                    "duration": "halfDay",
+                    "price": 29,
+                    "rating": 4.4,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-scenic-lake-cruise",
+                    "name": "Croisière panoramique sur le lac Léman avec audioguide",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 25,
+                    "rating": 4.3,
+                    "reviewCount": 435,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-annecy-day-trip",
+                    "name": "Excursion à Annecy depuis Genève",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 61,
+                    "rating": 4.6,
+                    "reviewCount": 117,
+                    "seasons": [
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-gruyeres-cheese-chocolate",
+                    "name": "Excursion à Gruyères avec fromagerie et chocolaterie",
+                    "city": "Genève",
+                    "duration": "fullDay",
+                    "price": 193,
+                    "rating": 4.6,
+                    "reviewCount": 84,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "geneva-city-un-highlights",
+                    "name": "Visite de Genève : quartier de l'ONU et vieille ville",
+                    "city": "Genève",
+                    "duration": "halfDay",
+                    "price": 56,
+                    "rating": 4.4,
+                    "reviewCount": 48,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-old-town-walking",
+                    "name": "Promenade dans la vieille ville de Bâle et ses trésors cachés",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 32,
+                    "rating": 4.7,
+                    "reviewCount": 154,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-rhine-river-cruise",
+                    "name": "Croisière sur le Rhin à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 28,
+                    "rating": 4.5,
+                    "reviewCount": 98,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-art-museum-architecture",
+                    "name": "Visite art et architecture à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 45,
+                    "rating": 4.8,
+                    "reviewCount": 62,
+                    "seasons": [
+                        "Toute l'année",
+                        "Hiver",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-alsace-wine-day-trip",
+                    "name": "Excursion dans la région viticole d'Alsace et à Colmar depuis Bâle",
+                    "city": "Bâle",
+                    "duration": "fullDay",
+                    "price": 145,
+                    "rating": 4.9,
+                    "reviewCount": 112,
+                    "seasons": [
+                        "Automne"
+                    ],
+                    "is_highlight": true,
+                    "notes": "Idéal en automne lors des vendanges en Alsace."
+                },
+                {
+                    "id": "basel-culinary-food-trail",
+                    "name": "Parcours gastronomique et dégustation à Bâle",
+                    "city": "Bâle",
+                    "duration": "halfDay",
+                    "price": 85,
+                    "rating": 4.6,
+                    "reviewCount": 73,
+                    "seasons": [
+                        "Toute l'année",
+                        "Printemps",
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                },
+                {
+                    "id": "basel-black-forest-express",
+                    "name": "Excursion en Forêt-Noire depuis Bâle",
+                    "city": "Bâle",
+                    "duration": "fullDay",
+                    "price": 110,
+                    "rating": 4.7,
+                    "reviewCount": 89,
+                    "seasons": [
+                        "Été",
+                        "Automne"
+                    ],
+                    "is_highlight": false,
+                    "notes": ""
+                }
+            ]
         }
     ]
 }
