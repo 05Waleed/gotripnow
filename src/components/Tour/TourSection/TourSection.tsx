@@ -7,32 +7,29 @@ import TourCard, { TourData } from '../TourCard/TourCard';
 interface TourSectionProps {
     ui: {
         sectionTitle: string;
-        buttons: {
-            seeDetails: string;
-            previous: string;
-            next: string;
-        };
-        labels: {
-            priceFrom: string;
-            reviews: string;
-            currency: string;
-        };
+        buttons: { seeDetails: string; previous: string; next: string };
+        labels: { priceFrom: string; reviews: string; currency: string };
     };
     tours: TourData[];
     layout?: 'slider' | 'grid';
+    /** When true this section receives id="tours-results" for scroll targeting */
+    isFirst?: boolean;
 }
 
 function useCardsPerPage(): number {
-    const getCount = () => {
-        if (typeof window === 'undefined') return 3;
-        if (window.innerWidth < 640) return 1;
-        if (window.innerWidth < 1024) return 2;
-        return 3;
-    };
-
-    const [count, setCount] = useState(getCount);
+    // Start with a consistent default (3) to match what the server generates
+    const [count, setCount] = useState(3);
 
     useEffect(() => {
+        const getCount = () => {
+            if (window.innerWidth < 640) return 1;
+            if (window.innerWidth < 1024) return 2;
+            return 3;
+        };
+
+        // Determine the actual client width immediately after mount
+        setCount(getCount());
+
         const handler = () => setCount(getCount());
         window.addEventListener('resize', handler);
         return () => window.removeEventListener('resize', handler);
@@ -41,7 +38,7 @@ function useCardsPerPage(): number {
     return count;
 }
 
-export default function TourSection({ ui, tours, layout = 'slider' }: TourSectionProps) {
+export default function TourSection({ ui, tours, layout = 'slider', isFirst = false }: TourSectionProps) {
     const cardsPerPage = useCardsPerPage();
     const totalPages = Math.ceil(tours.length / cardsPerPage);
 
@@ -57,31 +54,20 @@ export default function TourSection({ ui, tours, layout = 'slider' }: TourSectio
         if (!trackRef.current) return;
         isScrolling.current = true;
         setActivePage(page);
-        trackRef.current.scrollTo({
-            left: trackRef.current.offsetWidth * page,
-            behavior: 'smooth',
-        });
+        trackRef.current.scrollTo({ left: trackRef.current.offsetWidth * page, behavior: 'smooth' });
         setTimeout(() => { isScrolling.current = false; }, 500);
     }, []);
 
     const handleScroll = useCallback(() => {
         if (isScrolling.current || !trackRef.current) return;
-        const page = Math.round(
-            trackRef.current.scrollLeft / trackRef.current.offsetWidth
-        );
+        const page = Math.round(trackRef.current.scrollLeft / trackRef.current.offsetWidth);
         setActivePage(page);
     }, []);
 
     const handlePrev = () => goToPage(Math.max(activePage - 1, 0));
     const handleNext = () => goToPage(Math.min(activePage + 1, totalPages - 1));
 
-    // Pull only the labels TourCard needs
-    const cardUiData: {
-        seeDetails: string;
-        priceFrom: string;
-        reviews: string;
-        currency: string;
-    } = {
+    const cardUiData = {
         seeDetails: ui.buttons.seeDetails,
         priceFrom: ui.labels.priceFrom,
         reviews: ui.labels.reviews,
@@ -89,7 +75,10 @@ export default function TourSection({ ui, tours, layout = 'slider' }: TourSectio
     };
 
     return (
-        <section className={`tours-section large-screen-max-width tours-layout-${layout}`}>
+        <section
+            id={isFirst ? 'tours-results' : undefined}
+            className={`tours-section large-screen-max-width tours-layout-${layout}`}
+        >
             <div className="tours-section-header">
                 <h2 className="tours-section-title">{ui.sectionTitle}</h2>
                 <div className="tours-section-nav">
@@ -98,17 +87,13 @@ export default function TourSection({ ui, tours, layout = 'slider' }: TourSectio
                         onClick={handlePrev}
                         disabled={activePage === 0}
                         aria-label={ui.buttons.previous}
-                    >
-                        ‹
-                    </button>
+                    >‹</button>
                     <button
                         className="tours-nav-btn"
                         onClick={handleNext}
                         disabled={activePage === totalPages - 1}
                         aria-label={ui.buttons.next}
-                    >
-                        ›
-                    </button>
+                    >›</button>
                 </div>
             </div>
 
@@ -120,26 +105,15 @@ export default function TourSection({ ui, tours, layout = 'slider' }: TourSectio
                         style={{ '--cards-per-page': cardsPerPage } as React.CSSProperties}
                     >
                         {tours
-                            .slice(
-                                pageIndex * cardsPerPage,
-                                pageIndex * cardsPerPage + cardsPerPage
-                            )
+                            .slice(pageIndex * cardsPerPage, pageIndex * cardsPerPage + cardsPerPage)
                             .map((tour) => (
-                                <TourCard
-                                    key={tour.id}
-                                    {...tour}
-                                    ui={cardUiData}
-                                />
+                                <TourCard key={tour.id} {...tour} ui={cardUiData} />
                             ))}
                     </div>
                 ))}
             </div>
 
-            <div
-                className="tours-dots"
-                role="tablist"
-                aria-label={`${ui.sectionTitle} pages`}
-            >
+            <div className="tours-dots" role="tablist" aria-label={`${ui.sectionTitle} pages`}>
                 {Array.from({ length: totalPages }).map((_, i) => (
                     <button
                         key={i}

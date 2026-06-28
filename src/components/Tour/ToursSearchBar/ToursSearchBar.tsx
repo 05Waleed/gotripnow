@@ -44,21 +44,42 @@ interface ToursSearchBarProps {
     redirectTo?: string;
 }
 
+function scrollToTours() {
+    const el = document.getElementById('tours-results');
+    if (el) {
+        const offset = 80;
+        const top = el.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+    }
+}
+
 export default function ToursSearchBar({ dict, redirectTo }: ToursSearchBarProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
 
+    const [season, setSeason] = useState(() => searchParams.get('season') ?? '');
+    const [tourType, setTourType] = useState(() => searchParams.get('type') ?? '');
+
     const [activeField, setActiveField] = useState<ActiveField>(null);
-    const [season, setSeason] = useState('');
-    const [tourType, setTourType] = useState('');
     const [errors, setErrors] = useState<FormErrors>({ season: '', type: '' });
     const cardRef = useRef<HTMLDivElement>(null);
 
-    const hasActiveFilters = !!(
-        season || tourType ||
-        searchParams.get('season') ||
-        searchParams.get('type')
-    );
+    const hasActiveFilters = !!(season || tourType);
+
+    // Keep local state in sync if the URL params change externally
+    useEffect(() => {
+        setSeason(searchParams.get('season') ?? '');
+        setTourType(searchParams.get('type') ?? '');
+    }, [searchParams]);
+
+    // Scroll to results when params are present (tours page only)
+    useEffect(() => {
+        if (redirectTo) return;
+        if (searchParams.get('season') || searchParams.get('type')) {
+            const t = setTimeout(scrollToTours, 120);
+            return () => clearTimeout(t);
+        }
+    }, [searchParams, redirectTo]);
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -83,6 +104,7 @@ export default function ToursSearchBar({ dict, redirectTo }: ToursSearchBarProps
         params.set('type', tourType);
 
         if (redirectTo) {
+            sessionStorage.setItem('scrollToTours', '1');
             router.push(`${redirectTo}?${params.toString()}`);
         } else {
             router.push(`?${params.toString()}`);
@@ -108,8 +130,10 @@ export default function ToursSearchBar({ dict, redirectTo }: ToursSearchBarProps
                     onSelect={(value) => {
                         setSeason(value);
                         setErrors((e) => ({ ...e, season: '' }));
+                        // Seamless cascade transitions directly into opening the next menu option
                         setActiveField('type');
                     }}
+                    value={season}
                     resetSignal={season === ''}
                 />
                 <div className="tsb-divider" />
@@ -123,14 +147,13 @@ export default function ToursSearchBar({ dict, redirectTo }: ToursSearchBarProps
                         setErrors((e) => ({ ...e, type: '' }));
                         setActiveField('passenger');
                     }}
+                    value={tourType}
                     resetSignal={tourType === ''}
                 />
                 <div className="tsb-divider" />
                 <TourSearchBttn label={dict.button} onClick={handleSearch} />
             </div>
 
-            {/* Clear sits OUTSIDE the card — floats as a small tag below on mobile,
-                beside the card on desktop via absolute positioning */}
             <div className={`tsb-clear-row${hasActiveFilters ? ' tsb-clear-row--visible' : ''}`}>
                 <button
                     className="tsb-clear-btn"
@@ -139,16 +162,8 @@ export default function ToursSearchBar({ dict, redirectTo }: ToursSearchBarProps
                     type="button"
                     tabIndex={hasActiveFilters ? 0 : -1}
                 >
-                    <svg
-                        viewBox="0 0 24 24"
-                        width="12"
-                        height="12"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        aria-hidden="true"
-                    >
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none"
+                        stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" aria-hidden="true">
                         <line x1="18" y1="6" x2="6" y2="18" />
                         <line x1="6" y1="6" x2="18" y2="18" />
                     </svg>

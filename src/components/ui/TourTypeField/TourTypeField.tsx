@@ -11,7 +11,7 @@ interface TourTypeFieldProps {
     onOpen: () => void;
     onClose: () => void;
     onSelect: (value: string) => void;
-    /** When true the field clears its internal selection (driven by parent reset) */
+    value?: string;
     resetSignal?: boolean;
 }
 
@@ -32,35 +32,21 @@ function ClockDropdownIcon() {
 }
 
 export default function TourTypeField({
-    dict,
-    isOpen,
-    onOpen,
-    onClose,
-    onSelect,
-    resetSignal,
+    dict, isOpen, onOpen, onClose, onSelect, value = '', resetSignal,
 }: TourTypeFieldProps) {
-    const [selectedValue, setSelectedValue] = React.useState('');
-
-    // Clear internal state when parent signals a reset
-    useEffect(() => {
-        if (resetSignal) {
-            setSelectedValue('');
-        }
-    }, [resetSignal]);
-
+    // ✅ No internal selectedValue state — fully driven by parent value prop
     const options = [
         { value: 'halfDay', ...dict.options.halfDay },
         { value: 'fullDay', ...dict.options.fullDay },
         { value: 'twoDays', ...dict.options.twoDays },
     ];
 
-    const handleSelect = (value: string) => {
-        setSelectedValue(value);
-        onSelect(value);
+    const handleSelect = (val: string) => {
+        onSelect(val);
         onClose();
     };
 
-    const currentLabel = options.find((o) => o.value === selectedValue)?.label;
+    const currentLabel = options.find((o) => o.value === value)?.label;
 
     return (
         <div className="ttf-wrapper">
@@ -71,7 +57,8 @@ export default function TourTypeField({
                 <span className="ttf-field-icon"><ClockFieldIcon /></span>
                 <span className="ttf-icon-sep" />
                 <span className="ttf-field-text">
-                    <span className={`ttf-display-value${!selectedValue ? ' placeholder' : ''}`}>
+                    <span className={`ttf-display-value${!value ? ' placeholder' : ''}`}>
+                        {/* ✅ Shows label from URL-initialised value immediately */}
                         {currentLabel || dict.placeholder}
                     </span>
                 </span>
@@ -89,7 +76,7 @@ export default function TourTypeField({
                         {options.map((option) => (
                             <li
                                 key={option.value}
-                                className={`ttf-option-item${selectedValue === option.value ? ' selected' : ''}`}
+                                className={`ttf-option-item${value === option.value ? ' selected' : ''}`}
                                 onClick={() => handleSelect(option.value)}
                             >
                                 <div className="ttf-icon-container"><ClockDropdownIcon /></div>

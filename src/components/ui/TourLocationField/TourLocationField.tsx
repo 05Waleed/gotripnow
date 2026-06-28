@@ -18,7 +18,7 @@ interface TourLocationFieldProps {
     onOpen: () => void;
     onClose: () => void;
     onSelect: (season: string) => void;
-    /** When true the field clears its internal selection (driven by parent reset) */
+    value?: string;
     resetSignal?: boolean;
 }
 
@@ -31,61 +31,34 @@ function CalendarIcon() {
 }
 
 export default function TourLocationField({
-    dict,
-    isOpen,
-    onOpen,
-    onClose,
-    onSelect,
-    resetSignal,
+    dict, isOpen, onOpen, onClose, onSelect, value = ''
 }: TourLocationFieldProps) {
     const inputRef = useRef<HTMLInputElement>(null);
-    const [selected, setSelected] = React.useState('');
-    const [query, setQuery] = React.useState('');
-
-    // Clear internal state when parent signals a reset
-    useEffect(() => {
-        if (resetSignal) {
-            setSelected('');
-            setQuery('');
-        }
-    }, [resetSignal]);
 
     useEffect(() => {
         if (isOpen) setTimeout(() => inputRef.current?.focus(), 0);
     }, [isOpen]);
 
-    const filtered = dict.suggestions.filter(
-        (item) =>
-            item.season.toLowerCase().includes(query.toLowerCase()) ||
-            item.period.toLowerCase().includes(query.toLowerCase())
-    );
-
     const handleSelect = (item: SuggestionItem) => {
-        setSelected(item.season);
-        setQuery('');
         onSelect(item.season);
-    };
-
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setQuery(e.target.value);
-        setSelected('');
-        if (!isOpen) onOpen();
+        onClose();
     };
 
     return (
         <div className="tlf-wrapper">
-            <div
-                className={`tlf-input-container${isOpen ? ' active' : ''}`}
-                onClick={onOpen}
-            >
+            <div className={`tlf-input-container${isOpen ? ' active' : ''}`} onClick={isOpen ? onClose : onOpen}>
                 <span className="tlf-field-icon"><CalendarIcon /></span>
                 <span className="tlf-icon-sep" />
                 <input
                     ref={inputRef}
                     type="text"
                     placeholder={dict.placeholder}
-                    value={isOpen ? query : selected}
-                    onChange={handleInputChange}
+                    value={value}
+                    readOnly
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        if (!isOpen) onOpen();
+                    }}
                     style={{ cursor: 'pointer' }}
                 />
             </div>
@@ -94,11 +67,11 @@ export default function TourLocationField({
                 <div className="tlf-dropdown">
                     <div className="tlf-dropdown-title">{dict.dropdownTitle}</div>
                     <ul className="tlf-suggestions-list">
-                        {filtered.length > 0 ? (
-                            filtered.map((item, index) => (
+                        {dict.suggestions.length > 0 ? (
+                            dict.suggestions.map((item, index) => (
                                 <li
                                     key={index}
-                                    className={`tlf-suggestion-item${selected === item.season ? ' selected' : ''}`}
+                                    className={`tlf-suggestion-item${value === item.season ? ' selected' : ''}`}
                                     onMouseDown={(e) => e.preventDefault()}
                                     onClick={() => handleSelect(item)}
                                 >

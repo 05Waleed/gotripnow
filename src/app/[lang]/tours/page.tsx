@@ -122,12 +122,13 @@ export default async function Page({ params, searchParams }: PageProps) {
           <p>No tours match your search. Try a different season or duration!</p>
         </div>
       ) : (
-        sections.map(({ title, tours }) => (
+        sections.map(({ title, tours }, index) => (
           <TourSection
             key={title}
             ui={{ ...dict.Tours.ui, sectionTitle: title }}
             tours={tours}
             layout="grid"
+            isFirst={index === 0}
           />
         ))
       )}
